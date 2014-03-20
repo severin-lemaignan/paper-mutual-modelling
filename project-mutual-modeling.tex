@@ -26,6 +26,41 @@
 \chapter{Scientific Part}
 \section{Summary}
 
+Human-robot interaction is a challenge for artificial intelligence. This field
+indeed lays at the crossroad of several other domains of AI and requires to
+tackle them in a holistic manner: Modeling humans and human cognition;
+acquiring, representing, manipulating in a tractable way abstract knowledge;
+reasoning on this knowledge to make decisions; and eventually instantiating
+those decisions into physical actions in coordination with humans. Many AI
+techniques are invited, from visual processing to symbolic reasoning, from task
+planning to \emph{theory of mind} building, from reactive control to action
+recognition and learning.
+
+\paragraph{Theory of Mind}
+
+Theory of Mind (originally defined in~\cite{premack1978does}) is the cognitive
+ability that a subject possesses to represent the mental state of another
+agent, possibly including knowledge that contradicts the subject's own model: for
+example, a book can be at the same time \emph{visible} for myself, and \emph{not
+visible} for you.
+
+Children develop this skill, which is essential to understand others'
+perspectives during interactions, around the age of three. It supposes the
+ability to build, store and retrieve separate models of the knowledge of the
+interactors.
+
+One classical application of this cognitive skill is the so-called
+\emph{False-Belief} experiment (also known as the \emph{Sally and Ann}
+experiment)~\cite{Leslie2000}: a child is asked to watch a scene where two
+people, A and B, manipulate objects. Then A leaves and B hides away one
+object. When A comes back, we ask the child ``where do you think A will
+look for the object?''. Before acquiring a theory of mind, children are not
+able to separate their own (true) model of the world (where they know that
+the object was hidden) from the model of A, which contains \emph{false
+beliefs} on the world (A still thinks the object is at its original
+position since he did not see B hiding it).
+
+
 \paragraph{Mutual Modelling}
 
 In order to build a shared understanding, do partners have to build a
@@ -201,16 +236,31 @@ or to plan tasks that are actually doable for the human.
 
 \subsection{Detailed research plan}
 
-\subsubsection{Simple model of mutual modeling}
+\subsubsection{Research questions}
 
-To report experiments on MM, we use a simple notational system: "A knows that B
-knows X", noted \model{A}{B}{X} is a simplistic but hopefully useful reduction to
-reason on mutual modeling. This notation does not mean A as an explicit,
-monolithic representation of B: It is an abstraction referring to complex
-socio-cognitive processes. 
+
+The core research question we want to address in this project is
+$(\mathcal{Q}_1)$ how mutual modeling impacts the quality of the human-robot
+interaction?  \emph{Quality}, in our context, is measured as the performance of
+the human-robot pair in selected joint tasks.
+
+To actually instigate a mutual modeling situation, three other research
+questions must be addressed. $(\mathcal{Q}_2)$ how can the robot acquire and
+represent a mental model of its partners? $(\mathcal{Q}_3)$ conversely, how do
+the human partners model the robot and what are the robot's design/behavioural
+factors that influences it? $(\mathcal{Q}_4)$ once the robot detects
+misunderstandings, what should be the interaction strategy?
+\subsubsection{A theoretical model of mutual modeling}
+
+
+To report experiments on MM, we use a simple notational system: ``A knows that B
+knows X", noted \model{A}{B}{X}. This is a simple but hopefully useful reduction to
+reason on mutual modeling. This notation does not mean A has an explicit,
+monolithic representation of B: it must be understood as an abstraction referring to complex
+socio-cognitive processes.
 
 We refer to the degree of accuracy of the mutual model as
-\Model{A}{B}{X}. To estimate, the MM effort, we need 3 variables. 
+\Model{A}{B}{X}. To estimate the MM effort, we need 3 variables.
 
 \begin{enumerate}
 
@@ -329,7 +379,8 @@ estimate \Model{A}{B}{X}.
 
 \end{itemize}
 
-\subsubsection{Research questions}
+
+\subsubsection{Studies}
 
 The experiments we report here address MM across different tasks, some with
 dyads, other with triads. They were conducted along 6 years in two different
@@ -339,10 +390,10 @@ questions across these studies. We start with 3 simple hypotheses about
 $\mathcal{M}^{\circ}(A,B)$:
 
 \begin{itemize}
-    \item $\mathcal{H}_{1}$: $\mathcal{M}^{\circ}(A,B)$ depends upon A’s ability or effort
+    \item $\mathcal{H}_{1}$: $\mathcal{M}^{\circ}(A,B)$ depends upon A's ability or effort
         to model B,
     
-    \item $\mathcal{H}_{2}$: $\mathcal{M}^{\circ}(A,B)$ depends upon  B’s ability of
+    \item $\mathcal{H}_{2}$: $\mathcal{M}^{\circ}(A,B)$ depends upon  B's ability of
         effort to help A to model him/herself 
 
     \item $\mathcal{H}_{3}$: $\mathcal{M}^{\circ}(A,B)$ depends upon the quality of
