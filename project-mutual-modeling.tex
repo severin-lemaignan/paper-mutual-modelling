@@ -10,6 +10,14 @@
 \newcommand{\eg}{{\textit{e.g.\ }}}
 \newcommand{\al}{{\textit{et al.\ }}}
 
+\newcommand{\M}[3]{{\mathcal{M}(#1, #2, #3)}}
+\newcommand{\model}[3]{{$\mathcal{M}(#1, #2, #3)$}}
+\newcommand{\Model}[3]{{$\mathcal{M}^{\circ}(#1, #2, #3)$}}
+
+\newcommand{\concept}[1]{{\small \texttt{#1}}}
+\newcommand{\stmt}[1]{{\footnotesize \tt $\langle$ #1\relax$\rangle$}}
+
+
 
 \begin{document}
 
@@ -73,7 +81,7 @@ $Model(A,B,X)$:
     \item $Model(A,B, "urgent")$: What does A about know B's understanding of A's
         last utterance: does ‘urgent’ means now, ASAP and ‘not too lat’ ?
 
-    \item We could continue the list of what is X is $\mathcal{M}(A,B,X)$: beliefs,
+    \item We could continue the list of what is X is \model{A}{B}{X}: beliefs,
         emotions, history, status, …
 
 \end{itemize}
@@ -91,21 +99,22 @@ mechanisms, first for building an initial model of the partner and then for
 updating this model.  As two students meet for the first time, mutual models are
 initialized by the assumptions they make upon each other from cues such as
 his/her membership to large categories (age, culture, profession, ...) include
-stereotypes (sportsmen, junkie, business women, Swiss,…) as well as physical
+stereotypes (sportsmen, junkie, business women, Swiss,...) as well as physical
 appearance. Scholars studied how initial modeling impacts communication. In
-their experiments on initial MM, Slugoski, Lalljee, Lamb \& Ginsburg (1993)
-pretended to their subjects that their (fake) partner had or had not received
-the same information. They observed that the subjects adapted their dialogue by
-focusing the explanation on the items that (s)he was supposed to ignore. Brennan
-(1991) showed that the subjects used different initial strategies in forming
-queries depending on who they were told their partner was.  
+their experiments on initial MM, Slugoski, Lalljee, Lamb \&
+Ginsburg~\cite{slugoski1993attribution} pretended to their subjects that their
+(fake) partner had or had not received the same information. They observed that
+the subjects adapted their dialogue by focusing the explanation on the items
+that (s)he was supposed to ignore. Brennan (1991) showed that the subjects used
+different initial strategies in forming queries depending on who they were told
+their partner was.  
 
 Initial common grounds are also initiated by co-presence: they include events to
-which A and B attended together (Clark \& Marshall, 1981) in the physical space
+which A and B attended together~\cite{clark2002definite} in the physical space
 or in our cultural space (\eg ‘09-11’). Co-presence means that we can refer to
 a shared objects and event,-s it does of course not imply that we give them the
-same meaning. Namely, a shared screen does not mean a shared understanding
-(Dillenbourg \& Traum, 2006).
+same meaning. Namely, a shared screen does not mean a shared
+understanding~\cite{dillenbourg2006sharing}.
 
 After initialization, mutual models are updated along the collaborative work
 through verbal and non-verbal interactions. A default inference rule is that "my
@@ -121,42 +130,97 @@ reviews the features of the collaborative situation, namely the media
 reported a study in which a short silence between two pilots was perfectly
 interpreted because it occurred in a highly constrained communication context.
 Some environments are more productive than others in helping peers to detect
-their misunderstandings. Roschelle (REF) reformulate the design of CSCL
-interfaces as providing ways for peer to detect and repairs their
-misunderstanding. In CSCW, researchers have explored various so-called
-"awareness tools", \ie functionalities that inform A is about B's actions that
-A could not directly perceived because B was working on a different subset of
-the virtual space. Different awareness tools will be addressed in this
-contribution since they allowed us to manipulate experimentally the MM activity. 
+their misunderstandings. Roschelle~\cite{roschelle1995construction} reformulate
+the design of CSCL interfaces as providing ways for peer to detect and repairs
+their misunderstanding. In CSCW, researchers have explored various so-called
+"awareness tools", \ie functionalities that inform A is about B's actions that A
+could not directly perceived because B was working on a different subset of the
+virtual space. Different awareness tools will be addressed in this contribution
+since they allowed us to manipulate experimentally the MM activity. 
 
 \section{Research Plan}
 
 \subsection{State of the Art}
 
+\paragraph{Building a model of a human during the interaction} Perspective
+Taking is a human ability which allows one to put him/herself in another
+person's point of view. Studied in psychology
+literature~\cite{Flavell1992,Tversky1999}, this ability is crucial when
+interacting with people by allowing one to reason on others' understanding of
+the world in terms of visual perception, spatial descriptions, affordances and
+beliefs, etc.  In the last years these notions have been gradually employed in
+HRI.~\cite{Breazeal2006} presents a learning algorithm that takes into account
+information about a teacher's visual perspective in order to learn a task.
+~\cite{Johnson2005} apply visual perspective taking for action recognition
+between two robots.~\cite{Trafton2005} use both visual and spatial perspective
+taking to find out the referent indicated by a human partner.
+
+The cognitive model that the robot builds for the agent it interacts with is
+still simple and mostly focused on geometric features (who sees what? What are
+our relative positions? etc.). Extending this knowledge with more subtle
+perceptions (emotional state for instance) remains to be done.
+
+\paragraph{Joint action}
+Several theories dealing with collaboration~\cite{Cohen1991,Grosz1996,Clark1996}
+emphasize that collaborative tasks have specific requirements compared to
+individual ones, \eg, since the robot and the person share a common goal, they
+have to agree on the manner to realize it, they must show their commitment to
+the goal during execution, etc. Several robotic systems have already been built
+based on these theories~\cite{Rich1997,Sidner2005,Breazeal2003} and they all
+have shown benefits of this approach. They have also shown how difficult it is
+to manage turn-taking between communication partners and to interleave task
+realization and communication in a generic way. Finally, today only few
+systems~\cite{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
+levels.
+
 \subsection{Related research of the requirers}
+
+Our knowledge base implements such a mechanism: when the robots infers a new
+agent has been introduced in the knowledge base, it initializes a new,
+independent, ontology for this agent. All the ontologies that are created share
+the same common-sense knowledge, but rely on each agent's perspective for the
+actual instantiation: the robot (geometrically) computes that the book is in
+its own field of view, but not in the human one. The robot knowledge contains
+the fact \stmt{book isVisible true} while the human model contains \stmt{book
+isVisible false}.
+
+Using separate knowledge models in the knowledge base, we have been able to
+replicate the \emph{Sally and Ann} false-belief experiment with our
+robots~\cite{warnier2012when}.
+
+In our implementation, perspective taking is tightly connected to the symbolic
+knowledge models, and since our knowledge base allows for storage of one
+knowledge model per agent, we have been able to endow the robot with a simple
+theory of mind: we explicitly model
+what the robot knows about its partners in a symbolic way. This knowledge is
+then re-used in different places, to correctly interpret what the human says,
+or to plan tasks that are actually doable for the human.
+
+
+
 
 \subsection{Detailed research plan}
 
 \subsubsection{Simple model of mutual modeling}
 
 To report experiments on MM, we use a simple notational system: "A knows that B
-knows X", noted $\mathcal{M}(A,B,X)$ is a simplistic but hopefully useful reduction to
+knows X", noted \model{A}{B}{X} is a simplistic but hopefully useful reduction to
 reason on mutual modeling. This notation does not mean A as an explicit,
 monolithic representation of B: It is an abstraction referring to complex
 socio-cognitive processes. 
 
 We refer to the degree of accuracy of the mutual model as
-$\mathcal{M}^{\circ}(A,B,X)$. To estimate, the MM effort, we need 3 variables. 
+\Model{A}{B}{X}. To estimate, the MM effort, we need 3 variables. 
 
 \begin{enumerate}
-    
+
     \item Tasks vary a lot with respect to how much they require.  The grounding
         criterion – denoted $\mathcal{M}^{\circ}_{min}$  - refers to how
         important it is to mutually share a piece of information X to succeed
         the task T.. It can be computed as the probability to succeed T despite
         the fact X is not grounded. In the next studies, we estimate
         $\mathcal{M}^{\circ}_{min}(A,B,X)$ as the correlation between
-        $\mathcal{M}^{\circ}(A,B,X)$ and task performance. 
+        \Model{A}{B}{X} and task performance. 
 
     \item Before any specific grounding act, there is rarely a null probability
         that X is mutually understood by A and B: because X is part of A's and
@@ -170,12 +234,12 @@ $\mathcal{M}^{\circ}(A,B,X)$. To estimate, the MM effort, we need 3 variables.
         necessary to perform a grounding act α: a verbal repair (\eg
         rephrasing), a deictic gesture, a physical move to adopt one partner's
         viewpoint, etc. This cost varies according to media features ( Clark \&
-        Brennan (REF….). 
+        Brennan (REF)). 
 
 \end{enumerate}
 
 Based on these 3 parameters, the probability of making an action $\alpha_{t1}$ about
-content X at time $t1$ during task T for increasing $\mathcal{M}^{\circ}(A,B,X)$
+content X at time $t1$ during task T for increasing \Model{A}{B}{X}
 at time $t2$ is the ratio between how much it is needed  ((2)-(1)) and how much it
 costs (3)(Traum \& Dillenbourg, 1996):
 
@@ -187,22 +251,22 @@ are hard to quantify (\eg the cost an communication acts depends upon the user
 as well) but it clarifies the parameters of the experiments we report hereafter.
 
 \begin{itemize}
-    \item $\mathcal{M}^{\circ}(A,B,X)$: Our experiments address different contents that can be
+    \item \Model{A}{B}{X}: Our experiments address different contents that can be
         represented in mutual models:
 
         \begin{enumerate}
-            \item $\mathcal{M}(A,B,emotion)$: how accurately A perceives B's emotional state
+            \item \model{A}{B}{emotion}: how accurately A perceives B's emotional state
                 (study 3); 
 
-            \item $\mathcal{M}(A,B,actions)$ is about how well A guesses what action B has
+            \item \model{A}{B}{actions} is about how well A guesses what action B has
                 done (study 2) or will do next  (study 1)
 
-            \item $\mathcal{M} (A,B,knowledge)$: how accurately A estimates B's knowledge
+            \item \model{A}{B}{knowledge}: how accurately A estimates B's knowledge
                 with respect to the material they learn together (study 4 and 5)
 
         \end{enumerate}
 
-    \item $\mathcal{M}^{\circ\circ}(A,B,X,T)$ Our studies concern various collaborative tasks:
+    \item \Model{A,B}{X}{T} Our studies concern various collaborative tasks:
         argumentation (study 3), games (study 1 and 2) and concept mapping
         (study 4 and 5). By varying the tasks, we do actually vary the grounding
         criterion but they all require a "reasonably high" grounding criterion.
@@ -233,9 +297,9 @@ as well) but it clarifies the parameters of the experiments we report hereafter.
 \end{itemize}
 
 
-Measuring $\mathcal{M}^{\circ}(A,B,X)$ is methodologically difficult. We
-discriminate two steps, first to capture $\mathcal{M}(A,B,X)$ and then to
-estimate $\mathcal{M}^{\circ}(A,B,X)$. 
+Measuring \Model{A}{B}{X} is methodologically difficult. We
+discriminate two steps, first to capture \model{A}{B}{X} and then to
+estimate \Model{A}{B}{X}. 
 
 \begin{itemize}
     \item Capturing M (A,B,X) The simplest method is to ask A what (s)he
@@ -247,17 +311,17 @@ estimate $\mathcal{M}^{\circ}(A,B,X)$.
         have no other choice:. The first method was used in study 2 and the
         second one in the other studies.  
 
-    \item Estimating $\mathcal{M}^{\circ}(A,B,X)$. The accuracy of
-        $\mathcal{M}(A,B,X)$ can be
+    \item Estimating \Model{A}{B}{X}. The accuracy of
+        \model{A}{B}{X} can be
         estimated in 2 ways.
         \begin{itemize}
             \item Subjective accuracy: In study 3, we compute
-                $\mathcal{M}^{\circ}(A,B,emotions)$ by measuring if A describe
-                B's emotions in the same way B reports her emotions (
+                \Model{A}{B}{emotions} by measuring if A describe
+                B's emotions in the same way B reports her emotions 
                 ($\mathcal{M}(A,B)=\mathcal{M}(B,B)$) 
                 
             \item Objective accuracy: In studies 4 and 5, w we compute
-                $\mathcal{M}^{\circ}(A,B,knowledge)$ by comparing
+                \Model{A}{B}{knowledge} by comparing
                 $\mathcal{M}^{\circ}A,B,K)$ to B's actual knowledge as it has
                 measured by a test. 
 
@@ -292,12 +356,12 @@ $\mathcal{H}_{2}$ is also called a second level modeling hypothesis since H
 needs to monitor B to see if A understood him/her
 $\mathcal{M}(B,(A,\mathcal{M}(A,B)))$
 
-Our main issue is the symmetry questions: what is the relationship (fig.1)
-between $\mathcal{M}^{\circ}(A,B,X)$ and $\mathcal{M}^{\circ}(B,A,X)$? A low
-symmetry would mean that mutual modeling
-is mainly an individual attitude/aptitude ($\mathcal{H}_{1}$). A high
-correlation might support $\mathcal{H}_{2}$ since there is a low probability
-that randomly formed pairs integrate peers with the same level of MM skills.
+Our main issue is the symmetry questions: what is the relationship
+(Fig.~\ref{mm_symmetry}) between \Model{A}{B}{X} and
+\Model{B}{A}{X}? A low symmetry would mean that mutual modeling is
+mainly an individual attitude/aptitude ($\mathcal{H}_{1}$). A high correlation
+might support $\mathcal{H}_{2}$ since there is a low probability that randomly
+formed pairs integrate peers with the same level of MM skills.
 
 \begin{figure*}[htb]
 \centering
@@ -306,8 +370,8 @@ that randomly formed pairs integrate peers with the same level of MM skills.
 
 \draw(0,0) node[anchor=north] (A) {\scriptsize A};
 \draw(10,0) node[anchor=north] (B) {\scriptsize B};
-\draw(5,2) node[anchor=north] {\scriptsize $\mathcal{M}^{\circ}(A, B, X)$};
-\draw(5,-2) node[anchor=north] {\scriptsize $\mathcal{M}^{\circ}(B, A, X)$};
+\draw(5,2) node[anchor=north] {\scriptsize \Model{A}{ B}{ X}};
+\draw(5,-2) node[anchor=north] {\scriptsize \Model{B}{ A}{ X}};
 \draw[dashed, <->] (5,1) -- (5,-1.9) node[midway, sloped, above] {$\Delta_1$};
 \draw[->] (A) to[bend left] (B);
 \draw[->] (B) to[bend left] (A);
@@ -317,22 +381,21 @@ that randomly formed pairs integrate peers with the same level of MM skills.
 \caption{The MM symmetry question $\Delta_1 =  \Delta(\mathcal{M}^{\circ} (A,B,X),
 \mathcal{M}^{\circ} (B,A,X))$}
 
-\label{mm_symetry}
+\label{mm_symmetry}
 \end{figure*}
 
 
 With triads, we may compute the accuracy of 6 models:
-$\mathcal{M}^{\circ}(A,B)$, $\mathcal{M}^{\circ}(B,A)$,
-$\mathcal{M}^{\circ}(A,C)$, $\mathcal{M}^{\circ}(C,A)$,
-$\mathcal{M}^{\circ}(C,B)$ and $\mathcal{M}^{\circ}(B,C)$. This enables two
-triangle questions (see figure 2):
+\Model{A}{B}{X}, \Model{B}{A}{X}, \Model{A}{C}{X}, \Model{C}{A}{X},
+\Model{C}{B}{X} and \Model{B}{C}{X}. This enables two
+triangle questions (see Fig.~\ref{mm_triangles}):
 
-Do A and B have the same accuracy when modeling C? $\Delta2 =
-\Delta(\mathcal{M}(A,C,X), \mathcal{M}(B,C,X))$ If it is the same,
+Do A and B have the same accuracy when modeling C? $\Delta_2 =
+\Delta(\M{A}{C}{X}, \M{B}{C}{X})$ If it is the same,
 $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$ gain over $\mathcal{H}_{1}$
 
-Does C model more accurately A than B? $\Delta3= \Delta(\mathcal{M}(C,A,X),
-\mathcal{M}(C,B,X))$ A positive answer would support $\mathcal{H}_{3}$.
+Does C model more accurately A than B? $\Delta_3= \Delta(\M{C}{A}{X},
+\M{C}{B}{X})$ A positive answer would support $\mathcal{H}_{3}$.
 
 \begin{figure}[htb]
 \centering
@@ -343,8 +406,8 @@ Does C model more accurately A than B? $\Delta3= \Delta(\mathcal{M}(C,A,X),
     \draw(0,-2) node (B) {\scriptsize B};
     \draw(10,0) node (C) {\scriptsize C};
 
-    \draw(5,2) node {\scriptsize $\mathcal{M}^{\circ}(A, C, X)$};
-    \draw(5,-2) node {\scriptsize $\mathcal{M}^{\circ}(B, C, X)$};
+    \draw(5,2) node {\scriptsize \Model{A}{ C}{ X}};
+    \draw(5,-2) node {\scriptsize \Model{B}{ C}{ X}};
     \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above] {$\Delta_2$};
     \draw[->] (A) to (C);
     \draw[->] (B) to (C);
@@ -358,8 +421,8 @@ Does C model more accurately A than B? $\Delta3= \Delta(\mathcal{M}(C,A,X),
     \draw(0,-2) node (B) {\scriptsize B};
     \draw(10,0) node (C) {\scriptsize C};
 
-    \draw(5,2) node {\scriptsize $\mathcal{M}^{\circ}(C, A, X)$};
-    \draw(5,-2) node {\scriptsize $\mathcal{M}^{\circ}(C, B, X)$};
+    \draw(5,2) node {\scriptsize \Model{C}{ A}{ X}};
+    \draw(5,-2) node {\scriptsize \Model{C}{ B}{ X}};
     \draw[dashed, <->] (3,1.2) -- (3,-1.2) node[midway, sloped, above]
     {$\Delta_3$};
     \draw[<-] (A) to (C);
@@ -369,32 +432,33 @@ Does C model more accurately A than B? $\Delta3= \Delta(\mathcal{M}(C,A,X),
 }
 \caption{The MM triangle questions}
 
-\label{mm_triangle}
+\label{mm_triangles}
 \end{figure}
 
 
 
-In addition, the comparison between ($\Delta2$) and ($\Delta3$) could tell us
+In addition, the comparison between $\Delta_2$ and $\Delta_3$ could tell us
 whether the accuracy of mutual modelling depends more upon the modeller's effort
 or the modellee's behaviour.
 
-The rectangle questions 
+\paragraph{The rectangle questions}
 
-We could go further by comparing self- versus other modeling ($\Delta4$ in Fig.
-3) as an indication of metacognitive skills. We could also see if modeling
-skills depend upon what aspects are being modeled (X or Y), which would explain
-vertical differences ($\Delta5$ in Fig. 3). We do not further develop these
-questions because we don’t have the necessary data in our studies.
+We could go further by comparing self- versus other modeling $\Delta_4$ in
+Fig.~\ref{mm_rectangle}) as an indication of metacognitive skills. We could also
+see if modeling skills depend upon what aspects are being modeled (X or Y),
+which would explain vertical differences ($\Delta_5$ in
+Fig.~\ref{mm_rectangle}). We do not further develop these questions because we
+don’t have the necessary data in our studies.
 
 \begin{figure*}[htb]
 \centering
 
 \begin{tikzpicture}[scale=0.5]
 
-    \draw(0,0) node (a) {\scriptsize $\mathcal{M}^{\circ}(A, B, X)$};
-    \draw(10,0) node (b) {\scriptsize $\mathcal{M}^{\circ}(A, A, X)$};
-    \draw(10,-4) node (c) {\scriptsize $\mathcal{M}^{\circ}(A, A, Y)$};
-    \draw(0,-4) node (d) {\scriptsize $\mathcal{M}^{\circ}(A, B, Y)$};
+    \draw(0,0) node (a) {\scriptsize \Model{A}{ B}{ X}};
+    \draw(10,0) node (b) {\scriptsize \Model{A}{ A}{ X}};
+    \draw(10,-4) node (c) {\scriptsize \Model{A}{ A}{ Y}};
+    \draw(0,-4) node (d) {\scriptsize \Model{A}{ B}{ Y}};
     \draw[<->] (a) -- (b) node[midway, below] {$\Delta_4$};
     \draw[<->] (b) -- (c);
     \draw[<->] (c) -- (d);
