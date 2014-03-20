@@ -16,6 +16,9 @@
 \newcommand{\model}[3]{{$\mathcal{M}(#1, #2, #3)$}}
 \newcommand{\Model}[3]{{$\mathcal{M}^{\circ}(#1, #2, #3)$}}
 
+\newcommand{\groundingcriterion}{{$\mathcal{M}^{\circ}_{min}$}}
+\newcommand{\inigrounding}{{$\mathcal{M}^{\circ}_{t_0}$}}
+
 \newcommand{\concept}[1]{{\small \texttt{#1}}}
 \newcommand{\stmt}[1]{{\footnotesize \tt $\langle$ #1\relax$\rangle$}}
 
@@ -297,22 +300,22 @@ since they allowed us to manipulate experimentally the mutual modelling activity
 %systems~\cite{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
 %levels.
 %
-\section{A simple notation system}
+\section{A model for mutual modelling evaluation}
 
 To report experiments on mutual modeling, we suggest
 the notation \model{A}{B}{X} to denote ``A knows that B knows X". This is a
-simple but hopefully useful reduction to reason on mutual modeling. This
+simple but useful reduction to reason on mutual modelling. This
 notation does not mean A has an explicit, monolithic representation of B: it
 must be understood as an abstraction referring to complex socio-cognitive
 processes. Besides, we refer to the \emph{degree of accuracy} of the model as
 \Model{A}{B}{X}.
 
-To estimate the mutual modelling effort, we need 3 variables:
+We parametrize and assess the mutual modelling effort through 3 variables:
 
 \begin{enumerate}
 
     \item Tasks vary a lot with respect to how much they require.  The grounding
-        criterion -- denoted $\mathcal{M}^{\circ}_{min}$ -- refers to how
+        criterion -- denoted \groundingcriterion -- refers to how
         important it is to mutually share a piece of information X to succeed
         the task T. It can be computed as the probability to succeed T despite
         the fact X is not grounded. $\mathcal{M}^{\circ}_{min}(A,B,X)$ can be
@@ -431,7 +434,7 @@ estimate \Model{A}{B}{X}.
 
 \subsubsection{Studies}
 
-The experiments we report here address MM across different tasks, some with
+The experiments we report here address mutual modelling across different tasks, some with
 dyads, other with triads. They were conducted along 6 years in two different
 institutions by different researchers. They used different independent,
 intermediate and dependent variables. Nonetheless, we were able to address a few
