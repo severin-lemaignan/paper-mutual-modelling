@@ -64,7 +64,7 @@ position since he did not see B hiding it).
 \paragraph{Mutual Modelling}
 
 In order to build a shared understanding, do partners have to build a
-representation of each other's knowledge? We refer to \emph{mutual modeling} (MM) as
+representation of each other's knowledge? We refer to \emph{mutual modeling} as
 the process of inferring one's partner mental states. Any claim that students
 carry out a detailed monitoring of their peers would be as incorrect as any
 claim that they do not maintain any representation at all. If mutual modeling
@@ -77,8 +77,9 @@ what I believe unless contrary evidence), opportunistic (A does not model B
 unless the conversation requires it), global (A infers B's beliefs based on
 categories such as age, culture or profession) and, of course, it can be
 incorrect… but it can not remain empty. Dialogues include many instances of
-utterances such as "I thought he would do that" (first level of MM) or even "He
-thought I would do that but I intended something else." (second level of MM). 
+utterances such as "I thought he would do that" (first level of mutual
+modelling) or even "He thought I would do that but I intended something else."
+(second level of mutual modelling).
 
 The content of mutual models ranges from 'dispositional' versus 'situational'
 aspects. The 'dispositional' aspects refer to A's representation of B's long
@@ -121,8 +122,8 @@ aspects X, noted $Model(A,B,X)$:
 
 \end{itemize}
 
-We have different levels of MM. If A states "B thinks I am god in maths", we
-are the second level of MM:  $Model(A, B, Model(B,A, knowledge="good in
+We have different levels of mutual modelling. If A states "B thinks I am god in maths", we
+are the second level of mutual modelling:  $Model(A, B, Model(B,A, knowledge="good in
 math"))$. There is an infinite regress of nested models: If A says "B knows that
 I don't expect him to solve this statistics problem" corresponds to $Model(A, B,
 Model (B, A (Model (A,B, statistic-skills)))$.
@@ -136,7 +137,7 @@ initialized by the assumptions they make upon each other from cues such as
 his/her membership to large categories (age, culture, profession, ...) include
 stereotypes (sportsmen, junkie, business women, Swiss,...) as well as physical
 appearance. Scholars studied how initial modeling impacts communication. In
-their experiments on initial MM, Slugoski, Lalljee, Lamb \&
+their experiments on initial mutual modelling, Slugoski, Lalljee, Lamb \&
 Ginsburg~\cite{slugoski1993attribution} pretended to their subjects that their
 (fake) partner had or had not received the same information. They observed that
 the subjects adapted their dialogue by focusing the explanation on the items
@@ -171,7 +172,7 @@ their misunderstanding. In CSCW, researchers have explored various so-called
 "awareness tools", \ie functionalities that inform A is about B's actions that A
 could not directly perceived because B was working on a different subset of the
 virtual space. Different awareness tools will be addressed in this contribution
-since they allowed us to manipulate experimentally the MM activity. 
+since they allowed us to manipulate experimentally the mutual modelling activity. 
 
 \section{Research Plan}
 
@@ -208,97 +209,72 @@ realization and communication in a generic way. Finally, today only few
 systems~\cite{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
 levels.
 
-\subsection{Related research of the requirers}
-
-Our knowledge base implements such a mechanism: when the robots infers a new
-agent has been introduced in the knowledge base, it initializes a new,
-independent, ontology for this agent. All the ontologies that are created share
-the same common-sense knowledge, but rely on each agent's perspective for the
-actual instantiation: the robot (geometrically) computes that the book is in
-its own field of view, but not in the human one. The robot knowledge contains
-the fact \stmt{book isVisible true} while the human model contains \stmt{book
-isVisible false}.
-
-Using separate knowledge models in the knowledge base, we have been able to
-replicate the \emph{Sally and Ann} false-belief experiment with our
-robots~\cite{warnier2012when}.
-
-In our implementation, perspective taking is tightly connected to the symbolic
-knowledge models, and since our knowledge base allows for storage of one
-knowledge model per agent, we have been able to endow the robot with a simple
-theory of mind: we explicitly model
-what the robot knows about its partners in a symbolic way. This knowledge is
-then re-used in different places, to correctly interpret what the human says,
-or to plan tasks that are actually doable for the human.
+\subsection{Related research of the applicants}
 
 
+Pierre Dillenbourg has been working since several years on the role and importance
+of mutual modelling in human-human interaction, specifically in the context of
+learning sciences.
 
+He already conducted several experiments~\cite{sangin2007partner,
+nova2007collaboration} that supported the idea that modelling partners is not only
+an individual skill. When engaged in a social task that could benefit from
+mutual modelling, the accuracy of the models build by each of the participant on
+the other participants increase.
 
-\subsection{Detailed research plan}
+In the frame of this work, Pierre Dillenbourg has proposed a simple formalism
+that we describe below, and that we will use subsequently to describe the mutual
+modelling situations.
 
-\subsubsection{Research questions}
+\paragraph{A simple notational system for mutual modeling} We suggest
+the notation \model{A}{B}{X} to denote ``A knows that B knows X". This is a
+simple but hopefully useful reduction to reason on mutual modeling. This
+notation does not mean A has an explicit, monolithic representation of B: it
+must be understood as an abstraction referring to complex socio-cognitive
+processes. Besides, we refer to the \emph{degree of accuracy} of the model as
+\Model{A}{B}{X}.
 
-
-The core research question we want to address in this project is
-$(\mathcal{Q}_1)$ how mutual modeling impacts the quality of the human-robot
-interaction?  \emph{Quality}, in our context, is measured as the performance of
-the human-robot pair in selected joint tasks.
-
-To actually instigate a mutual modeling situation, three other research
-questions must be addressed. $(\mathcal{Q}_2)$ how can the robot acquire and
-represent a mental model of its partners? $(\mathcal{Q}_3)$ conversely, how do
-the human partners model the robot and what are the robot's design/behavioural
-factors that influences it? $(\mathcal{Q}_4)$ once the robot detects
-misunderstandings, what should be the interaction strategy?
-\subsubsection{A theoretical model of mutual modeling}
-
-
-To report experiments on MM, we use a simple notational system: ``A knows that B
-knows X", noted \model{A}{B}{X}. This is a simple but hopefully useful reduction to
-reason on mutual modeling. This notation does not mean A has an explicit,
-monolithic representation of B: it must be understood as an abstraction referring to complex
-socio-cognitive processes.
-
-We refer to the degree of accuracy of the mutual model as
-\Model{A}{B}{X}. To estimate the MM effort, we need 3 variables.
+To estimate the mutual modelling effort, we need 3 variables:
 
 \begin{enumerate}
 
     \item Tasks vary a lot with respect to how much they require.  The grounding
-        criterion – denoted $\mathcal{M}^{\circ}_{min}$  - refers to how
+        criterion -- denoted $\mathcal{M}^{\circ}_{min}$ -- refers to how
         important it is to mutually share a piece of information X to succeed
-        the task T.. It can be computed as the probability to succeed T despite
-        the fact X is not grounded. In the next studies, we estimate
-        $\mathcal{M}^{\circ}_{min}(A,B,X)$ as the correlation between
-        \Model{A}{B}{X} and task performance. 
+        the task T. It can be computed as the probability to succeed T despite
+        the fact X is not grounded. $\mathcal{M}^{\circ}_{min}(A,B,X)$ can be
+        estimated from the correlation between \Model{A}{B}{X} and task
+        performance. 
 
-    \item Before any specific grounding act, there is rarely a null probability
+    \item Before any specific grounding act, there is usually a non-null probability
         that X is mutually understood by A and B: because X is part of A's and
         B's cultures, because it is manifest to co-present subjects or simply
         because there is not much space for misunderstanding or disagreement
         about X. We could not simply collaborate without a high level of initial
         grounds. We note the theoretical accuracy of initial grounds:
-        $\mathcal{M}^{\circ}_{t1}(A,B,X)$.
+        $\mathcal{M}^{\circ}_{t_0}(A,B,X)$.
 
     \item The cost of grounding X refers to the physical and cognitive effort
-        necessary to perform a grounding act α: a verbal repair (\eg
+        necessary to perform a grounding act $\alpha$: a verbal repair (\eg
         rephrasing), a deictic gesture, a physical move to adopt one partner's
         viewpoint, etc. This cost varies according to media features ( Clark \&
         Brennan (REF)). 
 
 \end{enumerate}
 
-Based on these 3 parameters, the probability of making an action $\alpha_{t1}$ about
-content X at time $t1$ during task T for increasing \Model{A}{B}{X}
-at time $t2$ is the ratio between how much it is needed  ((2)-(1)) and how much it
-costs (3)(Traum \& Dillenbourg, 1996):
+Based on these 3 parameters, the probability of making an action $\alpha_{t_1}$ about
+content X at time $t_1$ during task T in order to increase \Model{A}{B}{X}
+at time $t_2$ is the ratio between how much it is needed  ((2)-(1)) and how much it
+costs (3)~\cite{traum1996miscommunication}:
 
-$p(\alpha_{t1}(X,T)   M^{\circ}_{t2}(A,B,X)) ≈ (M^{\circ}_{min}(A,B,X,T) -
-M^{\circ}_{t1}(A,B,X))/cost (\alpha)$
+\begin{equation}
+p(\alpha_{t_1}(X,T) / M^{\circ}_{t_2}(A,B,X) \nearrow) \approx \frac{(M^{\circ}_{min}(A,B,X,T) -
+M^{\circ}_{t_1}(A,B,X))}{cost (\alpha)}
+\end{equation}
 
 This is qualitative summary more that a real equation since several parameters
 are hard to quantify (\eg the cost an communication acts depends upon the user
-as well) but it clarifies the parameters of the experiments we report hereafter.
+as well) but it clarifies the parameters of the experiments we propose hereafter.
 
 \begin{itemize}
     \item \Model{A}{B}{X}: Our experiments address different contents that can be
@@ -330,18 +306,18 @@ as well) but it clarifies the parameters of the experiments we report hereafter.
         with teams of students who did not know each other. They came
         nonetheless from the same university: they hence had some general common
         grounds.  For studies 2 and 3, students knew each other before for
-        reasons explained later on. In study 5, we manipulated the initial MM by
+        reasons explained later on. In study 5, we manipulated the initial mutual modelling by
         using a JIGSAW script.
 
     \item $cost(\alpha)$ In all studies but study 4, the cost of  grounding is
         an independent variable. Study 3 uses media richness as independent
         variable, with the hypothesis that modeling emotions is "cheaper" with a
         richer medium, \ie  when peers can see each other.  Studies 1,2 and 4
-        use awareness tools which, in principle, reduce the cost of MM, but do
+        use awareness tools which, in principle, reduce the cost of mutual modelling, but do
         not eliminate all costs: if the tool provide A with information about
         what B does/knows, this additional information may actually increase
-        cognitive load. Awareness tools constitute as a kind of MM prosthesis,
-        and, like any prosthesis, they many augment MM (by facilitating it or
+        cognitive load. Awareness tools constitute as a kind of mutual modelling prosthesis,
+        and, like any prosthesis, they many augment mutual modelling (by facilitating it or
         even scaffolding it) or inhibit it (by making it useless).
 
 \end{itemize}
@@ -412,7 +388,7 @@ Our main issue is the symmetry questions: what is the relationship
 \Model{B}{A}{X}? A low symmetry would mean that mutual modeling is
 mainly an individual attitude/aptitude ($\mathcal{H}_{1}$). A high correlation
 might support $\mathcal{H}_{2}$ since there is a low probability that randomly
-formed pairs integrate peers with the same level of MM skills.
+formed pairs integrate peers with the same level of mutual modelling skills.
 
 \begin{figure*}[htb]
 \centering
@@ -429,7 +405,7 @@ formed pairs integrate peers with the same level of MM skills.
 
 \end{tikzpicture}
 
-\caption{The MM symmetry question $\Delta_1 =  \Delta(\mathcal{M}^{\circ} (A,B,X),
+\caption{The mutual modelling symmetry question $\Delta_1 =  \Delta(\mathcal{M}^{\circ} (A,B,X),
 \mathcal{M}^{\circ} (B,A,X))$}
 
 \label{mm_symmetry}
@@ -481,7 +457,7 @@ Does C model more accurately A than B? $\Delta_3= \Delta(\M{C}{A}{X},
 
     \end{tikzpicture}
 }
-\caption{The MM triangle questions}
+\caption{The mutual modelling triangle questions}
 
 \label{mm_triangles}
 \end{figure}
