@@ -14,6 +14,7 @@
 
 \newcommand{\M}[3]{{\mathcal{M}(#1, #2, #3)}}
 \newcommand{\model}[3]{{$\mathcal{M}(#1, #2, #3)$}}
+\newcommand{\refmodel}[2]{{$\mathcal{M}(#1, #2)$}}
 \newcommand{\Model}[3]{{$\mathcal{M}^{\circ}(#1, #2, #3)$}}
 
 \newcommand{\groundingcriterion}{{$\mathcal{M}^{\circ}_{min}$}}
@@ -343,7 +344,7 @@ content X at time $t_1$ during task T in order to increase \Model{A}{B}{X}
 at time $t_2$ is the ratio between how much it is needed  ((2)-(1)) and how much it
 costs (3)~\cite{traum1996miscommunication}:
 
-\begin{equation}
+\begin{equation} \label{eq:probrepair}
 p(\alpha_{t_1}(X,T) / M^{\circ}_{t_2}(A,B,X) \nearrow) \approx \frac{(M^{\circ}_{min}(A,B,X,T) -
 M^{\circ}_{t_1}(A,B,X))}{cost (\alpha)}
 \end{equation}
@@ -356,17 +357,19 @@ as well) but it clarifies the parameters of the experiments we propose hereafter
     \item \Model{A}{B}{X}: Our experiments address different contents that can be
         represented in mutual models:
 
-        \begin{enumerate}
-            \item \model{A}{B}{emotion}: how accurately A perceives B's emotional state
-                (study 3); 
+    \begin{enumerate}
+        \item \model{A}{B}{emotion}: how accurately A perceives B's emotional state
+            (study 3); 
 
-            \item \model{A}{B}{actions} is about how well A guesses what action B has
-                done (study 2) or will do next  (study 1)
+        \item \model{A}{B}{actions} is about how well A guesses what action B has
+            done (study 2) or will do next  (study 1)
 
-            \item \model{A}{B}{knowledge}: how accurately A estimates B's knowledge
-                with respect to the material they learn together (study 4 and 5)
+        \item \model{A}{B}{knowledge}: how accurately A estimates B's knowledge
+            with respect to the material they learn together (study 4 and 5)
 
-        \end{enumerate}
+    \end{enumerate}
+
+
 
     \item \Model{A,B}{X}{T} Our studies concern various collaborative tasks:
         argumentation (study 3), games (study 1 and 2) and concept mapping
@@ -399,33 +402,60 @@ as well) but it clarifies the parameters of the experiments we propose hereafter
 \end{itemize}
 
 
-Measuring \Model{A}{B}{X} is methodologically difficult. We
+Each of the studies that we present in the next section have been design in such a way that, while tractable on a
+robot, mutual modelling plays a key role for the task performance: the tasks
+require a ``reasonably high" grounding criterion \groundingcriterion,
+and all tasks are about building a solution or a representation together.
+
+Along the same reasoning, the initial degree of common grounds \inigrounding
+should be rather low (and hence the difference between initial and required
+degrees rather high) in order to make mutual modelling effort more observable.
+While we can exactly control the actual initial knowledge available to the
+robot, estimating \inigrounding still requires special care during the design of
+the experiments: as we have previously shown~\cite{lemaignan2014dynamics,
+lemaignan2014cognitive} and because the interaction takes place between a human and
+a robot, the initial human model of the robot can widely vary depending on
+several factors like the user familiarity with technology, the effect of
+novelty, the user expectations or the anthropomorphic features of the robot.
+
+More generally, while we have explicit access to \model{R}{H}{X} (from the facts
+stored in the robot belief state, as illustrated in
+Table~\ref{table|beliefsfig7}), estimating \Model{R}{H}{X} also requires
+\model{H}{H}{X}, which depends on the meta-cognitive competencies of the human
+partner.
+
+Conversely, measuring \Model{A}{B}{X} is methodologically difficult. We
 discriminate two steps, first to capture \model{A}{B}{X} and then to
 estimate \Model{A}{B}{X}. 
 
 \begin{itemize}
-    \item Capturing M (A,B,X) The simplest method is to ask A what (s)he
-        believes about what B knows, feels, intends to do, etc. This raises
+    \item {\bf Capturing \model{A}{B}{X}}: The simplest method is to ask $A$ what (s)he
+        believes about what $B$ knows, feels, intends to do, etc. This raises
         obvious methodological concerns since such a question triggers a
         modeling process beyond what it would 'naturally' be. To avoid this
         bias, one can estimate mutual modeling after task completion. Then, the
-        obvious drawback are memory losses and by post-hoc reconstruction. We
-        have no other choice:. The first method was used in study 2 and the
-        second one in the other studies.  
+        obvious drawback are memory losses and by post-hoc reconstruction.
+        The first method was used in study 2 and the
+        second one in the other studies. Another option would be to rely on external behavioural metrics like
+        eye-tracking: we hypothesise for instance that the fixation time
+        reflects the efforts engaged by the human to understand, hence, model,
+        the others. Such an approach has however not yet been investigated in the presented studies.
 
-    \item Estimating \Model{A}{B}{X}. The accuracy of
-        \model{A}{B}{X} can be
-        estimated in 2 ways.
+    \item {\bf Estimating \Model{A}{B}{X}}: Once \model{A}{B}{X} is captured, we
+        need to access the reference model \refmodel{B}{X} to estimate its
+        \emph{accuracy}. Since we can only indirectly access it via what $B$
+        reports (\ie \model{B}{B}{X}), accuracy can be estimated in 2 ways:
+
         \begin{itemize}
+
             \item Subjective accuracy: In study 3, we compute
-                \Model{A}{B}{emotions} by measuring if A describe
-                B's emotions in the same way B reports her emotions 
-                ($\mathcal{M}(A,B)=\mathcal{M}(B,B)$) 
-                
-            \item Objective accuracy: In studies 4 and 5, w we compute
-                \Model{A}{B}{knowledge} by comparing
-                $\mathcal{M}^{\circ}A,B,K)$ to B's actual knowledge as it has
-                measured by a test. 
+                \Model{A}{B}{X} by measuring if $A$ describes
+                $B$'s emotions in the same way $B$ reports its emotions 
+                ($\M{A}{B}{X} = \M{B}{B}{X}$).
+
+            \item Objective accuracy: In studies 4 and 5, we compute
+                \Model{A}{B}{X} by comparing \Model{A}{B}{K} to $B$'s
+                actual knowledge as it has measured by a test.
 
         \end{itemize}
 
