@@ -1,9 +1,11 @@
-\documentclass{report}
+\documentclass{article}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes}
 
 \usepackage{subcaption}
+
+\usepackage[draft]{fixme}
 
 \newcommand{\ie}{{\textit{i.e.\ }}}
 \newcommand{\cf}{{\textit{cf\ }}}
@@ -18,50 +20,137 @@
 \newcommand{\stmt}[1]{{\footnotesize \tt $\langle$ #1\relax$\rangle$}}
 
 
+\title{Is Partner Modeling Mutual?}
 
 \begin{document}
+\maketitle
 
-\title{Mutual Modeling in Human-Robot Interaction - Scientific part}
+\begin{abstract}
+    TDB
+\end{abstract}
 
-\chapter{Scientific Part}
-\section{Summary}
-
-Human-robot interaction is a challenge for artificial intelligence. This field
-indeed lays at the crossroad of several other domains of AI and requires to
-tackle them in a holistic manner: Modeling humans and human cognition;
-acquiring, representing, manipulating in a tractable way abstract knowledge;
-reasoning on this knowledge to make decisions; and eventually instantiating
-those decisions into physical actions in coordination with humans. Many AI
-techniques are invited, from visual processing to symbolic reasoning, from task
-planning to \emph{theory of mind} building, from reactive control to action
-recognition and learning.
-
-\paragraph{Theory of Mind}
-
-Theory of Mind (originally defined in~\cite{premack1978does}) is the cognitive
-ability that a subject possesses to represent the mental state of another
-agent, possibly including knowledge that contradicts the subject's own model: for
-example, a book can be at the same time \emph{visible} for myself, and \emph{not
-visible} for you.
-
-Children develop this skill, which is essential to understand others'
-perspectives during interactions, around the age of three. It supposes the
-ability to build, store and retrieve separate models of the knowledge of the
-interactors.
-
-One classical application of this cognitive skill is the so-called
-\emph{False-Belief} experiment (also known as the \emph{Sally and Ann}
-experiment)~\cite{Leslie2000}: a child is asked to watch a scene where two
-people, A and B, manipulate objects. Then A leaves and B hides away one
-object. When A comes back, we ask the child ``where do you think A will
-look for the object?''. Before acquiring a theory of mind, children are not
-able to separate their own (true) model of the world (where they know that
-the object was hidden) from the model of A, which contains \emph{false
-beliefs} on the world (A still thinks the object is at its original
-position since he did not see B hiding it).
+\section{Introduction}
 
 
-\paragraph{Mutual Modelling}
+From its very beginning, CSCL research has been following Roschelle \& Teasley's
+(1986) suggestion that collaborative learning has something to do with the
+process of constructing and maintaining a shared understanding of the task at
+hand. Building a shared/mutual understanding refers to the upper class of
+collaborative learning situations, those in which students should build upon
+each other's understanding to refine their own understanding. What is expected
+to produce learning is not the mere fact that two students build the same
+understanding but the cognitive effort they have to engage to build this shared
+understanding (Schwartz, 1995). This effort can be observed by the frequency of
+rich interactions, i.e. interactions whose occurrence has been related to
+learning: (self-) explanations in cognitive science (Chi ; Webb), conflict
+resolution in socio-cognitive theories (Doise), mutual regulation (Blaye,) in a
+Vygostkian perspective, etc. The construction of a shared understanding has been
+investigated for several years in psycholinguistics, under the  notion of
+“grounding” (Clark \&Wilkes-Gibbs, 1986). However, the relevance of grounding
+mechanisms for explaining learning outcomes has been questioned. The monitoring
+and repair of mis-understanding explains for instance referential failures in
+short dialogue episodes but does hardly predict conceptual change over longer
+sessions (Dillenbourg \& Traum, 2006). The cumulative effect of grounding
+episodes can probably be better understood from a socio-cultural perspective:
+"collaborative learning is associated with the increased cognitive-interactional
+effort involved in the transition from learning to understand each other to
+learning to understand the meanings of the semiotic tools that constitute the
+mediators of interpersonal interaction" (Baker, Hansen, Joiner \& Traum, 1999).
+Several scholars suggest that CSCL research should go deeper in the
+understanding of how partners engage into shared meaning making (Stahl, 2006) or
+'intersubjective' meaning making (Suthers (2006).  
+
+Paradoxically, while Clark's theory is somewhat too linguistic from a conceptual
+change viewpoint, it is criticized at the same time as being too cognitivist by
+some psycholinguists, i.e. as overestimating the amount shared knowledge and
+mutual representations actually necessary to conduct a dialogue. The fundamental
+issue, as old as philosophy, is the degree of coupling between the different
+levels of dialogue, mostly between the lexical / syntactical level and the
+deeper semantic levels. Pickering \& Garrod (2004) argue that the mutual
+understanding starts mostly with a 'local alignment' at the level of the
+linguistic representations, due to priming mechanisms, and that this superficial
+alignment may – in some cases- lead to a 'global alignment' of the semantic
+level.  For these authors, the convergence in dialogue, and even the repair of
+some misunderstandings, is explained by this mimetic behavior more than by a
+monitoring of each other's knowledge: "…interlocutors do not need to monitor and
+develop full common ground as a regular, constant part of routine conversation,
+as it would be unnecessary and far too costly. Establishment of full common
+ground is, we argue, a specialized and non-automatic process that is used
+primarily in times of difficulty (when radical misalignment becomes apparent)."
+(p. 179). This view is actually not incompatible with Clark's grounding
+criterion (REF): the degree of shared understanding that peers need to reach
+depends upon the task they perform. For instance, a dialogue between two
+surgeons might rely on superficial alignment if they talk about their friends
+but has to guarantee accurate common grounds when talking about which
+intervention will be conducted in which way on which patient.  Some CSCL
+scholars stressed the 'illusion of shared understanding' (JACCO?), i.e. the
+potential decoupling between linguistic alignment and actual shared meanings.
+
+This interesting cognitive science debate mostly occurred outside the field of
+learning. In education, the question is to relate these mechanisms to learning
+outcomes. Is linguistic alignment sufficient to trigger conceptual change? Does
+negotiation of meaning only occurs when partners monitor and diagnose each
+other's knowledge. If the ratio between shallow alignment and deep grounding
+depends upon the task, and if deep grounding is a condition for learning, then
+the pedagogical challenge is to design tasks that require deep grounding. Most
+empirical studies on grounding and alignment are conducted with tasks, which
+despite being qualified as 'ecologically valid' by their authors, are mere
+referencing tasks such as asking the way to the train station or helping the
+peer to choose a picture among many. In this contribution, we explore several
+richer tasks such as arguing on a sensitive issue or building a concept map.  
+
+Deep grounding or shared meaning making requires some cognitive load. For Clark
+\& Wilkes-Gibbs (1986), what is important is not the individual effort made by
+the receiver of a communicative act, but the overall least collaborative effort.
+The cost of producing a perfect utterance may be higher than the cost of
+repairing the problems that may arise through misunderstandings. For instance,
+subjects are less careful about adapting their utterances to their partner when
+they know they can provide feedback on his/her understanding (Schober, 1993). We
+introduced the notion of ‘optimal collaborative effort’ (Dillenbourg et al,
+1996) to stress that misunderstanding should not be viewed as something to be
+avoided (if this was possible), but as an opportunity to engage into
+verbalization, explanation, negotiation, and so forth. This issue is related to
+the global argument regarding cognitive load in learning activities, especially
+in discovery learning environments: there is no learning without some cognitive
+load, but overload may hinder learning (Paas, Renkl \& Sweller, 2003). In the
+context of collaborative learning, we understand the cognitive load induced by
+mutual modeling as part of Schwartz’s (1995) notion of effort towards a shared
+understanding. For instance, CSCL researchers expanded the use of 'collaboration
+scripts' (Aronson,?). A script is a pedagogical method that collaborative
+learning activities in order to foster the emergence of productive interactions
+such as argumentation, explanation or conflict. Conflict-resolution scripts such
+as the ArgueGraph (Dillenbourg \& Hong, 2008) forms pair of students with
+opposite opinions, which increases the difficulty of consensus building,
+requiring more justifications, more negotiation, more load. Similarly, JIGSAW
+scripts provide peers with different but complementary knowledge for augmenting
+(reasonably) the effort group members have to engage to reach a shared solution. 
+
+%\paragraph{Theory of Mind}
+%
+%Theory of Mind (originally defined in~\cite{premack1978does}) is the cognitive
+%ability that a subject possesses to represent the mental state of another
+%agent, possibly including knowledge that contradicts the subject's own model: for
+%example, a book can be at the same time \emph{visible} for myself, and \emph{not
+%visible} for you.
+%
+%Children develop this skill, which is essential to understand others'
+%perspectives during interactions, around the age of three. It supposes the
+%ability to build, store and retrieve separate models of the knowledge of the
+%interactors.
+%
+%One classical application of this cognitive skill is the so-called
+%\emph{False-Belief} experiment (also known as the \emph{Sally and Ann}
+%experiment)~\cite{Leslie2000}: a child is asked to watch a scene where two
+%people, A and B, manipulate objects. Then A leaves and B hides away one
+%object. When A comes back, we ask the child ``where do you think A will
+%look for the object?''. Before acquiring a theory of mind, children are not
+%able to separate their own (true) model of the world (where they know that
+%the object was hidden) from the model of A, which contains \emph{false
+%beliefs} on the world (A still thinks the object is at its original
+%position since he did not see B hiding it).
+
+\section{Mutual Modeling}
+
 
 In order to build a shared understanding, do partners have to build a
 representation of each other's knowledge? We refer to \emph{mutual modeling} as
@@ -141,7 +230,7 @@ their experiments on initial mutual modelling, Slugoski, Lalljee, Lamb \&
 Ginsburg~\cite{slugoski1993attribution} pretended to their subjects that their
 (fake) partner had or had not received the same information. They observed that
 the subjects adapted their dialogue by focusing the explanation on the items
-that (s)he was supposed to ignore. Brennan (1991) showed that the subjects used
+that (s)he was supposed to ignore. Brennan (1991) \fixme{ref} showed that the subjects used
 different initial strategies in forming queries depending on who they were told
 their partner was.  
 
@@ -174,59 +263,43 @@ could not directly perceived because B was working on a different subset of the
 virtual space. Different awareness tools will be addressed in this contribution
 since they allowed us to manipulate experimentally the mutual modelling activity. 
 
-\section{Research Plan}
 
-\subsection{State of the Art}
+%\subsection{State of the Art}
+%
+%\paragraph{Building a model of a human during the interaction} Perspective
+%Taking is a human ability which allows one to put him/herself in another
+%person's point of view. Studied in psychology
+%literature~\cite{Flavell1992,Tversky1999}, this ability is crucial when
+%interacting with people by allowing one to reason on others' understanding of
+%the world in terms of visual perception, spatial descriptions, affordances and
+%beliefs, etc.  In the last years these notions have been gradually employed in
+%HRI.~\cite{Breazeal2006} presents a learning algorithm that takes into account
+%information about a teacher's visual perspective in order to learn a task.
+%~\cite{Johnson2005} apply visual perspective taking for action recognition
+%between two robots.~\cite{Trafton2005} use both visual and spatial perspective
+%taking to find out the referent indicated by a human partner.
+%
+%The cognitive model that the robot builds for the agent it interacts with is
+%still simple and mostly focused on geometric features (who sees what? What are
+%our relative positions? etc.). Extending this knowledge with more subtle
+%perceptions (emotional state for instance) remains to be done.
+%
+%\paragraph{Joint action}
+%Several theories dealing with collaboration~\cite{Cohen1991,Grosz1996,Clark1996}
+%emphasize that collaborative tasks have specific requirements compared to
+%individual ones, \eg, since the robot and the person share a common goal, they
+%have to agree on the manner to realize it, they must show their commitment to
+%the goal during execution, etc. Several robotic systems have already been built
+%based on these theories~\cite{Rich1997,Sidner2005,Breazeal2003} and they all
+%have shown benefits of this approach. They have also shown how difficult it is
+%to manage turn-taking between communication partners and to interleave task
+%realization and communication in a generic way. Finally, today only few
+%systems~\cite{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
+%levels.
+%
+\section{A simple notation system}
 
-\paragraph{Building a model of a human during the interaction} Perspective
-Taking is a human ability which allows one to put him/herself in another
-person's point of view. Studied in psychology
-literature~\cite{Flavell1992,Tversky1999}, this ability is crucial when
-interacting with people by allowing one to reason on others' understanding of
-the world in terms of visual perception, spatial descriptions, affordances and
-beliefs, etc.  In the last years these notions have been gradually employed in
-HRI.~\cite{Breazeal2006} presents a learning algorithm that takes into account
-information about a teacher's visual perspective in order to learn a task.
-~\cite{Johnson2005} apply visual perspective taking for action recognition
-between two robots.~\cite{Trafton2005} use both visual and spatial perspective
-taking to find out the referent indicated by a human partner.
-
-The cognitive model that the robot builds for the agent it interacts with is
-still simple and mostly focused on geometric features (who sees what? What are
-our relative positions? etc.). Extending this knowledge with more subtle
-perceptions (emotional state for instance) remains to be done.
-
-\paragraph{Joint action}
-Several theories dealing with collaboration~\cite{Cohen1991,Grosz1996,Clark1996}
-emphasize that collaborative tasks have specific requirements compared to
-individual ones, \eg, since the robot and the person share a common goal, they
-have to agree on the manner to realize it, they must show their commitment to
-the goal during execution, etc. Several robotic systems have already been built
-based on these theories~\cite{Rich1997,Sidner2005,Breazeal2003} and they all
-have shown benefits of this approach. They have also shown how difficult it is
-to manage turn-taking between communication partners and to interleave task
-realization and communication in a generic way. Finally, today only few
-systems~\cite{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
-levels.
-
-\subsection{Related research of the applicants}
-
-
-Pierre Dillenbourg has been working since several years on the role and importance
-of mutual modelling in human-human interaction, specifically in the context of
-learning sciences.
-
-He already conducted several experiments~\cite{sangin2007partner,
-nova2007collaboration} that supported the idea that modelling partners is not only
-an individual skill. When engaged in a social task that could benefit from
-mutual modelling, the accuracy of the models build by each of the participant on
-the other participants increase.
-
-In the frame of this work, Pierre Dillenbourg has proposed a simple formalism
-that we describe below, and that we will use subsequently to describe the mutual
-modelling situations.
-
-\paragraph{A simple notational system for mutual modeling} We suggest
+To report experiments on mutual modeling, we suggest
 the notation \model{A}{B}{X} to denote ``A knows that B knows X". This is a
 simple but hopefully useful reduction to reason on mutual modeling. This
 notation does not mean A has an explicit, monolithic representation of B: it
@@ -503,17 +576,10 @@ This simple notation does not pretend to provide a mathematical account of
 mutual modeling but to be more systematic in describing the following
 experiments. 
 
-\subsection{Research agenda}
-
-\subsection{Importance of the work}
-
-\subsection{References}
-
 \bibliographystyle{abbrv}
 \bibliography{biblio}
 
 
-\section{International collaboration}
 
 \end{document}
 
