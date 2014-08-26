@@ -1,5 +1,11 @@
 \documentclass{article}
 
+\usepackage[english]{babel}
+
+\usepackage{graphicx}
+\graphicspath{{figs/}}
+
+
 \usepackage{tikz}
 \usetikzlibrary{shapes}
 
@@ -608,6 +614,130 @@ don’t have the necessary data in our studies.
 This simple notation does not pretend to provide a mathematical account of
 mutual modeling but to be more systematic in describing the following
 experiments. 
+
+\section{Studies}
+
+\subsection{Study 1: Effect of an awareness tool on \Model{A}{B} in a virtual
+game}
+
+\paragraph{Questions}
+
+We studied the impact of an awareness tool on group performance and mutual
+modeling. (Nova, Wehrle, Goslin, Bourquin \& Dillenbourg (2006). The availability
+of an awareness tool was our independent variable. In previous studies, we
+replayed a video of the game to subjects who surprised us by their ability to
+remember former states of their mutual model: "I did that because I thought that
+you would do that". Hence, this experiment focused the representation of each
+other's action plans. During the game, we asked them to anticipate the next
+action of their partner as well as to announce their own action. It is clear
+asking them a question about their partner increases their attention for the
+rest of the game.
+
+\paragraph{Experimental setting}
+
+SpaceMiners is a 3D game that involves two players collecting minerals located
+in asteroids. To do so, they shoot drones through the space after choosing their
+initial direction and speed. Once launched, the trajectory of drones is only
+influenced by the gravity of planets and by trajectory modification tools.
+During the experiment, the teams were confronted with three increasingly complex
+situations. The experiment was 2 hours long: a 30 minutes tutorial and 3 levels
+of 30 minutes. Players uses using a regular joystick and communicated with each
+other through an audio channel.
+
+The independent variable was the availability of an awareness tool that shows to
+player A  the location and gaze direction of player B. In the awareness
+condition, players could switch to the 'scout mode' where they could view what
+their partner was looking at. We hypothesize that this would enable subjects to
+more accurately infer their teammate's intentions. Each player sat in front of a
+distinct computer located in different rooms. 
+
+\paragraph{Subjects}
+
+Thirty-six persons participated in this study, all native French speakers. We
+constituted 18 pairs of participants (N = 18) who were not familiar with each
+other. The pairs were assigned randomly to either the control condition (without
+the awareness tool) or the awareness condition (with the awareness tool).
+
+\begin{figure}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{image4.png}
+        \caption{Snapshot of the SpaceMiner Game}
+        \label{spaceminer}
+\end{figure}
+
+\paragraph{Variables}
+
+Task performance was measured by the score reached by the two subjects after
+three situations. The effort of mutual modeling was measured as the ratio of
+time that players would spend in the scout mode (divided by total time), which
+is the time during which players are not performing their own actions but
+monitoring their partner's actions.
+
+In order to evaluate m°(A,B) during the task, we used two questionnaires (Figure
+4) that were displayed during each of the three games, as a transparent layer
+appearing over the game display. The first questionnaire concerned the player’s
+intended actions. The second questionnaire asked each player about what he
+thought her or his partner was intending to do. Some answers were identical in
+both questionnaires (like “adjusting a shot”) while others were reversed ("to
+guide my partner" versus "to guide me"). We chose this subjective measure of
+accuracy (∆ M(A,B), M(B,B)) rather than an objective measure (i.e. model (A,B)
+is compared to B's next action) because some the activities proposed by the
+questionnaire were not observable by the environment (e.g. establishing a
+strategy). We counted M°(A,B,activity,gamei) as the number of common answers
+between questionnaires M(A,B) and M(B,B) in each game and computed the average
+value a across the 3 games.
+
+
+Figure 4: M(A,A) and M(A,B) questionnaires in SpaceMiners (translated from French)
+
+\paragraph{Results}
+
+Grounding criterion. The grounding criterion was high: the correlation between
+M°(A,B) and task performance was 0.42, p = 0.05. Pairs with an accurate mutual
+model reached higher scores. A regression analysis confirmed the positive and
+significant relation between group performance and mutual modelling accuracy (β
+=54, p = .02).
+
+Study-specific questions. The awareness tool permitted higher group performance,
+but it did not improve the accuracy of the mutual model. Since teams were free
+to use the awareness tool or not (the 'scout' mode), we performed a post-hoc
+split of players depending on how much time they used it. The split point was
+the mean of time spent in the scout mode and it led to the constitution of two
+groups made up of 12 individuals “short time in scout mode” and 24 individuals
+“long time in scout mode”. A two-way analysis of variance conducted on these
+contrasted groups revealed that pairs in the awareness condition who spent more
+time in the scout mode reached higher levels of M°(A,B)(F = 8.02, p = 0.015). Of
+course, a post-hoc split does not support a causal direction. An alternative
+explanation could be that good modellers are more social and hence appreciate
+the awareness tool.
+
+Symmetry question. We computed intra-class correlation as described by Kenny et
+al. (1998) from the answers to the cross-questionnaires. Considering all pairs
+in both conditions, we found a positive and significant correlation (r = .38, p
+< .05) between M°(A,B) and M°(B,A). Interestingly, this was higher in the
+control group (r = 0.44) than in the experimental group (r = 0.24). Actually, ∆
+(M°(A,B),M°(B,A)), i.e. the absolute differences between the models accuracy,
+was not significantly different with or without the awareness tool ( F [1,13]=
+0.144, p > 0.5). This result could be explained by the fact that the players
+without awareness tools communicated more.
+
+We cannot answer the triangle questions since this study was conducted with
+pairs-
+
+\paragraph{Discussion}
+
+How to interpret a correlation of 0.38 between M°(A,B) and M°(B,A)? If it was
+null, modelling would be interpreted as an individual process that varies
+according to personality traits or cognitive skills: some persons tend to model
+more accurately their peer while others don't care or can simply not. If the
+correlation was close to 1, we could conclude that the modelling accuracy is an
+emergent property of teams since there would be low probability that, by chance,
+low accurate modellers are paired with accurate modellers and conversely. Our
+correlation is between these two extremes but the very notion of significant
+intra-class correlation tend to indicate that one may not consider peers as
+independent subjects, which is an argument for the 'interaction' hypothesis
+(H3). 
+
 
 \bibliographystyle{abbrv}
 \bibliography{biblio}
