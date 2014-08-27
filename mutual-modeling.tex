@@ -1,6 +1,11 @@
 \documentclass[twocolumn]{article}
 
+% UTF8 support
+\usepackage[utf8x]{inputenc}
+
 \usepackage[english]{babel}
+
+\usepackage[round]{natbib}
 
 \usepackage{graphicx}
 \graphicspath{{figs/}}
@@ -39,6 +44,25 @@
 
 \title{Is Partner Modeling Mutual?}
 
+\author{
+    Pierre Dillenbourg, Séverin Lemaignan \\
+    \small Computer-Human Interaction in Learning and Instruction (CHILI) \\
+    \small Ecole Polytechnique Fédérale de Lausanne (EPFL) \\
+    \small CH-1015 Lausanne, Switzerland \\
+    {\tt firstname.lastname@epfl.ch}
+    \and
+    Mirweis Sangin \\
+    \and
+    Nicolas Nova \\
+    \small Haute Ecole Arts \& Design de Genève\\
+    {\tt nicolas.nova@hesge.ch}
+    \and
+    René Glaus
+    \and
+    Gaëlle Molinari \\
+    \small Fernuni Schweiz \\
+    {\tt gaelle.molinari@fernuni.ch}
+}
 \begin{document}
 \maketitle
 
@@ -49,33 +73,35 @@
 \section{Introduction}
 
 
-From its very beginning, CSCL research has been following Roschelle \& Teasley's
-(1986) suggestion that collaborative learning has something to do with the
-process of constructing and maintaining a shared understanding of the task at
-hand. Building a shared/mutual understanding refers to the upper class of
-collaborative learning situations, those in which students should build upon
-each other's understanding to refine their own understanding. What is expected
-to produce learning is not the mere fact that two students build the same
-understanding but the cognitive effort they have to engage to build this shared
-understanding (Schwartz, 1995). This effort can be observed by the frequency of
-rich interactions, \ie interactions whose occurrence has been related to
-learning: (self-) explanations in cognitive science (Chi ; Webb), conflict
-resolution in socio-cognitive theories (Doise), mutual regulation (Blaye,) in a
-Vygostkian perspective, etc. The construction of a shared understanding has been
-investigated for several years in psycholinguistics, under the  notion of
-“grounding” (Clark \&Wilkes-Gibbs, 1986). However, the relevance of grounding
+From its very beginning, CSCL research has been following
+\citet{roschelle1995construction} suggestion that collaborative learning has
+something to do with the process of constructing and maintaining a shared
+understanding of the task at hand. Building a shared/mutual understanding refers
+to the upper class of collaborative learning situations, those in which students
+should build upon each other's understanding to refine their own understanding.
+What is expected to produce learning is not the mere fact that two students
+build the same understanding but the cognitive effort they have to engage to
+build this shared understanding~\citep{schwartz1995emergence}. This effort can
+be observed by the frequency of rich interactions, \ie interactions whose
+occurrence has been related to learning: (self-) explanations in cognitive
+science (Chi ; Webb), conflict resolution in socio-cognitive theories (Doise),
+mutual regulation (Blaye,) in a Vygostkian perspective, etc. The construction of
+a shared understanding has been investigated for several years in
+psycholinguistics, under the  notion of
+``grounding''~\citep{clark1986referring}.  However, the relevance of grounding
 mechanisms for explaining learning outcomes has been questioned. The monitoring
 and repair of mis-understanding explains for instance referential failures in
 short dialogue episodes but does hardly predict conceptual change over longer
-sessions (Dillenbourg \& Traum, 2006). The cumulative effect of grounding
+sessions~\citep{dillenbourg2006sharing}. The cumulative effect of grounding
 episodes can probably be better understood from a socio-cultural perspective:
-"collaborative learning is associated with the increased cognitive-interactional
-effort involved in the transition from learning to understand each other to
-learning to understand the meanings of the semiotic tools that constitute the
-mediators of interpersonal interaction" (Baker, Hansen, Joiner \& Traum, 1999).
-Several scholars suggest that CSCL research should go deeper in the
-understanding of how partners engage into shared meaning making (Stahl, 2006) or
-'intersubjective' meaning making (Suthers (2006).  
+``collaborative learning is associated with the increased
+cognitive-interactional effort involved in the transition from learning to
+understand each other to learning to understand the meanings of the semiotic
+tools that constitute the mediators of interpersonal
+interaction''~\citep{baker1999role}.  Several scholars suggest that CSCL
+research should go deeper in the understanding of how partners engage into
+shared meaning making~\citep{stahl2007meaning} or \emph{intersubjective} meaning
+making~\citep{suthers2006technology}.
 
 Paradoxically, while Clark's theory is somewhat too linguistic from a conceptual
 change viewpoint, it is criticized at the same time as being too cognitivist by
@@ -83,25 +109,26 @@ some psycholinguists, \ie as overestimating the amount shared knowledge and
 mutual representations actually necessary to conduct a dialogue. The fundamental
 issue, as old as philosophy, is the degree of coupling between the different
 levels of dialogue, mostly between the lexical / syntactical level and the
-deeper semantic levels. Pickering \& Garrod (2004) argue that the mutual
-understanding starts mostly with a 'local alignment' at the level of the
+deeper semantic levels. \citet{pickering2006alignment} argue that the mutual
+understanding starts mostly with a \emph{local alignment} at the level of the
 linguistic representations, due to priming mechanisms, and that this superficial
-alignment may – in some cases- lead to a 'global alignment' of the semantic
-level.  For these authors, the convergence in dialogue, and even the repair of
-some misunderstandings, is explained by this mimetic behavior more than by a
-monitoring of each other's knowledge: "…interlocutors do not need to monitor and
-develop full common ground as a regular, constant part of routine conversation,
-as it would be unnecessary and far too costly. Establishment of full common
-ground is, we argue, a specialized and non-automatic process that is used
-primarily in times of difficulty (when radical misalignment becomes apparent)."
-(p. 179). This view is actually not incompatible with Clark's grounding
-criterion (REF): the degree of shared understanding that peers need to reach
-depends upon the task they perform. For instance, a dialogue between two
-surgeons might rely on superficial alignment if they talk about their friends
-but has to guarantee accurate common grounds when talking about which
-intervention will be conducted in which way on which patient.  Some CSCL
-scholars stressed the 'illusion of shared understanding' (JACCO?), \ie the
-potential decoupling between linguistic alignment and actual shared meanings.
+alignment may -- in some cases -- lead to a \emph{global alignment} of the
+semantic level.  For these authors, the convergence in dialogue, and even the
+repair of some misunderstandings, is explained by this mimetic behavior more
+than by a monitoring of each other's knowledge: ``...interlocutors do not need
+to monitor and develop full common ground as a regular, constant part of routine
+conversation, as it would be unnecessary and far too costly. Establishment of
+full common ground is, we argue, a specialized and non-automatic process that is
+used primarily in times of difficulty (when radical misalignment becomes
+apparent).'' (p. 179). This view is actually not incompatible with Clark's
+grounding criterion \fixme{(REF)}: the degree of shared understanding that peers
+need to reach depends upon the task they perform. For instance, a dialogue
+between two surgeons might rely on superficial alignment if they talk about
+their friends but has to guarantee accurate common grounds when talking about
+which intervention will be conducted in which way on which patient.  Some CSCL
+scholars stressed the ``illusion of shared understanding'' \fixme{REF:(JACCO?)},
+\ie the potential decoupling between linguistic alignment and actual shared
+meanings.
 
 This interesting cognitive science debate mostly occurred outside the field of
 learning. In education, the question is to relate these mechanisms to learning
@@ -111,32 +138,34 @@ other's knowledge. If the ratio between shallow alignment and deep grounding
 depends upon the task, and if deep grounding is a condition for learning, then
 the pedagogical challenge is to design tasks that require deep grounding. Most
 empirical studies on grounding and alignment are conducted with tasks, which
-despite being qualified as 'ecologically valid' by their authors, are mere
+despite being qualified as ``ecologically valid'' by their authors, are mere
 referencing tasks such as asking the way to the train station or helping the
 peer to choose a picture among many. In this contribution, we explore several
 richer tasks such as arguing on a sensitive issue or building a concept map.  
 
-Deep grounding or shared meaning making requires some cognitive load. For Clark
-\& Wilkes-Gibbs (1986), what is important is not the individual effort made by
-the receiver of a communicative act, but the overall least collaborative effort.
-The cost of producing a perfect utterance may be higher than the cost of
-repairing the problems that may arise through misunderstandings. For instance,
-subjects are less careful about adapting their utterances to their partner when
-they know they can provide feedback on his/her understanding (Schober, 1993). We
-introduced the notion of ‘optimal collaborative effort' (Dillenbourg et al,
-1996) to stress that misunderstanding should not be viewed as something to be
-avoided (if this was possible), but as an opportunity to engage into
-verbalization, explanation, negotiation, and so forth. This issue is related to
-the global argument regarding cognitive load in learning activities, especially
-in discovery learning environments: there is no learning without some cognitive
-load, but overload may hinder learning (Paas, Renkl \& Sweller, 2003). In the
-context of collaborative learning, we understand the cognitive load induced by
-mutual modeling as part of Schwartz's (1995) notion of effort towards a shared
-understanding. For instance, CSCL researchers expanded the use of 'collaboration
-scripts' (Aronson,?). A script is a pedagogical method that collaborative
-learning activities in order to foster the emergence of productive interactions
-such as argumentation, explanation or conflict. Conflict-resolution scripts such
-as the ArgueGraph (Dillenbourg \& Hong, 2008) forms pair of students with
+Deep grounding or shared meaning making requires some cognitive load. For
+\citet{clark1986referring}, what is important is not the individual effort made
+by the receiver of a communicative act, but the overall least collaborative
+effort.  The cost of producing a perfect utterance may be higher than the cost
+of repairing the problems that may arise through misunderstandings. For
+instance, subjects are less careful about adapting their utterances to their
+partner when they know they can provide feedback on his/her
+understanding~\citep{schober1993spatial}. We introduced the notion of
+\emph{optimal collaborative effort}~\citep{dillenbourg1995evolution} to stress
+that misunderstanding should not be viewed as something to be avoided (if this
+was possible), but as an opportunity to engage into verbalization, explanation,
+negotiation, and so forth. This issue is related to the global argument
+regarding cognitive load in learning activities, especially in discovery
+learning environments: there is no learning without some cognitive load, but
+overload may hinder learning~\citep{paas2003cognitive}. In the context of
+collaborative learning, we understand the cognitive load induced by mutual
+modeling as part of~\citet{schwartz1995emergence} notion of effort towards a
+shared understanding. For instance, CSCL researchers expanded the use of
+\emph{collaboration scripts} \fixme{REF (Aronson,?)}. A script is a pedagogical
+method that collaborative learning activities in order to foster the emergence
+of productive interactions such as argumentation, explanation or conflict.
+Conflict-resolution scripts such as the {\sc
+ArgueGraph}~\citep{dillenbourg2008mechanics} forms pair of students with
 opposite opinions, which increases the difficulty of consensus building,
 requiring more justifications, more negotiation, more load. Similarly, JIGSAW
 scripts provide peers with different but complementary knowledge for augmenting
@@ -144,7 +173,7 @@ scripts provide peers with different but complementary knowledge for augmenting
 
 %\paragraph{Theory of Mind}
 %
-%Theory of Mind (originally defined in~\cite{premack1978does}) is the cognitive
+%Theory of Mind (originally defined in~\citep{premack1978does}) is the cognitive
 %ability that a subject possesses to represent the mental state of another
 %agent, possibly including knowledge that contradicts the subject's own model: for
 %example, a book can be at the same time \emph{visible} for myself, and \emph{not
@@ -157,7 +186,7 @@ scripts provide peers with different but complementary knowledge for augmenting
 %
 %One classical application of this cognitive skill is the so-called
 %\emph{False-Belief} experiment (also known as the \emph{Sally and Ann}
-%experiment)~\cite{Leslie2000}: a child is asked to watch a scene where two
+%experiment)~\citep{Leslie2000}: a child is asked to watch a scene where two
 %people, A and B, manipulate objects. Then A leaves and B hides away one
 %object. When A comes back, we ask the child ``where do you think A will
 %look for the object?''. Before acquiring a theory of mind, children are not
@@ -190,7 +219,7 @@ modelling) or even "He thought I would do that but I intended something else."
 The content of mutual models ranges from 'dispositional' versus 'situational'
 aspects. The 'dispositional' aspects refer to A's representation of B's long
 term knowledge, skills or traits. It is thus closely related to the notion of
-transactive memory~\cite{wegner1987transactive, moreland1999transactive}.
+transactive memory~\citep{wegner1987transactive, moreland1999transactive}.
 'Situational' aspects refer to A's representation of B's knowledge, behavior or
 intentions specifically activated in the situation in which A and B are
 collaborating, some of them being valid for 2 seconds, other ones for 2 hours.
@@ -244,7 +273,7 @@ his/her membership to large categories (age, culture, profession, ...) include
 stereotypes (sportsmen, junkie, business women, Swiss,...) as well as physical
 appearance. Scholars studied how initial modeling impacts communication. In
 their experiments on initial mutual modelling, Slugoski, Lalljee, Lamb \&
-Ginsburg~\cite{slugoski1993attribution} pretended to their subjects that their
+Ginsburg~\citep{slugoski1993attribution} pretended to their subjects that their
 (fake) partner had or had not received the same information. They observed that
 the subjects adapted their dialogue by focusing the explanation on the items
 that (s)he was supposed to ignore. Brennan (1991) \fixme{ref} showed that the subjects used
@@ -252,11 +281,11 @@ different initial strategies in forming queries depending on who they were told
 their partner was.  
 
 Initial common grounds are also initiated by co-presence: they include events to
-which A and B attended together~\cite{clark2002definite} in the physical space
+which A and B attended together~\citep{clark2002definite} in the physical space
 or in our cultural space (\eg ‘09-11'). Co-presence means that we can refer to
 a shared objects and event,-s it does of course not imply that we give them the
 same meaning. Namely, a shared screen does not mean a shared
-understanding~\cite{dillenbourg2006sharing}.
+understanding~\citep{dillenbourg2006sharing}.
 
 After initialization, mutual models are updated along the collaborative work
 through verbal and non-verbal interactions. A default inference rule is that "my
@@ -272,7 +301,7 @@ reviews the features of the collaborative situation, namely the media
 reported a study in which a short silence between two pilots was perfectly
 interpreted because it occurred in a highly constrained communication context.
 Some environments are more productive than others in helping peers to detect
-their misunderstandings. Roschelle~\cite{roschelle1995construction} reformulate
+their misunderstandings. Roschelle~\citep{roschelle1995construction} reformulate
 the design of CSCL interfaces as providing ways for peer to detect and repairs
 their misunderstanding. In CSCW, researchers have explored various so-called
 "awareness tools", \ie functionalities that inform A is about B's actions that A
@@ -286,14 +315,14 @@ since they allowed us to manipulate experimentally the mutual modelling activity
 %\paragraph{Building a model of a human during the interaction} Perspective
 %Taking is a human ability which allows one to put him/herself in another
 %person's point of view. Studied in psychology
-%literature~\cite{Flavell1992,Tversky1999}, this ability is crucial when
+%literature~\citep{Flavell1992,Tversky1999}, this ability is crucial when
 %interacting with people by allowing one to reason on others' understanding of
 %the world in terms of visual perception, spatial descriptions, affordances and
 %beliefs, etc.  In the last years these notions have been gradually employed in
-%HRI.~\cite{Breazeal2006} presents a learning algorithm that takes into account
+%HRI.~\citep{Breazeal2006} presents a learning algorithm that takes into account
 %information about a teacher's visual perspective in order to learn a task.
-%~\cite{Johnson2005} apply visual perspective taking for action recognition
-%between two robots.~\cite{Trafton2005} use both visual and spatial perspective
+%~\citep{Johnson2005} apply visual perspective taking for action recognition
+%between two robots.~\citep{Trafton2005} use both visual and spatial perspective
 %taking to find out the referent indicated by a human partner.
 %
 %The cognitive model that the robot builds for the agent it interacts with is
@@ -302,16 +331,16 @@ since they allowed us to manipulate experimentally the mutual modelling activity
 %perceptions (emotional state for instance) remains to be done.
 %
 %\paragraph{Joint action}
-%Several theories dealing with collaboration~\cite{Cohen1991,Grosz1996,Clark1996}
+%Several theories dealing with collaboration~\citep{Cohen1991,Grosz1996,Clark1996}
 %emphasize that collaborative tasks have specific requirements compared to
 %individual ones, \eg, since the robot and the person share a common goal, they
 %have to agree on the manner to realize it, they must show their commitment to
 %the goal during execution, etc. Several robotic systems have already been built
-%based on these theories~\cite{Rich1997,Sidner2005,Breazeal2003} and they all
+%based on these theories~\citep{Rich1997,Sidner2005,Breazeal2003} and they all
 %have shown benefits of this approach. They have also shown how difficult it is
 %to manage turn-taking between communication partners and to interleave task
 %realization and communication in a generic way. Finally, today only few
-%systems~\cite{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
+%systems~\citep{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
 %levels.
 %
 \section{A model for mutual modelling evaluation}
@@ -355,7 +384,7 @@ We parametrize and assess the mutual modelling effort through 3 variables:
 Based on these 3 parameters, the probability of making an action $\alpha_{t_1}$ about
 content X at time $t_1$ during task T in order to increase \Model{A}{B}{X}
 at time $t_2$ is the ratio between how much it is needed  ((2)-(1)) and how much it
-costs (3)~\cite{traum1996miscommunication}:
+costs (3)~\citep{traum1996miscommunication}:
 
 \begin{multline} \label{eq:probrepair}
 p(\alpha_{t_1}(X,T) / M^{\circ}_{t_2}(A,B,X) \nearrow) \approx \\
@@ -425,7 +454,7 @@ should be rather low (and hence the difference between initial and required
 degrees rather high) in order to make mutual modelling effort more observable.
 While we can exactly control the actual initial knowledge available to the
 robot, estimating \inigrounding still requires special care during the design of
-the experiments: as we have previously shown~\cite{lemaignan2014dynamics,
+the experiments: as we have previously shown~\citep{lemaignan2014dynamics,
 lemaignan2014cognitive} and because the interaction takes place between a human and
 a robot, the initial human model of the robot can widely vary depending on
 several factors like the user familiarity with technology, the effect of
@@ -639,7 +668,7 @@ game}
 \subsubsection*{Questions}
 
 We studied the impact of an awareness tool on group performance and mutual
-modeling~\cite{nova2007collaboration}. The availability
+modeling~\citep{nova2007collaboration}. The availability
 of an awareness tool was our independent variable. In previous studies, we
 replayed a video of the game to subjects who surprised us by their ability to
 remember former states of their mutual model: ``I did that because I thought that
@@ -735,7 +764,7 @@ does not support a causal direction. An alternative explanation could be that
 good modellers are more social and hence appreciate the awareness tool.
 
 \paragraph{Symmetry question} We computed intra-class correlation as described
-by~\cite{kenny1998data} from the answers to the cross-questionnaires.
+by~\citep{kenny1998data} from the answers to the cross-questionnaires.
 Considering all pairs in both conditions, we found a positive and significant
 correlation ($r = .38, p < .05$) between \gModel{A}{B} and \gModel{B}{A}.
 Interestingly, this was higher in the control group ($r = 0.44$) than in the
@@ -773,7 +802,7 @@ game}
 \subsubsection*{Questions}
 
 This study concerns a collaborative game that occurred in the physical
-space~\cite{nova2006underwhelming}. We studied whether players build an accurate
+space~\citep{nova2006underwhelming}. We studied whether players build an accurate
 model of the path followed by their partners because this path reflected their
 problem solving strategy. We used an objective measure of \gModel{A}{B}: the
 distance between where A believes B has been walking and where B actually went.
@@ -854,7 +883,7 @@ the awareness tool was related to a higher \gModel{A}{B}: players better
 remembered their partners' path if they did not see their position permanently!
 We will not enter into the details of these results but, to be short, teams
 without awareness tool made more annotations on the map while permanent MLA has
-an underwhelming effect~\cite{nova2005location}.
+an underwhelming effect~\citep{nova2005location}.
 
 \paragraph{Symmetry question} The correlation between \gModel{A}{B}  and
 \gModel{B}{A}  is positive ($r = .41$) and significant ($p < .01$);  the more A
@@ -869,7 +898,7 @@ significant as well: $r=0.43, p <.001$.
 
 This positive result regarding to the symmetry question is even more surprising
 than the previous one: despite the high heterogeneity of spatial skills among
-adults~\cite{liben1981spatial}, a significant correlation could indicate that
+adults~\citep{liben1981spatial}, a significant correlation could indicate that
 mutual modeling relies more on group processes than on individual processes. The
 significant results on the triangle questions probably go in the same direction:
 either the modeler or the modeled both contribute to accurate modeling, or that
@@ -969,7 +998,7 @@ rejected: the average \Model{A}{B}{emotions} was .62 ($SD = .28$) with the
 audio+video condition and .71 ($SD = .19$) in the audio condition ($F=3.4, p:
 0.065$). Our interpretation is that viewing what one's partner sees (shared
 graphical editor) was, in this task, more important than seeing each
-other~\cite{gaver1993one}\fixme{check ref with Pierre}\fixme{other cite:
+other~\citep{gaver1993one}\fixme{check ref with Pierre}\fixme{other cite:
 Anderson et al., 2000}.
 
 \paragraph{Symmetry question} Regarding the main items, the mutual modeling of
@@ -1008,7 +1037,7 @@ area  (perceiving emotions).
 \subsubsection*{Questions}
 
 This study investigated the effect of a collaboration script on collaborative
-learning~\cite{molinari2008effects}. The script chosen is a JIGSAW: two students
+learning~\citep{molinari2008effects}. The script chosen is a JIGSAW: two students
 receive different but complementary subsets of the knowledge (texts) which have
 to be integrated to build a shared concept map.  This script increases the
 cognitive effort to build the map, not only to recon ciliate the viewpoints of
@@ -1162,7 +1191,7 @@ outcomes by comparing teams with or without a knowledge awareness tool (KAT),
 \subsubsection*{Experimental setting}
 
 The peers were located into two different rooms. A complete description of the
-study is provided in~\cite{sangin2008learners}. The experiment lasted 90 minutes.
+study is provided in~\citep{sangin2008learners}. The experiment lasted 90 minutes.
 
 It started with the same two steps as in study 4, followed by:
 
@@ -1371,7 +1400,7 @@ Girardin, Marc-Antoine Nüssli, Thomas Werhle, Yvan Bourquin and  Jeremy Goslin.
 The main funding has been provided from a NSF Grant grant \#102511-106940.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{abbrv}
+\bibliographystyle{plainnat}
 \bibliography{biblio}
 
 
