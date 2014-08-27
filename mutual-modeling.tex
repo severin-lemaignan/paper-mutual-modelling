@@ -417,7 +417,7 @@ as well) but it clarifies the parameters of the experiments we propose hereafter
 
 Each of the studies that we present in the next section have been design in such a way that, while tractable on a
 robot, mutual modelling plays a key role for the task performance: the tasks
-require a ``reasonably high" grounding criterion \groundingcriterion,
+require a ``reasonably high'' grounding criterion \groundingcriterion,
 and all tasks are about building a solution or a representation together.
 
 Along the same reasoning, the initial degree of common grounds \inigrounding
@@ -1268,7 +1268,107 @@ conditions of collaboration (viewing multiple maps or not) and the conditions
 (scripted or not, awareness tool or not) probably explain differences in terms
 of mutual modeling.
 
+\section{Synthesis}
 
+Out of 5 studies, 3 revealed a correlation between the model peers built about
+each other: when A builds an accurate model of B, B also tends to build an
+accurate model of A.  In one study, this was the case only in one condition.
+The conclusion is hence that modeling is mutual but only in certain conditions,
+summarized in Table~\ref{synthesis_table}.
+
+\begin{table*}[h!t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{3cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}}
+\textit{}                     & \textbf{Study 1}                 & \textbf{Study 2}                & \textbf{Study 3}          & \textbf{Study 4}          & \textbf{Study 5}             \\ \hline
+\textit{Task}                 & Game in virtual Space            & Game in physical Space          & Building an argument map  & Building a concept map    & Building a concept map       \\
+\textit{Interactions}         & Audio                            & Written                         & Audio / Video             & Audio                     & Audio                        \\
+\textit{Shared Editor}        & 3D Space                         & 2D Map                          & Concept Map               & Concept Map               & Concept Map                  \\
+\textit{Group Size}           & 2                                & 3                               & 3                         & 3                         & 3                            \\
+\textit{Duration (mean)}      & 90min                            & 16min                           & 61min                     & 90min                     & 90min                        \\
+\textit{Awareness tool}       & Partner's position / orientation & Partner's current/past position & -                         & Partner's concept map     & Partner's scores at pre-test \\
+\textit{Dependent variable}   & Team/Ind. performance            & Team/Ind. performance           & Team performance          & Team/Ind. knowledge gains & Team/Ind. knowledge gains    \\
+\textit{Independent variable} & Awareness tool vs not.           & Awareness tool vs not.          & Audio only vs Audio+Video & Script vs  not            & Awareness tool vs not.       \\
+\textit{MM°-DV correlation}   & +0.42                            & +0.15                           & +0.22                     & +0.08                     & +0.40                        \\
+\textit{$\Delta_1$}                   & +0.38 (Sig)                      & +0.41 (Sig)                     & ???                       & +0.26 (near SIG)          & +0.05 (non SIG)              \\
+\textit{$\Delta_2$}                   &                                  & +0.30                           & +0.43                     &                           &                              \\
+\textit{$\Delta_3$}                   &                                  & ???                             & +0.66                     &                           &                              \\
+\textit{$\Delta_4$}                   &                                  &                                 &                           & +0.05                     &                             
+\end{tabular}
+}
+\caption{Comparison of the studies}
+\label{synthesis_table}
+\end{table*}
+
+Coming back to our initial hypotheses, the $\Delta_2$ results in studies 1, 2
+and 3 reinforce both $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$. The
+\emph{interaction hypothesis} $\mathcal{H}_{3}$ was that the activity of
+modeling one's partner is not simply the result of an individual cognitive
+effort but overall the side-effect of the quality of interactions. The
+\emph{second-order-modeling hypothesis} $\mathcal{H}_{2}$ stated that, if A is
+accurate in modeling B, A should notice when B misunderstands A and should be
+able to repair. A good modeler would somehow drive the modeling of his or her
+partner.  This \emph{drive} will however occur through verbal cues and repairs
+and is hence not easy to differentiate from $\mathcal{H}_{3}$.  The
+contradictory $\Delta_1$ results in studies 4 (to some extent) and 5 weaken the
+hypothesis. 
+
+The triangular questions lead to similar contradictions. The $\Delta_2$
+correlation between the \gmodel{A}{C} and \gmodel{B}{C} (studies 2 and 3?)
+support $\mathcal{H}_{2}$ if modeling skills were purely individual, there would
+be no reason for modeling skills of A and B to be correlated.  The role of C in
+\gmodel{A}{C} and \gmodel{B}{C} probably explains this correlation.  Conversely,
+the $\Delta_3$ correlation between the \gmodel{A}{B} and \gmodel{A}{C} (studies
+3 and 2?) question $\mathcal{H}_{3}$: if the role of the modellee was so
+important, it would lead be surprising to have by chance a correlation between
+B's and C' ability to drive A's modeling.
+
+In addition, the lack of correlation between \gmodel{A}{A} and \gmodel{A}{B}
+($\Delta_2$ in study 4 and study 5) could also contributes to the idea that A's
+modeling skills is not the key factor. However, between modeling someone and
+modeling oneself, \ie  metacognition, they are so many differences, that we
+would hardly conclude from that,
+
+Among these complex results, it is important to stress that, for $\Delta_2$, the
+significant correlations are all below .50, not around .90.  So even if all
+$\Delta_2$ correlations were significant in all experiments, we would still not
+conclude that modelling purely reflects the quality of social interactions.
+There is obviously a large part of individual variance; some of us are much
+better in modelling peers. This is not new. The contribution of these studies is
+rather to establish the importance of team processes on something that a priori
+seemed to be more of a personal cognitive skill.  In other words, we stress that
+the bottle is half-full. 
+
+These conclusions must be presented with multiple disclaimers. First, they
+heavily rely on correlations; hence we cannot identify causal links. Second, we
+faced hard methodological issues. Providing learners with on-task questionnaires
+introduce a bias: they will pay more attention to their partners in the
+remaining time. Providing them with ``after-task'' questionnaires implies mnemonic
+and rationalization biases. The nature of mutual modeling implies methodological
+challenges that call for new  measurement methods. We have promising results for
+using eye tracking methods to address this challenge.
+
+Finally, let us stress the expressions we used, such as \gmodel{A}{B}, do not
+imply we have a mechanical view of modeling. It's just a language for referring
+to different components of modeling each other in teams.  This simple notation
+emerges from the need to compare five mutual modelling studies; it did not
+generate a consistent program of consistent studies.  Our results are not very
+robust because they emerge from a \emph{post-hoc} reinterpretation of studies
+that addressed different research questions (media richness, awareness tools,
+scripts,...). This diversity makes our results difficult to integrate, partly
+contradictory. Nonetheless, this diversity gives some generalizability: mutual
+modelling has been investigated in different contexts (virtual space versus real
+space), with different groups sizes (pairs and triads) and different tasks.
+Moreover, these results have been found using different methods for measuring
+modeling: on-task in study 1 versus off-task in study 2, subjective validation
+in study 1 versus objective validation in study 2 (comparing A's model with B's
+behavior).
+
+\section*{Acknowledgments}
+
+The experiments were developed with the help of Patrick Jermann,  Fabien
+Girardin, Marc-Antoine Nüssli, Thomas Werhle, Yvan Bourquin and  Jeremy Goslin.
+The main funding has been provided from a NSF Grant grant \#102511-106940.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{abbrv}
