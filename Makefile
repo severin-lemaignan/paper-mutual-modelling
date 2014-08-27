@@ -1,5 +1,5 @@
 
-TARGET=project-mutual-modeling.tex
+TARGET=mutual-modeling.tex
 
 DOT=$(wildcard figs/*.dot)
 SVG=$(wildcard figs/*.svg)
