@@ -617,7 +617,7 @@ experiments.
 
 \section{Studies}
 
-\subsection{Study 1: Effect of an awareness tool on \Model{A}{B} in a virtual
+\subsection{Study 1: Effect of an awareness tool on \Model{A}{B}{x} in a virtual
 game}
 
 \paragraph{Questions}
@@ -687,8 +687,13 @@ strategy). We counted M°(A,B,activity,gamei) as the number of common answers
 between questionnaires M(A,B) and M(B,B) in each game and computed the average
 value a across the 3 games.
 
-
-Figure 4: M(A,A) and M(A,B) questionnaires in SpaceMiners (translated from French)
+\begin{figure}[ht!]
+        \centering
+        \includegraphics[width=\columnwidth]{image5.png}
+        \caption{M(A,A) and M(A,B) questionnaires in SpaceMiners (translated
+        from French)}
+        \label{study1:questionnaires}
+\end{figure}
 
 \paragraph{Results}
 
@@ -738,7 +743,455 @@ intra-class correlation tend to indicate that one may not consider peers as
 independent subjects, which is an argument for the 'interaction' hypothesis
 (H3). 
 
+\subsection{Study 2: Effect of an awareness tool on M°(A,B)  in a pervasive
+game}
 
+\paragraph{Questions}
+
+This study concerns a collaborative game that occurred in the physical space
+(Nova et al , 200?). We studied whether players build an accurate model of the
+path followed by their partners because this path reflected their problem
+solving strategy. We used an objective measure of M°(A,B): the distance between
+where A believes B has been walking and where B actually went. The main
+hypothesis concerned the effect of awareness tools on group performance and on
+M°(A,B). 
+
+\paragraph{Experimental setting}
+
+CatchBob is a mobile game in which groups of 3 players have to solve a joint
+task. The game was played on EPFL campus. Participants had to find a virtual
+object ('Bob') and "to catch it" by forming a triangle around it. Players used a
+Tablet PC that displayed a map of the campus and an indication of their personal
+distance from Bob. Their annotations on the map were shared with the two other
+players (A could see what B and C wrote). These annotations faded out after a
+few minutes to avoid covering the full display. The awareness tool displayed the
+location of the two other players on the map. The availability of location
+awareness tool constituted our independent variable.
+
+\begin{figure*}[h!t]
+        \centering
+        \begin{subfigure}{.3\textwidth}
+            \includegraphics[width=\linewidth]{image6.png}
+            \caption{A's drawing A of B's path.}
+        \end{subfigure}
+        \begin{subfigure}{.3\textwidth}
+            \includegraphics[width=\linewidth]{image7.png}
+            \caption{Actual path followed by B.}
+        \end{subfigure}
+        \caption{Bla bla}
+        \label{study2:paths}
+\end{figure*}
+
+\paragraph{Subjects}
+
+Ninety students participated in this experiment. We chosen only students from
+our University because knowing the campus geography had an impact both on group
+performance but also on mutual modeling: it is hard to represent the path of
+someone across some space without having a mental map of this space. We selected
+groups of students who knew each other. We assigned 10 triads to each of our
+three experimental conditions. Each condition was made up of approximately 25%
+of women, but we did not control gender repartition within each triad.
+
+\paragraph{Variables}
+
+The independent variable was the awareness tool: the control condition (without
+tool) and two experimental conditions: synchronous awareness (display current
+position of each player) and asynchronous awareness (display current position of
+each player and their recent spatial trace).  As a dependent variable, we had
+the task performance which was the distance covered by the team to catch Bob and
+M°(A,B). To estimate M°(A,B), we asked players to draw on paper their own path
+and the path of each of their partners after the game. This enabled us to
+calculate the number of errors players made while drawing the path of their
+partners. We compared the path that player A attributed to B with B's real paths
+recorded by the system and the same for A\&C or B\&C as depicted on Figure 5. 
+ 
+
+M°(A,B) is the sum of errors made by A about B’s paths. An error was either
+drawing a place where the partner had not been or not drawing a place where
+he/she had gone. One could argue that M°(A,B) is biased by the subjects' ability
+to translate their trajectories souvenir into a map drawing. However, 85% of
+subjects made no mistake at all when drawing their own path. We therefore
+consider mistakes in their partners' path as being due to a lack of mutual
+modeling accuracy instead of being due to spatial reasoning skills.
+
+\paragraph{Results}
+
+Grounding criterion. The correlation between M°(A,B) and the task performance
+(path lengths) was low: 0.15. Using a post-hoc split on M°(A,B), there is no
+significant difference between the performance of the groups with high and low
+M°(A,B)  (F = 1.45, p = 0.24). Conversely, a post-hoc split of the groups
+according to their performance did not show any significant differences on
+M°(A,B) (F = 1.16, p = 0.29).
+
+Study-specific questions. There was no significant difference regarding the task
+performance. However, our surprise was that the absence of the awareness tool
+was related to a higher M°(A,B): players better remembered their partners’ path
+if they did not see their position permanently! We will not enter into the
+details of these results but, to be short, teams without awareness tool made
+more annotations on the map while permanent MLA has an underwhelming effect
+(Nova et al., 2005).
+
+Symmetry question. The correlation between M°(A,B)  and M°(B,A)  is positive (r
+= .41) and significant (p < .01);  the more A makes errors about B, the more B
+does the same.
+
+Triangle questions. About ∆2, the correlation between M°(A,B) and M°(A,C)is
+significant: r=0.30, p <.01. About ∆3, the correlation between M°(A,C) and
+M°(B,C) is significant: r=0.43, p <.001. 
+
+\paragraph{Discussion}
+
+This positive result regarding to the symmetry question is even more surprising
+than the previous one: despite the high heterogeneity of spatial skills among
+adults (Liben et al, 1981), a significant correlation could indicate that mutual
+modeling relies more on group processes than on individual processes. The
+significant results on the triangle questions probably go in the same direction:
+either the modeler or the modeled both contribute to accurate modeling, or that
+the quality of teamwork has a global effect. In this experiment, since team
+members did not interact intensively during the task, the factor that
+facilitates accurate mutual modeling is probably less the quality of verbal
+interactions that the group strategy: a clear strategy facilitates memorizing
+one’s partner path. 
+
+\subsection{Study 3:  Effect of media richness on M°(A,B) in argumentation}
+
+\paragraph{Questions}
+
+The aim of this unpublished study was to evaluate the effect of media richness
+on M°(A,B,emotions). The hypothesis was that video communication would lead to a
+better M°(A,B) than audio only since emotions often impact on facial
+expressions.
+
+\begin{figure*}[ht!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{image8.jpg}
+        \caption{Example of argumentation graph}
+        \label{study3:argumentation_graph}
+\end{figure*}
+
+
+\paragraph{Experimental settings} 
+
+Triads had to address an emotional societal debate: authorizing or not adoption
+by homosexual couples). They worked on-line and had to structure their
+argumentation with a shared concept map tool (TeamWave) as illustrated in Fig.
+6. Ten groups had only an audio connection while ten groups had audio plus
+video. The video communication was provided by a web cam and the software
+IVisit. For the audio link, we used microphones, headsets and a software called
+BattleCom. In the audio+video condition, the screen was divided in three
+sections. The main part was devoted to the concept map window (24 X 24 cm). In
+the remaining part appeared the image of the two peers (8.5 X 8.5 cm each). In
+the audio condition, this video zone was left empty so that the size of the
+concept map was equal in each condition. The subjects were located in the same
+room, separated by mobile walls. Despite their headsets, it is not impossible
+that they could hear non-verbal audio cues (e.g. tapping the sole with feet).
+The task last in average 61 minutes.  
+
+\paragraph{Subjects}
+
+Twenty triads from the University of Geneva participated to this experiment. We
+formed groups of subjects who knew each other, i.e. they had ab initio mutual
+models: the task required the discussion of sensitive issues which required to
+feel quite comfortable with peers. There were 36 women and 24 men, but, since
+groups were formed a priori, we could not control the balance of men and women
+in each condition.
+
+\paragraph{Variables}
+
+The independent variable was the presence of not of video link. The dependent
+variable M°(A,B) was subjectively by using 3 questionnaires: in the first one, A
+described his or her own emotions M(A,A) , while in the two other questionnaire,
+A describes B’s and C’s emotions.   The questionnaire included 18 items (7 steps
+Likert Scale) describing emotions labeled as adjectives: anxious, enthusiastic,
+agitated, proud, excited, quiet, calm, stressed, bored, upset, relaxed,
+irritated, determined, hostile, active, etc. This list of emotions was
+elaborated from (REF?). The proposed emotions were . M(A,B) is a vector of 18
+numerical values {x1 … xi} corresponding to their answers on each questionnaire.
+M°(A,B) has been computed as the correlation between the two vectors :  
+
+M°(A,B,emotions) = ∆M(A,B,{x1 … xi}, M(B,B,{y1, … ,yi}) = r ({x1 … xi}, {y1, …
+,yi}))
+
+\paragraph{Results}
+
+\begin{figure*}[ht!]
+        \centering
+        \includegraphics[width=0.9\textwidth]{image9.pdf}
+        \caption{Average values of M°(A,B,X) where X is one of the proposed
+        emotions (max = 7).}
+        \label{study3:deg_m_values}
+\end{figure*}
+
+Grounding criterion. The maps produced by teams were ranked. We use the average
+rank as a estimation of the team performance and correlated with the average of
+the 6 values of M°(A,B) per team (M°(A,B), M°(A,C), M°(BA),…): The correlation
+is -0.22: teams with a good M°(A,B) team to be better ranked. 
+
+Study-specific questions. Our hypothesis about media richness is rejected: the
+average M°(A,B, emotions) was .62 (SD .28) with the audio+video condition and
+.71 (SD .19) in the audio condition (F=3.4, p: 0.065). Our interpretation is
+that viewing what one's partner sees (shared graphical editor) was, in this
+task, more important than seeing each other (Gaver et al 1993; Anderson et al.,
+2000).  
+
+Symmetry questions. Regarding the main items, the mutual modeling of emotions,
+the correlation is .25 or .36  a reprendre avec - Patrick 
+
+Triangle questions. Check (∆2) . For (∆3) If we compute for each subject A, the
+correlation between the vectors of emotions in M(B,A) and the vector in M(C,A),
+and take the average across all 60 subjects, we obtain a very impressive
+correlation of .66. This average is about the same in each condition.
+
+Rectangle questions We cannot address the relationship (∆4) between self-and
+social accuracy here because we don't have an estimation of self-accuracy:
+subjects describe their emotions but we have no way to check if there are
+correct. However, by measuring M°(A,B) on  18 emotional labels, we can however
+have a glimpse about ∆5: how M°(A,B,X) varies according to X. Figure 7 shows the
+range of modelling errors: the difference between M(A,B) and M(B,A), on a scale
+of 7, is in average of 0.3 for the emotion "discasted" up to 1.9 for the emotion
+"calm". This is probably specific to the variety of scales  (SD= 0-5 for
+"discated" versus .7 for "calm"), our point is not to interpret this too far,
+but to show that there are large varations even with one area  (perceiving
+emotions). 
+
+\paragraph{Discussion}
+
+Chek si il faut modifier les resultats de la symmetries
+
+\subsection{Study 4:  Effects of a script on M°(A,B)  in concept mapping}
+
+\paragraph{Questions}
+
+This study investigated the effect of a collaboration script on collaborative
+learning (REF).. The script chosen is a JIGSAW: two students receive different
+but complementary subsets of the knowledge (texts) which have to be integrated
+to build a shared concept map.  This script increases the cognitive effort to
+build the map, not only to recon ciliate the viewpoints of each team members
+but, before that, to find out what the other knows. 
+
+\paragraph{Experimental settings}
+
+The instructional material consisted of an explanatory text about the
+neurophysiologic phenomenon of “action potential”. The text was divided into 3
+chapters. The peers were located in two rooms equipped with the same computer.
+The experimental session lasted around 90 minutes and consisted of 6 phases:
+Participants used two software components, CmapTools (http://cmap.ihmc.us/) and
+TeamSpeak (http://www.goteamspeak.com/).
+
+1. As a pre-test, participants were asked to write down all they knew about the
+neuron and its functioning (5 minutes).
+
+2. Participants were instructed to read a text (12 minutes). 
+
+3. Participants were asked to build individually a concept map in order to
+graphically represent what they learnt from the text (10 minutes). 
+
+4. Dyads had to built a concept map during 20 minutes, communicating by audio.
+The screen layout was structured into three areas (see Figure 8) 
+
+5. Participants were invited to individually complete a knowledge test (15-20
+minutes). 
+
+6. Participants where asked to estimate their own- and their partner’s final
+knowledge in a questionnaire. 
+
+Figure ?... 
+
+
+\begin{figure*}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+        \node[anchor=south west,inner sep=0] at (0,0)
+            {\includegraphics[width=0.65\textwidth]{image10.png}};
+        
+            \node[rectangle,draw, thick] at (11,6.2) {Self map};
+            \node[rectangle,draw, thick] at (11,3) {Partner map};
+            \node[rectangle,draw, thick] at (3,2) {Collaborative map};
+    \end{tikzpicture}
+    \caption{The group concept map and the individual concept maps in study
+    4}
+    \label{study4:concept_map}
+\end{figure*}
+
+\paragraph{Subjects}
+
+Fifty-eight first year students from EPFL, 47 men and 11 women, with a mean age
+of 20.46 were remunerated for participation. Dyads were randomly assigned to one
+of the two experimental conditions. The men/women ratio was equivalent in each
+condition. Participants did not know each other before the experiment. Students
+from Life Sciences were not recruited since they had too high background
+knowledge on the learning domain.
+
+\paragraph{Variables}
+
+The independent variable, script versus no-script, was implemented by the
+difference of texts that individuals had to read. In the “same information” (SI)
+condition, the same text was given to both partners. In the “complementary
+information” (CI) condition. it was divided into two sub-texts, one about the
+electrical processes of the neuron while the second one about the chemical
+processes. These two versions were equivalent in terms of number of information
+pieces. 
+
+The dependent variables were the post-test scores, but this paper is mostly
+concerned by the M(A,B, knowledge).  In phase 6, participants were ask to
+estimate (7-point Likert scale) their own- and their partner’s outcome knowledge
+with respect to each chapter of the zexz. The order of questions about oneself
+and about the other was counterbalanced across participants. We measure M°(A,B)
+in an objective (1 \& 2) as well as in a subjective way (3). 
+
+(1) M°(A,B, knowledge) = Σi=1to3  | M(A,B, chapteri) – score (B, chapteri) |
+
+(2) M°(A,A, knowledge) = Σi=1to3  | M(A,A, chapteri) – score (A, chapteri) |
+
+(3) m°(A,B, knowledge) = Σi=1to3  | M(A,B, chapteri) – M(B,A, chapteri) |
+
+\paragraph{Results}
+
+Grounding criterion. In this task, the grounding criterion was low, but we did
+not evaluate task performance (e.g. the quality of the jointly produced concept
+map) but the learning gains. The correlation between M°(A,B) and A's learning
+gains is not significant (β =.08, ,NS, N = 60). It is also not significant
+within each condition.
+
+Study-specific questions. We performed a non-parametric Mann-Whitney test on
+post-test scores for electric questions and a one-way ANOVA on scores for ionic
+questions (Levene tests for homogeneity of variances: p = .02 and ns,
+respectively. Results  did not show any significant difference between the “same
+information” (SI) condition and the “complementary information” (CI) condition,
+neither for electric questions [U = 388.50, z = -0.88, ns] nor for ionic
+questions [F(1, 58) = 0.17, ns].  The effect of scripts on M°(A,B) was not
+significant (F(1, 58) = 0.78, ns) when considering the absolute difference
+between M°(A,B) and B's post-test score. However, A tended underestimate B's
+score in the SI condition (M = -2.06) and to overestimate it in the CI condition
+(M = 1.21). (F(1, 58) = 6.44, p<.01). Regarding to M°(A,A), there was no
+significant difference between conditions.
+
+Symmetry question. The interclass correlation between M°(A,B) and M° (B,A) is
+not significant, but almost (r=.26 (F(1,29)=1.71, p= 0.075)). Actually, it is
+significant when students read the same text (SI condition: r= 0.43,
+F(1,15)=2.53, p<.05) but not when they read different texts (r=.13, F(1,12)=1.3,
+NS). 
+
+Triangle questions do not apply here since we worked with dyads.
+
+Rectangle question ∆4: the correlation between M(A,A) and M(A,B) is globally not
+significant (r=0.05) as well as not significant in each condition: someone good
+at self-modeling is not necessarily good at modeling someone else and
+vice-versa.  Discussion
+
+In this experiment, the symmetry of mutual modelling is only found when subjects
+are in conditions of symmetry of information. This consolidates the hypothesis
+of M°(A,B) being a property of interactions in context rather than A's cognitive
+attitude.
+
+\subsection{Study 5:  M°(A,B, knowledge)  in concept mapping}
+
+\paragraph{Questions}
+
+This study investigates if M°(A,B, knowledge) is related to learning outcomes by
+comparing teams with or without a knowledge awareness tool (KAT), i.e. a tool
+that informs A about B's knowledge as measured through a pre-test.
+
+\paragraph{Experimental setting}
+
+The peers were located into two different rooms. A complete description of the
+study is provided in Sangin et al (2008).The experiment lasted 90 minutes. It
+started with the same two steps as in study 4.
+
+3. Subjects passed a pre-test, with ten questions per chapter. 
+
+4. Participants had 20 minutes to draw a collaborative concept map reporting the
+content of the texts. They were able to communicate orally through headsets.  We
+used Tobbii eye tracking devices to record their gazes.
+
+5. The post-test included the same items than the pre-test but in a different
+order. 
+
+6. Finally, participants were asked to estimate their partner’s knowledge at the
+post-test for each of the three chapters on a 7-point likert-like survey. 
+
+\begin{figure*}
+        \centering
+        \includegraphics[width=0.9\textwidth]{image11.png}
+        \caption{Screenshot of the KAT condition during the concept-map building
+        phase.}
+        \label{study5:kat}
+\end{figure*}
+
+\paragraph{Subjects}
+
+Sixty-four first year EPFL students (18 women, mean age = 21.2 years)
+participated to the study. They were involved in curricula that do not imply
+advanced neurophysiologic notions. They were randomly assigned to conditions and
+did not know each other before. 
+
+\paragraph{Variables}
+
+The participants of the experimental condition group were provided with the KAT
+on the bottom part of the screen (see Figure 9): each line represents the score
+obtained by the partner at the pre-test for a chapter. Participants did not see
+they own score, but they usually started their discussion by exchanging this
+information.
+
+\paragraph{Results}
+
+Grounding criterion. A linear regression revealed a positive relation between M°
+(A,B) and the collaborative learning gain of the pair (AB): β = .401, p < .001,
+r2adj. =.15, large effect. This relationship was not significant in the previous
+experiment which as been conducted with the same task: using the same task
+should produce the same grounding criterion This probably due to the fact that
+M° (A,B) was influence by the KAT.
+
+Study-specific questions. The t-test reported a significant difference between
+the KAT condition participants (M = 13.4\%) and the control group [M = 3.6%, t(1,
+60) = 2.73, p < .01,Cohen’s d = 0.7, medium to large effect]. Providing learners
+with cues about the prior-knowledge of their partner enhances their
+collaborative learning. As a treatment check, we found a positive and
+significant correlation between the amount of gazes on KAT (using eye tracking
+devices) and the learning gains (r(22) = .54, p = .01). A detailed analysis
+revealed that subjects look at KAT to assess their peer's credibility when (s)he
+provided new information. 
+
+The KAT has a significant effect on M°(A,B): peers more accurately estimated
+their partners knowledge (M = 1.11) than those in the control condition [M =
+.98, t(1, 60) = 3.19, p < .01, Cohen’s d = 0.83, large effect]. This is a
+trivial result since the KAT provided them with an initial M(A,B). However,
+subjects have to predict the post-test score while the KAT informed them about
+the pre-test score. Actually, pairs in the KAT condition produced significantly
+more instances of 3 specific categories of interactions: (1) elaborated
+utterances with rich contents,  (2) utterances asking about the other's
+knowledge such as "Did you understand how transmission works?" (3) utterances
+describing one's own knowledge (M(A,A)) such as "I don’t remember the Ranvier’s
+thing…" . These 3 categories provide different account of M°(A,B): (1) as an
+effect of the quality of interaction, (2) as an effect of A's effort to model B
+or (3) as B's effort to give cues to A about his own knowledge.
+
+We examined M° (A,B) as potentially mediating the effect of the KAT factor on
+the relative learning gain. A linear regression confirmed that M° (A,B) was
+significantly related to the KAT-factor (β = .381, p < .01, r2 = .15). The
+KAT-factor was also significantly and positively related to the RLG (β = .332, p
+< .01, r2 = .11). We then tested the relation between the independent variable
+(KAT) and the dependent variable (gains) when controlling for the mediating
+variable (M° (A,B)). A multiple regression showed that the KAT-factor was no
+longer a significant predictor (β = .210; p = ns) whereas the M° (A,B) was still
+a significant predictor (β = .32, p < .01). Thus, it can be concluded that M°
+(A,B) mediated the KAT-factor’s effect on the learners’ RLG. The Sobel (1982)
+significance test for indirect effects was significant [z = 1.99, p < .05]. 
+
+Symmetry question.  We did not find an intra-pair correlation (ICC = 0.05, NS).
+Rectangle question ∆4: the correlation between M(A,A) and M(A,B) is \fixme{???
+MIRWEIS A FAIRE}.
+
+\paragraph{Discussion}
+
+Despite the fact that the learning task was the same as in study 4, the
+conditions of collaboration (viewing multiple maps or not) and the conditions
+(scripted or not, awareness tool or not) probably explain differences in terms
+of mutual modeling
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{abbrv}
 \bibliography{biblio}
 
