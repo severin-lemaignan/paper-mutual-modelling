@@ -1,11 +1,10 @@
-\documentclass[twocolumn]{article}
+\documentclass[natbib]{svjour3}
 
 % UTF8 support
 \usepackage[utf8x]{inputenc}
 
 \usepackage[english]{babel}
 
-\usepackage[round]{natbib}
 
 \usepackage{graphicx}
 \graphicspath{{figs/}}
@@ -41,32 +40,37 @@
 \newcommand{\concept}[1]{{\small \texttt{#1}}}
 \newcommand{\stmt}[1]{{\footnotesize \tt $\langle$ #1\relax$\rangle$}}
 
-
 \title{Do I Need to Model You in order to Learn With You?}
+\subtitle{Mutual Modelling in CSCL}
 
 \author{
-    Pierre Dillenbourg, Séverin Lemaignan \\
-    \small Computer-Human Interaction in Learning and Instruction (CHILI) \\
-    \small Ecole Polytechnique Fédérale de Lausanne (EPFL) \\
-    \small CH-1015 Lausanne, Switzerland \\
-    {\tt firstname.lastname@epfl.ch}
+    Pierre Dillenbourg
     \and
-    Mirweis Sangin \\
+    Séverin Lemaignan
     \and
-    Nicolas Nova \\
-    \small Haute Ecole Arts \& Design de Genève\\
-    {\tt nicolas.nova@hesge.ch}
+    Mirweis Sangin
+    \and
+    Nicolas Nova
     \and
     René Glaus
     \and
-    Gaëlle Molinari \\
-    \small Fernuni Schweiz \\
-    {\tt gaelle.molinari@fernuni.ch}
+    Gaëlle Molinari
+}
+\institute{
+    Pierre Dillenbourg, Séverin Lemaignan \at Computer-Human Interaction in Learning and Instruction \\
+    École Polytechnique Fédérale de Lausanne (EPFL) \\ CH-1015 Lausanne, Switzerland \\
+    \email{firstname.lastname@epfl.ch}
+    \and
+    Mirweis Sangin \at Sony Computer Entertainment Europe
+    \and
+    Nicolas Nova \at Haute École Arts \& Design de Genève \\\email{nicolas.nova@hesge.ch}
+    \and
+    René Glaus
+    \and
+    Gaëlle Molinari \at Fernuni Schweiz \\\email{gaelle.molinari@fernuni.ch}
 }
 \begin{document}
 \maketitle
-
-\listoffixmes
 
 \begin{abstract}
     Collaborative learning has something to do with building a shared
@@ -100,9 +104,9 @@ two students build the same understanding but the cognitive effort they have to
 engage to build this shared understanding~\citep{schwartz1995emergence}. This
 effort can be observed by the frequency of rich interactions, \ie interactions
 whose occurrence has been related to learning: (self-) explanations in cognitive
-science~\cite{chi1989self, webb1991task}, conflict resolution in
-socio-cognitive theories~\cite{doise1975social},
-mutual regulation~\cite{blaye1995collaborative} in a Vygostkian perspective, etc. The
+science~\citep{chi1989self, webb1991task}, conflict resolution in
+socio-cognitive theories~\citep{doise1975social},
+mutual regulation~\citep{blaye1995collaborative} in a Vygostkian perspective, etc. The
 construction of a shared understanding has been investigated for several years
 in psycholinguistics, under the  notion of
 \emph{grounding}~\citep{clark1986referring}. However, the relevance of grounding
@@ -1090,11 +1094,11 @@ TeamSpeak}.
     \centering
     \begin{tikzpicture}[scale=0.8]
         \node[anchor=south west,inner sep=0] at (0,0)
-            {\includegraphics[width=0.65\textwidth]{image10.png}};
+            {\includegraphics[width=0.75\textwidth]{image10.png}};
         
-            \node[rectangle,draw, thick] at (11,6.2) {Self map};
-            \node[rectangle,draw, thick] at (11,3) {Partner map};
-            \node[rectangle,draw, thick] at (3,2) {Collaborative map};
+            \node[rectangle,draw, thick] at (10,5.4) {Self map};
+            \node[rectangle,draw, thick] at (7.5,3.3) {Partner map};
+            \node[rectangle,draw, thick] at (2.5,1.5) {Collaborative map};
     \end{tikzpicture}
     \caption{The group concept map and the individual concept maps in study
     4}
@@ -1392,14 +1396,16 @@ modelling: on-task in study 1 versus off-task in study 2, subjective validation
 in study 1 versus objective validation in study 2 (comparing $A$'s model with $B$'s
 behavior).
 
-\section*{Acknowledgments}
+\begin{acknowledgements}
 
 The experiments were developed with the help of Patrick Jermann,  Fabien
 Girardin, Marc-Antoine Nüssli, Thomas Werhle, Yvan Bourquin and  Jeremy Goslin.
 The main funding has been provided from a NSF Grant grant \#102511-106940.
 
+\end{acknowledgements}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliographystyle{plainnat}
+\bibliographystyle{spbasic}
 \bibliography{biblio}
 
 
