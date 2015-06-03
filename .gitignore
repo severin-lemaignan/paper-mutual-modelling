@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+*.bbl
+*.log
+*.aux
+*.out
+*.pdf
+*.lox
+*.blg
