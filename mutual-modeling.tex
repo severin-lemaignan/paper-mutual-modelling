@@ -28,6 +28,7 @@
 \newcommand{\model}[3]{{$\mathcal{M}(#1, #2, #3)$}}
 % generic mutual model (gmodel) 
 \newcommand{\gmodel}[2]{{$\mathcal{M}(#1, #2)$}}
+\newcommand{\Gmodel}[2]{{\mathcal{M}(#1, #2)}}
 \newcommand{\refmodel}[2]{{$\mathcal{M}(#1, #2)$}}
 \newcommand{\Model}[3]{{$\mathcal{M}^{\circ}(#1, #2, #3)$}}
 \newcommand{\gModel}[2]{{$\mathcal{M}^{\circ}(#1, #2)$}}
@@ -39,6 +40,10 @@
 
 \newcommand{\concept}[1]{{\small \texttt{#1}}}
 \newcommand{\stmt}[1]{{\footnotesize \tt $\langle$ #1\relax$\rangle$}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\newcommand*\mean[1]{\overline{#1}}
 
 \title{Do I Need to Model You in order to Learn With You?}
 \subtitle{Mutual Modelling in CSCL}
@@ -558,6 +563,8 @@ $\mathcal{H}_{2}$ is also called a second level modelling hypothesis since $B$
 needs to monitor $A$ to see if $A$ understood him/her
 ($\mathcal{M}(B,A,\mathcal{M}(A,B))$).
 
+\paragraph{The symmetry question}
+
 One interesting question relates to the symmetry of mutual modelling: what is
 the relationship between \Model{A}{B}{X} and
 \Model{B}{A}{X} (Fig.~\ref{mm_symmetry})? A low symmetry would mean that mutual modelling is mainly an
@@ -587,16 +594,16 @@ pairs integrate peers with the same level of mutual modelling skills.
 \label{mm_symmetry}
 \end{figure}
 
+\paragraph{The triangle questions}
 
 With triads, we may compute the accuracy of 6 models:
 \Model{A}{B}{X}, \Model{B}{A}{X}, \Model{A}{C}{X}, \Model{C}{A}{X},
 \Model{C}{B}{X} and \Model{B}{C}{X}.
 
-This leads to two \emph{triangle questions} (Fig.~\ref{mm_triangles}): Do $A$ and
-$B$ have the same accuracy when modelling $C$ ($\Delta_2 =
-\Delta(\mathcal{M}^{\circ}(A,C,X),
-\mathcal{M}^{\circ}(B,C,X))$)? If it is the same, $\mathcal{H}_{2}$ gains over
-$\mathcal{H}_{1}$
+This leads to two \emph{triangle questions} (Fig.~\ref{mm_triangles}): Do $A$
+and $B$ have the same accuracy when modelling $C$ ($\Delta_2 =
+\Delta(\mathcal{M}^{\circ}(A,C,X), \mathcal{M}^{\circ}(B,C,X))$)? If it is the
+same, $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$ gains over $\mathcal{H}_{1}$
 
 Conversely, does $C$ model more accurately $A$ than $B$ ($\Delta_3=
 \Delta(\mathcal{M}^{\circ}(C,A,X),
