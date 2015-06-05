@@ -939,10 +939,12 @@ strategy facilitates memorizing one's partner path.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{{\bf Study 3}:  Effect of media richness on \gModel{A}{B} in argumentation}
 
-The aim of this unpublished study was to evaluate the effect of media richness
-on \Model{A}{B}{emotions}. The hypothesis was that video communication would
-lead to a better \gModel{A}{B} than audio only since emotions often impact on
-facial expressions.
+The aim of this unpublished\footnote{The data and statistical analyses of this
+study are available online:
+\url{https://github.com/chili-epfl/mutual-modelling-adoption-homosexuality-study}.}
+study was to evaluate the effect of media richness on \Model{A}{B}{emotions}.
+The hypothesis was that video communication would lead to a better \gModel{A}{B}
+than audio only since emotions often impact on facial expressions.
 
 \begin{figure*}[ht!]
         \centering
@@ -979,18 +981,25 @@ priori}, we did not balance gender in each condition.
 
 \subsubsection*{Variables}
 
-The independent variable was the presence or not of video link. The dependent
-variable \gModel{A}{B} was measured subjectively from three questionnaires: in the first
-one, $A$ described his/her own emotions \gmodel{A}{A}, while in the two other
-questionnaire, $A$ described $B$'s and C's emotions. The questionnaire included 18
-items (7-point Likert Scale) describing emotions labeled as adjectives:
-\emph{anxious}, \emph{enthusiastic}, \emph{agitated}, \emph{proud},
+The independent variable was the presence or not of a video link. The dependent
+variable \gModel{A}{B} was measured subjectively from three questionnaires: in
+the first one, $A$ described his/her own emotions \gmodel{A}{A}, while in the
+two other questionnaire, $A$ described $B$'s and $C$'s emotions. The questionnaire
+included 18 items (7-point Likert Scale) describing emotions labeled as
+adjectives: \emph{anxious}, \emph{enthusiastic}, \emph{agitated}, \emph{proud},
 \emph{excited}, \emph{quiet}, \emph{calm}, \emph{stressed}, \emph{bored},
 \emph{upset}, \emph{relaxed}, \emph{irritated}, \emph{determined},
-\emph{hostile}, \emph{active}, etc. \gmodel{A}{B} was modelled as a vector
-of 18 numerical values corresponding to their answers on each
-questionnaire items, and \gModel{A}{B} was computed as the correlation between the
-two vectors \gmodel{A}{B} and \gmodel{B}{B}.
+\emph{hostile}, \emph{active}, etc. \gmodel{A}{B} was modelled as a vector of 18
+numerical values corresponding to their answers on each questionnaire items, and
+\gModel{A}{B} was computed as the distance between the two vectors
+\gmodel{A}{B} and \gmodel{B}{B}:
+
+\[
+    \Mdeg{A}{B}{emotions} = \frac{\displaystyle\sum_{emotions} \abs{\M{A}{B}{e} -
+    \M{B}{B}{e}}}{18}
+\]
+
+The smaller the score, the \emph{more} accurate the model.
 
 \subsubsection*{Results}
 
@@ -1002,25 +1011,31 @@ per team (\gModel{A}{B}, \gModel{A}{C}, \gModel{B}{A},...). The correlation is
 -0.22: teams with a good \gModel{A}{B} tend to be better ranked. 
 
 \paragraph{Study-specific questions} Our hypothesis about media richness is
-rejected: the average \Model{A}{B}{emotions} was 0.62 ($SD = 0.28$) with the
-audio+video condition and 0.71 ($SD = 0.19$) in the audio condition ($F=3.4, p:
-0.065$).
+rejected: the average score for \model{A}{B}{emotions} was 1.25 ($SD = 0.53$) in
+the audio+video condition and 1.09 ($SD = 0.41$) in the audio alone condition
+($t=1.89, df=111, p = 0.062$): the average degree of accuracy of
+\model{A}{B}{emotions} was hence \emph{higher} in the audio alone condition.
 
-\paragraph{Symmetry question} We computed the absolute differences between
-\gModel{A}{B} and \gModel{B}{A} over all subjects (3 values per triad, 20
-triads) and averaged them. The average difference in the degrees of accuracy of
-symmetrical models is 0.21 ($SD= 0.21$): pairs of subjects tend to assess the
-emotions of each other with similar levels of accuracy.
+\paragraph{Symmetry question} We computed the absolute differences $\Delta_1$
+between \gModel{A}{B} and \gModel{B}{A} over all pair of subjects within a triad
+(3 values per triad, 20 triads), and compared them with the same differences
+computed from random gradings (following the same grade distribution as for the
+experimental data).
 
+A t-test on the two sets releaved a significantly lower average difference in
+the experimental data (mean difference: $0.40$ vs $0.54$ with random gradings,
+$t=-3.3, df=60, p = 0.0016$), supporting the symmetry hypothesis.
 
 \paragraph{Triangle questions} $\Delta_2$ is computed in a similar way as the average of
 the absolute differences between \gModel{A}{C} and \gModel{B}{C} over the 60
-subjects. The average difference is 0.17 ($SD= 0.19$), indicating that, inside a
-triad, $A$ and $B$ tend to model $C$ in a similar way. For $\Delta_3$, the
-average absolute difference between \gModel{C}{A} and \gModel{C}{B} over the 60
-subjects is 0.22 ($SD= 0.12$), which means that a given subject tends to model
-the two other member of the triad with a similar degree of accuracy, which
-supports $\mathcal{H}_{1}$.
+subjects. The average difference is 0.42 ($SD= 0.34$), and if not significantly
+different from the same data obtained from random gradings ($t=-1.61, df=60,
+p=0.11$).
+
+For $\Delta_3$, the average absolute difference between \gModel{C}{A} and
+\gModel{C}{B} over the 60 subjects is 0.40 ($SD= 0.41$) and is significantly
+lower than chance ($t=-2.62, df=60, p=0.01$): a given subject tends to model its
+two partners with similar degrees of accuracy, which supports $\mathcal{H}_{1}$.
 
 \begin{figure*}[ht!]
         \centering
@@ -1056,16 +1071,14 @@ one's partner sees (shared graphical editor) was, in this task, more important
 than seeing each other~\citep{gaver1993one,anderson1997impact}.
 
 In this study, the accuracy of mutual modelling between two peers tend to be
-symmetrical, which supports the idea that the quality of modelling is primarily
-building upon the social interaction. This is further supported by a low
-averaged $\Delta_2$: if, for any $A$ and $B$, $A$ and $B$ generally model $C$
-with a similar level of accuracy, it is likely due to the social interaction
-induced by $C$ (hypothesis $\mathcal{H}_{2}$).
+symmetrical, which would support the idea that the quality of modelling is primarily
+building upon the social interaction. This is however not fully supported by the
+analysis of $\Delta_2$: $A$ being good at modelling $C$ does not correlate with
+$B$ being good at modelling $C$.
 
-On the other hand, the low $\Delta_3$ that we also found ($C$ tends to always
-model $A$ and $B$ with similar levels of accuracy) tend to contradict this, and
-supports the idea that modelling is primarily an individual skill (hypothesis
-$\mathcal{H}_{1}$).
+On the other hand, $\Delta_3$ shows that a given $A$ tends to
+model $B$ and $C$ at similar levels of accuracy: this evidences an individual
+skill at modelling others (hypothesis $\mathcal{H}_{1}$).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1340,31 +1353,30 @@ accurate model of A.  In one study, this was the case only in one condition.
 The conclusion is hence that modelling is mutual but only in certain conditions,
 summarized in Table~\ref{synthesis_table}.
 
-\begin{table*}[h!t]
+\begin{table*}[ht!]
 \centering
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{p{3cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}|p{4cm}}
+\begin{tabular}{p{2.6cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}}
 \textit{}                     & \textbf{Study 1}                 & \textbf{Study 2}                & \textbf{Study 3}          & \textbf{Study 4}          & \textbf{Study 5}             \\ \hline
-\textit{Task}                 & Game in virtual space            & Game in physical space          & Building an argument map  & Building a concept map    & Building a concept map       \\
-\textit{Interactions}         & Audio                            & Written                         & Audio / Video             & Audio                     & Audio                        \\
-\textit{Shared editor}        & 3D Space                         & 2D Map                          & Concept Map               & Concept Map               & Concept Map                  \\
-\textit{Group Size}           & 2                                & 3                               & 3                         & 3                         & 3                            \\
-\textit{Duration (mean)}      & 90min                            & 16min                           & 61min                     & 90min                     & 90min                        \\
-\textit{Awareness tool}       & Partner's position / orientation & Partner's current/past position & -                         & Partner's concept map     & Partner's scores at pre-test \\
-\textit{Dependent var.}       & Team/Ind. performance            & Team/Ind. performance           & Team performance          & Team/Ind. knowledge gains & Team/Ind. knowledge gains    \\
-\textit{Independent var.}     & Awareness tool \textit{vs} none  & Awareness tool \textit{vs} none & Audio \textit{vs} Audio+Video & Script \textit{vs} none & Awareness tool \textit{vs} none       \\
-\textit{MM°-DV correlation}   & +0.42                            & +0.15                           & +0.22                     & +0.08                     & +0.40                        \\
-\textit{$\Delta_1$}           & +0.38 (significant)              & +0.41 (significant)             & ???                       & +0.26 (near significant)          & +0.05 (ns)              \\
-\textit{$\Delta_2$}           &                                  & +0.43 (significant)             & +0.43                     &                           &                              \\
-    \textit{$\Delta_3$}       &                                  & +0.30 (significant)             & +0.66                     &                           &                              \\
-\textit{$\Delta_4$}           &                                  &                                 &                           & +0.05                     &                             
+\textbf{Task}                 & Game in virtual space            & Game in physical space          & Building an argument map  & Building a concept map    & Building a concept map       \\
+\textbf{Interactions}         & Audio                            & Written                         & Audio / Video             & Audio                     & Audio                        \\
+\textbf{Shared editor}        & 3D Space                         & 2D Map                          & Concept Map               & Concept Map               & Concept Map                  \\
+\textbf{Group Size}           & dyads                            & \textbf{triads}                 & \textbf{triads}           & dyads                     & dyads                            \\
+\textbf{Duration (mean)}      & 90min                            & 16min                           & 61min                     & 90min                     & 90min                        \\
+\textbf{Awareness tool}       & Partner's position               & Partner's current/past pos.     & -                         & Partner's concept map     & Partner's scores at pre-test \\
+\textbf{Dependent var.}       & Team/Ind. performance            & Team/Ind. performance           & Team performance          & Team/Ind. knowledge       & Team/Ind. knowledge          \\
+\textbf{Independent var.}     & Awareness tool \textit{vs} none  & Awareness tool \textit{vs} none & Audio \textit{vs} Audio+Video & Script \textit{vs} none & Awareness tool \textit{vs} none       \\
+\textbf{Grounding crit.}      & +0.42                            & +0.15                           & +0.22                     & +0.08                     & +0.40                        \\
+$\mathcal{H}_1$               &                                  & supported                       & supported                 &                           &                              \\
+$\mathcal{H}_2$               &                                  & supported                       & supported                 &                           &                              \\
+$\mathcal{H}_3$               & supported                        & supported                       &                           & supported                 &                              \\
 \end{tabular}
 }
 \caption{Comparison of the studies}
 \label{synthesis_table}
 \end{table*}
 
-Coming back to our initial hypotheses, the $\Delta_2$ results in studies 2 and 3
+Coming back to our initial hypotheses, the $\Delta_2$ results in study 2
 reinforce both $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$. The \emph{interaction
 hypothesis} $\mathcal{H}_{3}$ was that the activity of modelling one's partner
 is not simply the result of an individual cognitive effort but overall the
@@ -1373,24 +1385,25 @@ hypothesis} $\mathcal{H}_{2}$ stated that, if $A$ is accurate in modelling $B$,
 $A$ should notice when $B$ misunderstands $A$ and should be able to repair. A
 good modeler would somehow drive the modelling of his or her partner.  This
 \emph{drive} will however occur through verbal cues and repairs and is hence not
-easy to differentiate from $\mathcal{H}_{3}$.  The contradictory $\Delta_1$
-results in studies 4 (to some extent) and 5 weaken the hypothesis. 
+easy to differentiate from $\mathcal{H}_{3}$. The contradictory $\Delta_2$
+analysis in study 3 and $\Delta_1$ results in studies 4 (to some extent) and 5
+weaken the hypothesis.
 
 The triangular questions lead to similar contradictions. The $\Delta_2$
-correlation between the \gmodel{A}{C} and \gmodel{B}{C} (studies 2 and 3?)
+correlation between the \gmodel{A}{C} and \gmodel{B}{C} (study 2)
 support $\mathcal{H}_{2}$ if modelling skills were purely individual, there would
 be no reason for modelling skills of $A$ and $B$ to be correlated.  The role of $C$ in
 \gmodel{A}{C} and \gmodel{B}{C} probably explains this correlation.  Conversely,
-the $\Delta_3$ correlation between the \gmodel{A}{B} and \gmodel{A}{C} (studies
-3 and 2?) question $\mathcal{H}_{3}$: if the role of the modellee was so
-important, it would lead be surprising to have by chance a correlation between
-B's and C' ability to drive $A$'s modelling.
+the $\Delta_3$ correlation between the \gmodel{A}{B} and \gmodel{A}{C} (study
+3) question $\mathcal{H}_{3}$: if the role of the modellee was so
+important, it would be surprising to have by chance a correlation between
+$B$'s and $C$' ability to drive $A$'s modelling.
 
 In addition, the lack of correlation between \gmodel{A}{A} and \gmodel{A}{B}
-($\Delta_2$ in study 4 and study 5) could also contributes to the idea that $A$'s
+($\Delta_4$ in study 4 and study 5) could also contributes to the idea that $A$'s
 modelling skills is not the key factor. However, between modelling someone and
 modelling oneself, \ie  metacognition, they are so many differences, that we
-would hardly conclude from that,
+would hardly conclude from that.
 
 Among these complex results, it is important to stress that, for $\Delta_2$, the
 significant correlations are all below 0.50, not around 0.90.  So even if all
