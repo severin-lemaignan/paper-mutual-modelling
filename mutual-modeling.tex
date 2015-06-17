@@ -78,7 +78,7 @@
     Building on a set of five independent studies that where conducted over
     several years, we propose in this article a simple model of the mechanisms
     of mutual modelling. It integrates several concepts related to the classical
-    idea of knowledge grounding, and we apply it as an operational tool to
+    idea of grounding, and we apply it as an operational tool to
     analyse the interplay of learning and mutual modelling in the five studies.
 
     We come up with mixed experimental results that evidence the dual nature of
@@ -112,7 +112,7 @@ sciences. The monitoring and repair of misunderstanding explains for instance
 referential failures in short dialogue episodes but does hardly predict
 \emph{conceptual change} (\ie the acquisition, acceptation and integration of a
 new belief into one's mental model) over longer
-sessions~\cite{dillenbourg2006sharing}. The cumulative effect of grounding
+sessions~\citep{dillenbourg2006sharing}. The cumulative effect of grounding
 episodes can probably be better understood from a socio-cultural perspective:
 
 \begin{quote}
@@ -306,7 +306,7 @@ maths'', $A$ builds a \emph{second level} model:
 \model{A}{B}{\M{B}{A}{\text{maths-skill}}}. This leads to possibly infinite
 regress of nested models: $A$
 saying ``$B$ knows that I don't expect him to solve this statistics problem''
-corresponds to \model{A}{B}{\M{B}{A}{\M{A}{B}{\text{statistic-skills}}}}.
+corresponds to \\ \model{A}{B}{\M{B}{A}{\M{A}{B}{\text{statistic-skills}}}}.
 
 A partner model is likely not a ``box'', \ie not a monolithic representation
 but rather a mosaic of information fragments about the partner, with various
@@ -405,9 +405,9 @@ We parametrize and assess the mutual modelling effort through 3 variables:
 
     \item Tasks vary a lot with respect to how much they require mutual
         understanding.  The \emph{grounding criterion} -- denoted
-        \groundingcriterion -- refers to how important it is to mutually share a
-        piece of information $X$ to succeed the task $T$. It can be calculated as
-        the probability to succeed $T$ despite the fact $X$ is not grounded.
+        \groundingcriterion -- refers to how accurate the models need to be to
+        succeed the task $T$. It can be calculated as the probability to succeed
+        $T$ despite the fact $X$ is not grounded.
         $\mathcal{M}^{\circ}_{min}(A,B,X)$ can be estimated from the correlation
         between \Model{A}{B}{X} and the task performance. 
 
@@ -433,7 +433,7 @@ at time $t_2$ is the ratio between how much it is needed  ((2)-(1)) and how much
 costs (3)~\citep{traum1996miscommunication}:
 
 \begin{multline} \label{eq:probrepair}
-    p(\alpha_{t_1}(X,T) / \mathcal{M}^{\circ}_{t_2}(A,B,X) \nearrow) \propto \\
+    p(\alpha_{t_1}(X,T) / \mathcal{M}^{\circ}_{t_2}(A,B,X) \nearrow) \simeq
     \frac{\mathcal{M}^{\circ}_{min}(A,B,X,T) - \mathcal{M}^{\circ}_{t_1}(A,B,X)}{cost (\alpha)}
 \end{multline}
 
@@ -446,11 +446,12 @@ as well) but it clarifies the parameters of the experiments we present hereafter
         represented in mutual models:
 
     \begin{enumerate}
-        \item \model{A}{B}{emotion}: how accurately $A$ perceives $B$'s emotional state
-            (study 3),
 
         \item \model{A}{B}{actions} is about how well $A$ guesses what action $B$ has
             performed (study 2) or will perform next (study 1),
+
+        \item \model{A}{B}{emotion}: how accurately $A$ perceives $B$'s emotional state
+            (study 3),
 
         \item \model{A}{B}{knowledge}: how accurately $A$ estimates $B$'s knowledge
             with respect to the material they learn together (study 4 and 5).
@@ -466,7 +467,7 @@ as well) but it clarifies the parameters of the experiments we present hereafter
         grounding criterion.  All tasks are about building a solution or a
         representation together; we did not address everyday conversations. 
 
-    \item $\mathcal{M}^{\circ}_{t1}(A,B,X)$: along the same reasoning, the initial degree
+    \item $\mathcal{M}^{\circ}_{t0}(A,B,X)$: along the same reasoning, the initial degree
         of common grounds should be rather low (and hence the difference between
         initial and required degrees rather high) in order to make mutual
         modelling effort more observable. Studies 1, 4 and 5 have been conducted
@@ -505,7 +506,7 @@ estimate \Model{A}{B}{X}.
         behavioural metrics like eye-tracking: we hypothesise for instance that
         the fixation time reflects the efforts engaged by the human to
         understand, hence, model, the others. Such an approach has however not
-        yet been investigated in the presented studies.
+        been investigated in the presented studies.
 
     \item {\bf Estimating \Model{A}{B}{X}}: Once \model{A}{B}{X} is captured, we
         need to access the reference model \refmodel{B}{X} to estimate its
@@ -528,7 +529,7 @@ estimate \Model{A}{B}{X}.
 \end{itemize}
 
 
-\subsubsection*{Studies}
+\subsubsection*{Hypotheses}
 
 The experiments we report here address mutual modelling across different tasks,
 some with dyads, other with triads. They were conducted along 6 years in two
@@ -551,18 +552,20 @@ about $\mathcal{M}^{\circ}(A,B)$:
 
 
 
-$\mathcal{H}_{2}$ is also called a second level modelling hypothesis since $B$
-needs to monitor $A$ to see if $A$ understood him/her
-($\mathcal{M}(B,A,\mathcal{M}(A,B))$).
+$\mathcal{H}_{2}$ relates to second level modelling since $B$ needs to monitor
+$A$ to see if $A$ understood him/her ($\mathcal{M}(B,A,\mathcal{M}(A,B))$). We
+will see that $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$ are actually difficult to
+differentiate.
 
 \paragraph{The symmetry question}
 
 One interesting question relates to the symmetry of mutual modelling: what is
-the relationship between \Model{A}{B}{X} and
-\Model{B}{A}{X} (Fig.~\ref{mm_symmetry})? A low symmetry would mean that mutual modelling is mainly an
-individual attitude/aptitude ($\mathcal{H}_{1}$). A high correlation might
-support $\mathcal{H}_{2}$ since there is a low probability that randomly formed
-pairs integrate peers with the same level of mutual modelling skills.
+the relationship between \Model{A}{B}{X} and \Model{B}{A}{X}
+(Fig.~\ref{mm_symmetry})? A low symmetry would mean that mutual modelling is
+mainly an individual attitude/aptitude ($\mathcal{H}_{1}$). A high correlation
+might support $\mathcal{H}_{2}$ or $\mathcal{H}_{3}$ since there is a low
+probability that randomly formed pairs integrate peers with the same level of
+mutual modelling skills.
 
 \begin{figure}[htb]
 \centering
@@ -598,8 +601,10 @@ and $B$ have the same accuracy when modelling $C$ ($\Delta_2 =
 same, $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$ gains over $\mathcal{H}_{1}$
 
 Conversely, does $C$ model more accurately $A$ than $B$ ($\Delta_3=
-\Delta(\mathcal{M}^{\circ}(C,A,X),
-\mathcal{M}^{\circ}(C,B,X))$)? A positive answer would support $\mathcal{H}_{3}$.
+\Delta(\mathcal{M}^{\circ}(C,A,X), \mathcal{M}^{\circ}(C,B,X))$)? A positive
+answer would support $\mathcal{H}_{3}$. A negative answer would support
+$\mathcal{H}_{2}$ since $\Delta_3$ could mainly be explained by the way $A$ and
+$B$ help $C$ to model them.
 
 \begin{figure}[htb]
 \centering
@@ -748,14 +753,14 @@ games, as a transparent layer appearing over the game display. The first
 questionnaire concerned the player's intended actions. The second questionnaire
 asked each player about what he thought her or his partner was intending to do.
 Some answers were identical in both questionnaires (like ``adjusting a shot'')
-while others were reversed (``to guide my partner'' versus ``to guide me''). We
-chose a subjective measure of accuracy ($\Delta(\M{A}{A}{X}, \M{A}{B}{X})$)
-rather than an objective measure (\ie the model \gmodel{A}{B} is compared to $B$'s
-next action) because some of the activities proposed by the questionnaire were not
-observable by the environment (\eg establishing a strategy). We calculated
-\Model{A}{B}{activity_{game_{i}}}) as the number of common answers between
-questionnaires \gmodel{A}{A} and \gmodel{A}{B} in each game and computed the
-average value a across the 3 levels.
+while others were reversed (``to guide my partner'' versus ``to guide me'').
+This method provides us with a subjective measure of accuracy
+($\Delta(\M{A}{A}{X}, \M{A}{B}{X})$) rather than an objective measure (\ie the
+model \gmodel{A}{B} is compared to $B$'s next action) because some of the
+activities proposed by the questionnaire were not observable by the environment
+(\eg establishing a strategy). We calculated \Model{A}{B}{activity})
+as the number of common answers between questionnaires \gmodel{A}{A} and
+\gmodel{A}{B} in each game and computed the average value a across the 3 levels.
 
 \begin{figure}[ht!]
         \centering
@@ -798,19 +803,21 @@ different with or without the awareness tool ($F [1,13]= 0.144, p > 0.5$). This
 result could be explained by the fact that the players without awareness tools
 communicated more.
 
+\subsubsection*{The triangle and rectangle questions are not addressed in this study.}
+
 \subsubsection*{Discussion}
 
 How to interpret a correlation of 0.38 between \gModel{A}{B} and \gModel{B}{A}?
 If it was null, modelling would be interpreted as an individual process that
 varies according to personality traits or cognitive skills: some persons tend to
-model more accurately their peer while others don't care or can simply not. If
-the correlation was close to 1, we could conclude that the modelling accuracy is
-an emergent property of teams since there would be low probability that, by
-chance, low accurate modellers are paired with accurate modellers and
-conversely. Our correlation is between these two extremes but the very notion of
-significant intra-class correlation tend to indicate that one may not consider
-peers as independent subjects, which is an argument for the \emph{interaction}
-hypothesis $\mathcal{H}_{3}$. 
+model more accurately their peer while others don't care or can simply not
+($\mathcal{H}_{1}$). If the correlation was close to 1, we could conclude that
+the modelling accuracy is an emergent property of teams since there would be low
+probability that, by chance, low accurate modellers are paired with accurate
+modellers and conversely ($\mathcal{H}_{2}$). Our correlation is between these
+two extremes but the very notion of significant intra-class correlation tend to
+indicate that one may not consider peers as independent subjects, which is an
+argument for the \emph{interaction} hypothesis $\mathcal{H}_{3}$. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -842,7 +849,7 @@ player as well as their recent spatial trace).
 
 \begin{figure*}[h!t]
         \centering
-        \begin{subfigure}{.4\textwidth}
+        \begin{subfigure}{.45\textwidth}
             \includegraphics[width=\linewidth]{image6.png}
             \caption{A's drawing of $B$'s path.}
         \end{subfigure}
@@ -933,14 +940,14 @@ strategy facilitates memorizing one's partner path.
 
 The aim of this unpublished\footnote{The data and statistical analyses of this
 study are available online:
-\url{https://github.com/chili-epfl/mutual-modelling-adoption-homosexuality-study}.}
+\url{https://github.com/chili-epfl/mutual-modelling-emotions-study}.}
 study was to evaluate the effect of media richness on \Model{A}{B}{emotions}.
 The hypothesis was that video communication would lead to a better \gModel{A}{B}
 than audio only since emotions often impact on facial expressions.
 
 \begin{figure*}[ht!]
         \centering
-        \includegraphics[width=0.8\textwidth]{image8.jpg}
+        \includegraphics[width=\textwidth]{image8.jpg}
         \caption{Example of argumentation graph}
         \label{study3:argumentation_graph}
 \end{figure*}
@@ -1000,7 +1007,7 @@ independent judges on completeness and structure quality (Kendall's $W=0.474$,
 limited agreement). We used the average rank as a estimation of the team
 performance and correlated it with the average of the 6 values of \gModel{A}{B}
 per team (\gModel{A}{B}, \gModel{A}{C}, \gModel{B}{A},...). The correlation is
--0.22: teams with a good \gModel{A}{B} tend to be better ranked. 
+0.22: teams with a good \gModel{A}{B} tend to be better ranked. 
 
 \paragraph{Study-specific questions} Our hypothesis about media richness is
 rejected: the average score for \model{A}{B}{emotions} was 1.25 ($SD = 0.53$) in
@@ -1016,22 +1023,24 @@ experimental data).
 
 A t-test on the two sets releaved a significantly lower average difference in
 the experimental data (mean difference: $0.40$ vs $0.54$ with random gradings,
-$t=-3.3, df=60, p = 0.0016$), supporting the symmetry hypothesis.
+$t=-3.3, df=60, p = 0.0016$), supporting $\mathcal{H}_{2}$ or $\mathcal{H}_{3}$.
 
 \paragraph{Triangle questions} $\Delta_2$ is computed in a similar way as the average of
 the absolute differences between \gModel{A}{C} and \gModel{B}{C} over the 60
 subjects. The average difference is 0.42 ($SD= 0.34$), and if not significantly
 different from the same data obtained from random gradings ($t=-1.61, df=60,
-p=0.11$).
+p=0.11$). This rejects $\mathcal{H}_{2}$.
 
 For $\Delta_3$, the average absolute difference between \gModel{C}{A} and
 \gModel{C}{B} over the 60 subjects is 0.40 ($SD= 0.41$) and is significantly
 lower than chance ($t=-2.62, df=60, p=0.01$): a given subject tends to model its
 two partners with similar degrees of accuracy, which supports $\mathcal{H}_{1}$.
+It could also support $\mathcal{H}_{3}$, but it does not since $\Delta_2$ is not
+significant.
 
 \begin{figure*}[ht!]
         \centering
-        \includegraphics[width=0.9\textwidth]{image9.pdf}
+        \includegraphics[width=\textwidth]{image9.pdf}
         \caption{Average values of \Model{A}{B}{X} where $X$ is one of the proposed
         emotions (max = 7).}
         \label{study3:deg_m_values}
@@ -1124,12 +1133,12 @@ TeamSpeak}.
 
 \begin{figure*}
     \centering
-    \begin{tikzpicture}[scale=0.8]
+    \begin{tikzpicture}[scale=1]
         \node[anchor=south west,inner sep=0] at (0,0)
             {\includegraphics[width=0.75\textwidth]{image10.png}};
         
-            \node[rectangle,draw, thick] at (10,5.4) {Self map};
-            \node[rectangle,draw, thick] at (7.5,3.3) {Partner map};
+            \node[rectangle,draw, thick] at (8,4.3) {Self map};
+            \node[rectangle,draw, thick] at (6,2.6) {Partner map};
             \node[rectangle,draw, thick] at (2.5,1.5) {Collaborative map};
     \end{tikzpicture}
     \caption{The group concept map and the individual concept maps in study
@@ -1154,24 +1163,25 @@ the post-test scores, used to assess \Model{A}{B}{knowledge}. In phase 6,
 participants were ask to estimate (7-point Likert scale) their own and their
 partner's outcome knowledge with respect to each chapter of the learning
 material. The order of questions about oneself and about the other was
-counterbalanced across participants. We measure \gModel{A}{B} in an objective
-(Eq.~\ref{eq:study4.1} and \ref{eq:study4.2}) as well as in a subjective way
-(Eq.~\ref{eq:study4.3}).
-
-\begin{multline} \label{eq:study4.1}
-    \Mdeg{A}{B}{knowledge} = 
-        \sum_{i=1}^{3} (\M{A}{B}{chapter_i} - score(B, chapter_i))
-\end{multline}
-
-\begin{multline} \label{eq:study4.2}
-    \Mdeg{A}{A}{knowledge} = 
-        \sum_{i=1}^{3}  (\M{A}{A}{chapter_i} - score(A, chapter_i))
-\end{multline}
-
-\begin{multline} \label{eq:study4.3}
-    \Mdeg{A}{B}{knowledge} = 
-        \sum_{i=1}^{3}  (\M{A}{B}{chapter_i} - \M{B}{A}{chapter_i})
-\end{multline}
+counterbalanced across participants. 
+%We measure \gModel{A}{B} in an objective
+%(Eq.~\ref{eq:study4.1} and \ref{eq:study4.2}) as well as in a subjective way
+%(Eq.~\ref{eq:study4.3}).
+%
+%\begin{multline} \label{eq:study4.1}
+%    \Mdeg{A}{B}{knowledge} = 
+%        \sum_{i=1}^{3} (\M{A}{B}{chapter_i} - score(B, chapter_i))
+%\end{multline}
+%
+%\begin{multline} \label{eq:study4.2}
+%    \Mdeg{A}{A}{knowledge} = 
+%        \sum_{i=1}^{3}  (\M{A}{A}{chapter_i} - score(A, chapter_i))
+%\end{multline}
+%
+%\begin{multline} \label{eq:study4.3}
+%    \Mdeg{A}{B}{knowledge} = 
+%        \sum_{i=1}^{3}  (\M{A}{B}{chapter_i} - \M{B}{A}{chapter_i})
+%\end{multline}
 
 \subsubsection*{Results}
 
@@ -1210,8 +1220,8 @@ good at modelling someone else and vice-versa.
 
 In this experiment, the symmetry of mutual modelling is only found when subjects
 are in conditions of symmetry of information. This consolidates the hypothesis
-of \gModel{A}{B} being a property of interactions in context rather than $A$'s
-cognitive attitude.
+of \gModel{A}{B} being a property of interactions in context ($\mathcal{H}_{3}$)
+rather than $A$'s cognitive attitude.
 
 
 
@@ -1360,7 +1370,7 @@ summarized in Table~\ref{synthesis_table}.
 \textbf{Independent var.}     & Awareness tool \textit{vs} none  & Awareness tool \textit{vs} none & Audio \textit{vs} Audio+Video & Script \textit{vs} none & Awareness tool \textit{vs} none       \\
 \textbf{Grounding crit.}      & +0.42                            & +0.15                           & +0.22                     & +0.08                     & +0.40                        \\
 $\mathcal{H}_1$               &                                  & supported                       & supported                 &                           &                              \\
-$\mathcal{H}_2$               &                                  & supported                       & supported                 &                           &                              \\
+$\mathcal{H}_2$               &                                  & supported&                         &                           &                              \\
 $\mathcal{H}_3$               & supported                        & supported                       &                           & supported                 &                              \\
 \end{tabular}
 }
@@ -1387,12 +1397,12 @@ support $\mathcal{H}_{2}$ if modelling skills were purely individual, there woul
 be no reason for modelling skills of $A$ and $B$ to be correlated.  The role of $C$ in
 \gmodel{A}{C} and \gmodel{B}{C} probably explains this correlation.  Conversely,
 the $\Delta_3$ correlation between the \gmodel{A}{B} and \gmodel{A}{C} (study
-3) question $\mathcal{H}_{3}$: if the role of the modellee was so
+3) question $\mathcal{H}_{2}$: if the role of the modellee was so
 important, it would be surprising to have by chance a correlation between
 $B$'s and $C$' ability to drive $A$'s modelling.
 
 In addition, the lack of correlation between \gmodel{A}{A} and \gmodel{A}{B}
-($\Delta_4$ in study 4 and study 5) could also contributes to the idea that $A$'s
+($\Delta_4$ in study 4 and study 5) could also contribute to the idea that $A$'s
 modelling skills is not the key factor. However, between modelling someone and
 modelling oneself, \ie  metacognition, they are so many differences, that we
 would hardly conclude from that.
