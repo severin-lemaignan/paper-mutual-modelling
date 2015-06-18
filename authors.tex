@@ -1,0 +1,93 @@
+\documentclass[natbib]{svjour3}
+
+% UTF8 support
+\usepackage[utf8x]{inputenc}
+
+\usepackage[english]{babel}
+
+
+\usepackage{graphicx}
+\graphicspath{{figs/}}
+
+\usepackage{amsmath}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+\usepackage[draft, footnote, margin=false]{fixme}
+
+\newcommand{\ie}{{\textit{i.e.\ }}}
+\newcommand{\cf}{{\textit{cf\ }}}
+\newcommand{\eg}{{\textit{e.g.\ }}}
+\newcommand{\al}{{\textit{et al.\ }}}
+
+\newcommand{\M}[3]{{\mathcal{M}(#1, #2, #3)}}
+\newcommand{\model}[3]{{$\mathcal{M}(#1, #2, #3)$}}
+% generic mutual model (gmodel) 
+\newcommand{\gmodel}[2]{{$\mathcal{M}(#1, #2)$}}
+\newcommand{\Gmodel}[2]{{\mathcal{M}(#1, #2)}}
+\newcommand{\refmodel}[2]{{$\mathcal{M}(#1, #2)$}}
+\newcommand{\Model}[3]{{$\mathcal{M}^{\circ}(#1, #2, #3)$}}
+\newcommand{\gModel}[2]{{$\mathcal{M}^{\circ}(#1, #2)$}}
+\newcommand{\Mdeg}[3]{{\mathcal{M}^{\circ}(#1, #2, #3)}}
+\newcommand{\gMdeg}[2]{{\mathcal{M}^{\circ}(#1, #2)}}
+
+\newcommand{\groundingcriterion}{{$\mathcal{M}^{\circ}_{min}$}}
+\newcommand{\inigrounding}{{$\mathcal{M}^{\circ}_{t_0}$}}
+
+\newcommand{\concept}[1]{{\small \texttt{#1}}}
+\newcommand{\stmt}[1]{{\footnotesize \tt $\langle$ #1\relax$\rangle$}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\newcommand*\mean[1]{\overline{#1}}
+
+\title{Mutual Modelling}
+
+\author{
+    Pierre Dillenbourg
+    \and
+    Séverin Lemaignan
+    \and
+    Nicolas Nova
+    \and
+    Gaëlle Molinari
+}
+\institute{
+    Pierre Dillenbourg, Séverin Lemaignan \at Computer-Human Interaction in Learning and Instruction \\
+    École Polytechnique Fédérale de Lausanne (EPFL) \\ CH-1015 Lausanne, Switzerland \\
+    \email{firstname.lastname@epfl.ch}
+    \and
+    Nicolas Nova \at Haute École Arts \& Design de Genève \\ CH-1201 Genève, Switzerland\\\email{nicolas.nova@hesge.ch}
+    \and
+    Gaëlle Molinari \at Distance Learning University Switzerland (Unidistance),
+    CH-3960 Sierre, Switzerland\\\email{gaelle.molinari@unidistance.ch}
+}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+    Collaborative learning has something to do with building a shared
+    understanding of the situation at hand. Yet, the psycholinguistics mechanisms
+    at work while establishing common grounds are complex and certainly involve
+    modelling what the partner knows/wants/intends at a given time.
+
+    Building on a set of five independent studies that where conducted over
+    several years, we propose in this article a simple model of the mechanisms
+    of mutual modelling. It integrates several concepts related to the classical
+    idea of grounding, and we apply it as an operational tool to
+    analyse the interplay of learning and mutual modelling in the five studies.
+
+    We come up with mixed experimental results that evidence the dual nature of
+    mutual modelling: a individual meta-cognitive aptitude that co-exists with
+    modelling elicited and fostered by social interactions.
+
+\end{abstract}
+
+\subsection*{Corresponding author}
+Séverin Lemaignan \texttt{severin.lemaignan@epfl.ch}
+\end{document}
+
