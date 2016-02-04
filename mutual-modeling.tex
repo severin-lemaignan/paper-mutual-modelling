@@ -244,25 +244,26 @@ Cherubini, M., Van Der Pol, J., & Dillenbourg, P. (2005). Grounding is not share
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Mutual Modelling}
+\section{Partner Modelling}
 
-We refer to \emph{mutual modelling} as the process of inferring one's partner
+We refer to \emph{Partner modelling} as the process of inferring one's partner
 mental states. Any claim that students carry out a detailed monitoring of their
 peers would be as incorrect as any claim that they do not maintain any
 representation at all. If mutual modelling had to be permanently detailed and
 accurate, subjects would obviously face a huge cognitive load. Conversely, peers
-could not collaborate without some minimal amount of mutual modelling. For
-instance, $A$ cannot disagree with $B$ without knowing that $B$ has a different
-opinion. The mutual model can be \emph{implicit} ($A$ is not aware of what he knows about
-B), \emph{by-default} (I believe that $B$ believes what I believe unless contrary
-evidence), \emph{opportunistic} ($A$ does not model $B$ unless the conversation requires
-it), \emph{global} ($A$ infers $B$'s beliefs based on categories such as age, culture or
-profession) and, of course, it can be incorrect\ldots but it can not remain empty.
-Dialogues include many instances of utterances such as ``I thought he would do
+could not collaborate without some minimal amount of mutual modelling. 
+Collaborative learning dialogue include many instances of utterances such as ``I thought he would do
 that'' (first level of mutual modelling) or even ``He thought I would do that
 but I intended something else.'' (second level of mutual modelling).
 
-The content of mutual models ranges from \emph{dispositional} to
+%For instance, $A$ cannot disagree with $B$ without knowing that $B$ has a different
+%opinion. The mutual model can be \emph{implicit} ($A$ is not aware of what he knows about
+%B), \emph{by-default} (I believe that $B$ believes what I believe unless contrary
+%evidence), \emph{opportunistic} ($A$ does not model $B$ unless the conversation requires
+%it), \emph{global} ($A$ infers $B$'s beliefs based on categories such as age, culture or
+%profession) and, of course, it can be incorrect\ldots but it can not remain empty.
+
+The content of the partner model ranges from \emph{dispositional} to
 \emph{situational} aspects. The \emph{dispositional} aspects refer to $A$'s
 representation of $B$'s long term knowledge, skills or traits. It is thus closely
 related to the notion of transactive memory~\citep{wegner1987transactive,
@@ -301,26 +302,16 @@ regarding to aspects X, \ie $Model(A,B,X)$, abbreviated \model{A}{B}{X}, could b
 \end{itemize}
 
 The list of what $X$ stands for in \model{A}{B}{X} is possibly infinite:
-beliefs, emotions, history, status, etc.
-
-
-Besides, we have different levels of mutual modelling. If $A$ states ``B thinks I am good in
-maths'', $A$ builds a \emph{second level} model:
-\model{A}{B}{\M{B}{A}{\text{maths-skill}}}. This leads to possibly infinite
-regress of nested models: $A$
-saying ``$B$ knows that I don't expect him to solve this statistics problem''
-corresponds to \\ \model{A}{B}{\M{B}{A}{\M{A}{B}{\text{statistic-skills}}}}.
-
-A partner model is likely not a ``box'', \ie not a monolithic representation
+beliefs, emotions, history, status, etc. A partner model is likely not a ``box'', \ie not a monolithic representation
 but rather a mosaic of information fragments about the partner, with various
 granularity and various life cycles. This mosaic is elaborated through a variety
 of mechanisms, first for building an initial model of the partner, then for
-updating this model. As two students meet for the first time, mutual models are
+updating this model. As two students meet for the first time, partners models are
 initialized by the assumptions they make upon each other based on cues such as
 his/her belonging to broad categories (age, culture, profession, \ldots),
 stereotypes (sportsmen, junkie, business women, Swiss,\ldots) as well as physical
 appearance. Scholars studied how initial modelling impacts communication. In
-their experiments on initial mutual modelling, \citet{slugoski1993attribution}
+their experiment, \citet{slugoski1993attribution}
 pretended to their subjects that their (fake) partner had or had not received
 the same information. They observed that the subjects adapted their dialogue by
 focusing the explanation on the items that he/she was supposed to ignore.
@@ -334,15 +325,15 @@ they can refer to shared objects and events, it does not imply that they give
 them the same meaning. Namely, a shared screen does not mean a shared
 understanding~\citep{dillenbourg2006sharing}.
 
-After initialization, mutual models are updated during the collaborative work
+After initialization, partners models are updated during the collaborative work
 through verbal and non-verbal interactions. A default inference rule is that ``my
 partner agrees with me unless he disagrees'', which rejects the critiques that
-mutual modelling generates an unbearable cognitive load. This default rule is
+partner modelling generates an unbearable cognitive load. This default rule is
 superseded by the several mechanisms for monitoring and repairing the partner
 understanding: acknowledgement, continuous attention, relevance of next turns,
 facial expressions including gaze signals, etc.
 
-Mutual modelling does not occur in a vacuum but it is highly contextualized.
+Finally, partner modelling does not occur in a vacuum but it is highly contextualized.
 \citet{clark1991grounding} review how the features of the collaborative
 situation, namely the media (co-temporality,\ldots), may facilitate or hamper
 mutual modelling.  \citet{hutchins1997constructing} reported a study in which a
@@ -351,47 +342,10 @@ in a highly constrained communication context.  Some environments are more
 productive than others in helping peers to detect their misunderstandings.
 \citet{roschelle1995construction} reformulate the design of CSCL
 interfaces to provide ways for peers to detect and repair their
-misunderstanding. In CSCW, researchers have explored various so-called
-``awareness tools'', \ie functionalities that inform $A$ is about $B$'s actions
-that A could not directly perceive because $B$ was working on a different subset
-of the virtual space. Different awareness tools are presented and relied upon in
-this contribution as well since they allowed us to manipulate experimentally the
-mutual modelling activity. 
+misunderstanding.
 
 
-%\subsection{State of the Art}
-%
-%\paragraph{Building a model of a human during the interaction} Perspective
-%Taking is a human ability which allows one to put him/herself in another
-%person's point of view. Studied in psychology
-%literature~\citep{Flavell1992,Tversky1999}, this ability is crucial when
-%interacting with people by allowing one to reason on others' understanding of
-%the world in terms of visual perception, spatial descriptions, affordances and
-%beliefs, etc.  In the last years these notions have been gradually employed in
-%HRI.~\citep{Breazeal2006} presents a learning algorithm that takes into account
-%information about a teacher's visual perspective in order to learn a task.
-%~\citep{Johnson2005} apply visual perspective taking for action recognition
-%between two robots.~\citep{Trafton2005} use both visual and spatial perspective
-%taking to find out the referent indicated by a human partner.
-%
-%The cognitive model that the robot builds for the agent it interacts with is
-%still simple and mostly focused on geometric features (who sees what? What are
-%our relative positions? etc.). Extending this knowledge with more subtle
-%perceptions (emotional state for instance) remains to be done.
-%
-%\paragraph{Joint action}
-%Several theories dealing with collaboration~\citep{Cohen1991,Grosz1996,Clark1996}
-%emphasize that collaborative tasks have specific requirements compared to
-%individual ones, \eg, since the robot and the person share a common goal, they
-%have to agree on the manner to realize it, they must show their commitment to
-%the goal during execution, etc. Several robotic systems have already been built
-%based on these theories~\citep{Rich1997,Sidner2005,Breazeal2003} and they all
-%have shown benefits of this approach. They have also shown how difficult it is
-%to manage turn-taking between communication partners and to interleave task
-%realization and communication in a generic way. Finally, today only few
-%systems~\citep{Fong2006,Breazeal2003,Sisbot2008} take humans into account at all
-%levels.
-%
+
 
 \section{A model for mutual modelling evaluation}
 
