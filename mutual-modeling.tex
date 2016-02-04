@@ -347,14 +347,26 @@ misunderstanding.
 
 
 
-\section{A model for mutual modelling evaluation}
+\section{Mutual Modelling}
 
-To report on experiments on mutual modelling, we suggest the notation
-\model{A}{B}{X} to denote ``$A$ knows that $B$ knows X''. This is a simple but
-useful reduction to reason on mutual modelling. This notation does not mean $A$
+Mutual modelling is bi-directional. During dyadic problem solving,   partner A builds some model of B and B build some model of A.  Moreover, these two processes are not independent: A's model of what B knows, include what B knows about A.  This leads to nested levels of  modelling. If $A$ states ``B thinks I am good in
+maths'', $A$ builds a \emph{second level} model:
+\model{A}{B}{\M{B}{A}{\text{maths-skill}}}. This leads to possibly infinite
+regress of nested models: $A$
+saying ``$B$ knows that I don't expect him to solve this statistics problem''
+corresponds to \\ \model{A}{B}{\M{B}{A}{\M{A}{B}{\text{statistic-skills}}}}.  As we will see in one study we report, mutuality also applies to triads in which A will elaborate a model of B and of C, and reciprocally. This is probably also true for larger groups although one may hypothesize that there exists (yet undefined) group size from which it is not possible to model all partners individually and, therefore, members  model  the group as a whole instead as a collection of individuals.  We do not explore this hypothesis here and limit ourselves to dyads and triads.
+
+This mutuality allows us to address a fundamental question: \emph{does the quality of partner modelling depend upon the cognitive skills of each partner (some people being better in perceiving other's states) or does it result from the quality of interactions among them ?} Behind his question, the reader may perceive the long lasting debate between tenets of, respectively, the individual and social views of human cognition.  The simple hypothesis is that when individual are randomly paired for an experiment, there is no reason for which their individual cognitive skills would correlate. Therefore, if it occurs that the quality of the Model (A,B) is correlated with Model (B,A), one may infers that this quality depends upon what A and B have in common, their verbal interactions. 
+
+To answer this question, we went back to five previous studies that addressed various other research questions, but in which the correlation between the quality of these two models could be computed.  The studies we report do hence not constitue a clean sequence of experiment to investigate mutual modelling but the ad-hoc revisiting of previous experiments to explore a question that we had then neglected. Some of these studies are about collaborative learning while others are only collaborative problem solving, but the latter rely on rich tasks that are similar to those we use in CSCL.
+
+\section{A notation for discussing mutual modelling }
+
+Natural language becomes cumbersome when describing things such as "the model that A builds about the model that B builds about A". Therefore, to define hypotheses and report on experiments on mutual modelling, we use  the notation
+\model{A}{B}{X} to denote ``$A$ knows that $B$ knows X''. This  notation is not proposed as a formal theory of mutual modelling but as useful simplification for communicating about mutual modelling. This notation does not mean $A$
 has an explicit, monolithic representation of $B$: it must be understood as an
-abstraction referring to complex socio-cognitive processes. Besides, we refer to
-the \emph{degree of accuracy} of the model as \Model{A}{B}{X}.
+abstraction referring to complex socio-cognitive processes.  As explained in the previous section, $A$ can be fragmented, multi-dimensional, etc. This notation is neither presented as a computational model of mutual modelling, nor as some universal formalism; it's usefulness is internal to this paper.  Besides, we refer to
+the \emph{degree of accuracy} of the model as \Model{A}{B}{X}. We discuss in the next section the methodological difficulty in measuring this accuracy.
 
 We parametrize and assess the mutual modelling effort through 3 variables:
 
@@ -394,9 +406,9 @@ costs (3)~\citep{traum1996miscommunication}:
     \frac{\mathcal{M}^{\circ}_{min}(A,B,X,T) - \mathcal{M}^{\circ}_{t_1}(A,B,X)}{cost (\alpha)}
 \end{multline}
 
-This is qualitative summary more that a real equation since several parameters
+This formula is presented as a qualitative summary, not as a real equation, since several parameters
 are hard to quantify (\eg the cost of a communication act depends upon the user
-as well) but it clarifies the parameters of the experiments we present hereafter.
+as well). We use it for clarifying the parameters of the experiments we present hereafter.
 
 \begin{itemize}
     \item \Model{A}{B}{X}: our experiments address different contents that can be
@@ -422,7 +434,7 @@ as well) but it clarifies the parameters of the experiments we present hereafter
         concept mapping (study 4 and 5). By varying the tasks, we do actually
         vary the grounding criterion but they all require a ``reasonably high''
         grounding criterion.  All tasks are about building a solution or a
-        representation together; we did not address everyday conversations. 
+        representation together. As stated earlier, we did not address everyday conversations. 
 
     \item $\mathcal{M}^{\circ}_{t0}(A,B,X)$: along the same reasoning, the initial degree
         of common grounds should be rather low (and hence the difference between
