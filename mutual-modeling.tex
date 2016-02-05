@@ -9,6 +9,9 @@
 \usepackage{graphicx}
 \graphicspath{{figs/}}
 
+\usepackage{booktabs}
+\usepackage{array}
+
 \usepackage{amsmath}
 
 \usepackage{tikz}
@@ -21,9 +24,9 @@
 
 \usepackage{xspace}
 \newcommand{\ie}{i.e.\xspace}
-\newcommand{\cf}{{\textit{cf\xspace}}}
-\newcommand{\eg}{{\textit{e.g.\xspace}}}
-\newcommand{\al}{{\textit{et al.\xspace}}}
+\newcommand{\cf}{{\textit{cf}\xspace}}
+\newcommand{\eg}{e.g.\xspace}
+\newcommand{\al}{{\textit{et al.}\xspace}}
 
 \newcommand{\A}{A\xspace}
 \newcommand{\B}{B\xspace}
@@ -444,7 +447,7 @@ explicit, monolithic representation of \B: it must be understood as an
 abstraction referring to complex socio-cognitive processes.  As explained in the
 previous section, \A can be fragmented, multi-dimensional, etc. This notation
 is neither presented as a computational model of mutual modelling, nor as some
-universal formalism; it's usefulness is internal to this paper.  Besides, we
+universal formalism; its usefulness is internal to this paper.  Besides, we
 refer to the \emph{degree of accuracy} of the model as \Model{A}{B}{X}. We
 discuss in the next section the methodological difficulty in measuring this
 accuracy.
@@ -455,11 +458,17 @@ We parametrize and assess the mutual modelling effort through 3 variables:
 
     \item Tasks vary a lot with respect to how much they require mutual
         understanding.  The \emph{grounding criterion} -- denoted
-        \groundingcriterion -- refers to how accurate the models need to be to
-        succeed the task $T$. It can be calculated as the probability to succeed
-        $T$ despite the fact $X$ is not grounded.
-        $\mathcal{M}^{\circ}_{min}(A,B,X)$ can be estimated from the correlation
-        between \Model{A}{B}{X} and the task performance. 
+        \groundingcriterion -- represents the minimum level of modelling
+        accuracy required for a task $T$ to succeed. Qualitatively, if the
+        performance on a given task $T$ is correlated to \Model{A}{B}{X}, then
+        \model{A}{B}{X} is significant to $T$ success, and the
+        grounding criterion of $X$ for $T$
+        ($\mathcal{M}^{\circ}_{min}(A,B,X,T)$) is non-zero.
+
+        Under the assumption that the higher the correlation, the more
+        critical \model{A}{B}{X} is to $T$, we hereafter use the correlation
+        coefficient as an estimate of \groundingcriterion.
+        \vspace{1em}
 
     \item Before any specific grounding action, there is generally a non-null
         probability that $X$ is mutually understood by \A and \B (\eg $X$ is
@@ -468,6 +477,7 @@ We parametrize and assess the mutual modelling effort through 3 variables:
         about $X$). We simply could not collaborate without a certain level of
         initial grounds. We note the theoretical accuracy of \emph{initial
         grounds} $\mathcal{M}^{\circ}_{t_0}(A,B,X)$.
+        \vspace{1em}
 
     \item The \emph{cost of grounding} $X$ refers to the physical and cognitive
         effort required to perform a grounding act $\alpha$: a verbal repair
@@ -477,20 +487,23 @@ We parametrize and assess the mutual modelling effort through 3 variables:
 
 \end{enumerate}
 
-Based on these 3 parameters, the probability of making an action $\alpha_{t_1}$
-about content $X$ at time $t_1$ during task T in order to increase
-\Model{A}{B}{X} at time $t_2$ is the ratio between how much it is needed
-((2)-(1)) and how much it costs (3)~\citep{traum1996miscommunication}:
+Based on these 3 parameters, the probability of making an action $\alpha_{t}$
+about content $X$ at time $t$ during task T in order to increase \Model{A}{B}{X}
+is the ratio between how much it is needed and how much it
+costs~\citep{traum1996miscommunication}:
 
-\begin{multline} \label{eq:probrepair}
-    p(\alpha_{t_1}(X,T) / \mathcal{M}^{\circ}_{t_2}(A,B,X) \nearrow) \simeq
-    \frac{\mathcal{M}^{\circ}_{min}(A,B,X,T) - \mathcal{M}^{\circ}_{t_1}(A,B,X)}{cost (\alpha)}
-\end{multline}
+\begin{equation}\label{eq:probrepair}
+    p(\alpha_{t}(X,T) /_{\mathcal{M}^{\circ}_{t+1}(A,B,X)\nearrow}) \simeq
+    \frac{\mathcal{M}^{\circ}_{min}(A,B,X,T) -
+    \mathcal{M}^{\circ}_{t}(A,B,X)}{cost (\alpha_{t})}
+\end{equation}
 
 This formula is presented as a qualitative summary, not as a real equation,
 since several parameters are hard to quantify (\eg the cost of a communication
-act depends upon the user as well). We use it for clarifying the parameters of
-the experiments we present hereafter.
+act depends upon the user as well).
+
+We can further clarify the parameters in the context of the experiments we
+present hereafter:
 
 \begin{itemize}
     \item \Model{A}{B}{X}: our experiments address different contents that can be
@@ -498,25 +511,25 @@ the experiments we present hereafter.
 
     \begin{enumerate}
 
-        \item \model{A}{B}{actions} is about how well \A guesses what action \B has
+        \item \Model{A}{B}{actions} is about how well \A guesses what action \B has
             performed (study 2) or will perform next (study 1),
 
-        \item \model{A}{B}{emotion}: how accurately \A perceives \B's emotional state
+        \item \Model{A}{B}{emotion}: how accurately \A perceives \B's emotional state
             (study 3),
 
-        \item \model{A}{B}{knowledge}: how accurately \A estimates \B's knowledge
+        \item \Model{A}{B}{knowledge}: how accurately \A estimates \B's knowledge
             with respect to the material they learn together (study 4 and 5).
 
     \end{enumerate}
-
-
+        \vspace{1em}
 
     \item $\mathcal{M}^{\circ}_{min}(A,B,X,T)$: our studies build upon various
         collaborative tasks: argumentation (study 3), games (study 1 and 2) and
         concept mapping (study 4 and 5). By varying the tasks, we do actually
-        vary the grounding criterion but they all require a ``reasonably high''
-        grounding criterion.  All tasks are about building a solution or a
-        representation together. As stated earlier, we did not address everyday conversations. 
+        vary the grounding criterion. The tasks were all designed to require a reasonably high
+        grounding criterion, as they are meant for the participants to have to
+        actually build a solution or a representation together.
+        \vspace{1em}
 
     \item $\mathcal{M}^{\circ}_{t0}(A,B,X)$: along the same reasoning, the initial degree
         of common grounds should be rather low (and hence the difference between
@@ -527,6 +540,7 @@ the experiments we present hereafter.
         grounds).  For studies 2 and 3, students knew each other before for
         reasons explained later on. In study 5, we manipulated the initial mutual modelling by
         using a {\sc jigsaw} script.
+        \vspace{1em}
 
     \item $cost(\alpha)$: in all studies but study 4, the cost of  grounding is
         an independent variable. Study 3 uses media richness as independent
@@ -539,13 +553,18 @@ the experiments we present hereafter.
         and, like any prosthesis, they may augment mutual modelling (by facilitating it or
         even scaffolding it) or inhibit it (by making it useless).
 
+        While we introduce here formally the cost of grounding $cost(\alpha)$ as
+        one relevant variable for the discussion of mutual modelling situations,
+        we will not attempt to characterize it beyond these qualitative
+        observations in the studies we present hereafter.
+
 \end{itemize}
 
 
 \section{Methodological Issues}
 
 Since a mental model is not directly observable,  the study of mutual modelling
-is methodologically difficult. How can we for instance measure \Model{A}{B}{X}.
+is methodologically difficult. How can we for instance measure \Model{A}{B}{X}?
 We proceed in two steps, first to capture \model{A}{B}{X} and then to estimate
 \Model{A}{B}{X}. 
 
@@ -553,8 +572,8 @@ We proceed in two steps, first to capture \model{A}{B}{X} and then to estimate
 believes about what \B knows, feels, intends to do, etc.  This raises obvious
 methodological concerns since such a question triggers a modelling process
 beyond what would naturally occur. To avoid this bias, one can estimate mutual
-modelling after task completion.  Then, the obvious drawback are memory losses
-and by post-hoc reconstruction.  The first method was used in study 2 and the
+modelling after task completion. Then, the obvious drawback are memory losses
+and post-hoc reconstruction. The first method was used in study 2 and the
 second one in the other studies. Another option would be to rely on external
 behavioural metrics like eye-tracking: we hypothesise for instance that the
 fixation time reflects the efforts engaged by the human to understand, hence,
@@ -562,13 +581,13 @@ model, the others. Such an approach has however not been investigated in the
 presented studies.
 
 {\bf Estimating \Model{A}{B}{X}}: Once \model{A}{B}{X} is captured, we need to
-access the reference model \refmodel{B}{X} to estimate its \emph{accuracy}.
+access the reference model \refmodel{B}{X} to estimate its accuracy.
 Since we can only indirectly access it via what \B reports (\ie
 \model{B}{B}{X}), accuracy can be estimated in 2 ways:
 
 \begin{itemize}
 
-    \item Subjective accuracy: In study 3, we compute \Model{A}{B}{X} by
+    \item Subjective accuracy: In study 3, for instance, we compute \Model{A}{B}{X} by
         measuring if \A describes \B's emotions in the same way \B reports
         its emotions ($\M{A}{B}{X} = \M{B}{B}{X}$).
 
@@ -578,20 +597,20 @@ Since we can only indirectly access it via what \B reports (\ie
 
 \end{itemize}
 
-Our method for investigating mutual modelling is observe the variations of
-accuracy that result from variations of external parameters that appear as
-variable in the formula presented in the previous section: the accuracy should
-for go down if we increase the cost of grounding acts and goes up if we increase
-the grounding criterion (the necessity to build a shared understanding). One way
-to produce these variations is what CSCW researchers have called ``awareness
-tools'', \ie functionalities that inform \A is about \B's actions that \A could
-not directly perceive because \B was working on a different subset of the
+Our method for investigating mutual modelling relies on the observation of the variations of
+accuracy that result from variations of external parameters (the variables of
+the formula~\ref{eq:probrepair} above): for instance, the accuracy should
+go down if we increase the cost of grounding acts, and conversly go up if we increase
+the grounding criterion (\ie the necessity to build a shared understanding). One way
+to produce these variations relies what CSCW researchers call ``awareness
+tools'', \ie functionalities that inform \A about \B's actions that \A can
+not directly perceive due to \B working in a different subset of the
 virtual space. Different awareness tools are used in the following studies as
-methodological tricks  to manipulate experimentally the  mutual modelling
-activity. 
+methodological levers to experimentally manipulate the mutual modelling
+activity.
 
 
-\section*{Hypotheses and questions}
+\section{Hypotheses and questions}
 
 The experiments we report here address mutual modelling across different tasks,
 some with dyads, other with triads. They were conducted along 6 years in two
@@ -602,16 +621,17 @@ retroactively address 3 research questions across these studies.
 \paragraph{The symmetry question}
 
 As stated earlier, the fundamental challenge is to determine if mutual modelling
-is an individual skill (hypothesis 1) or  the emergent property of social
-interactions (hypothesis 3).  This question is empirically translated into the
-symmetry of mutual modelling: what is the relationship between \Model{A}{B}{X}
-and \Model{B}{A}{X} (Fig.~\ref{mm_symmetry})? A low symmetry would mean that
-mutual modelling is mainly an individual attitude/aptitude ($\mathcal{H}_{1}$).
-A high correlation might support $\mathcal{H}_{3}$ since there is a low
-probability that randomly formed pairs integrate peers with the same level of
-mutual modelling skills. However, a high correlation could also have another
-explanation, stated in  $\mathcal{H}_{2}$: it could be that \A is good at
-modelling \B and good at helping \B to model herself or himself.
+is an individual skill (hypothesis $\mathcal{H}_{1}$ below) or  the emergent
+property of social interactions (hypothesis $\mathcal{H}_{3}$).  This question
+is empirically translated into the symmetry of mutual modelling
+(Fig.~\ref{mm_symmetry}): what is the relationship between \Model{A}{B}{X} and
+\Model{B}{A}{X}? A low symmetry would mean that mutual modelling is mainly an
+individual attitude/aptitude ($\mathcal{H}_{1}$).  A high correlation might
+support $\mathcal{H}_{3}$ since there is a low probability that randomly formed
+pairs integrate peers with the same level of mutual modelling skills. However, a
+high correlation could also have another explanation, stated in
+$\mathcal{H}_{2}$: it could be that \A is good at modelling \B and good at
+helping \B to model herself or himself.
 
 
 \begin{itemize}
@@ -660,7 +680,7 @@ differentiate.
 
 With triads, we may compute the accuracy of 6 models: \Model{A}{B}{X},
 \Model{B}{A}{X}, \Model{A}{C}{X}, \Model{C}{A}{X}, \Model{C}{B}{X} and
-\Model{B}{C}{X}.This leads to two \emph{triangle questions}
+\Model{B}{C}{X}. This leads to two \emph{triangle questions}
 (Fig.~\ref{mm_triangles}): Do \A and \B have the same accuracy when modelling
 \C ($\Delta_2 = \Delta(\mathcal{M}^{\circ}(A,C,X),
 \mathcal{M}^{\circ}(B,C,X))$)? A significant correlation would support ,
@@ -669,7 +689,7 @@ $\mathcal{H}_{3}$ (the quality of triad interactions enables all partners to
 model each other accurately)  
 
 
-Conversely, does \C model more accurately \A than \B ($\Delta_3=
+Conversely, does \C model with similar accuracy \A and \B? (low $\Delta_3=
 \Delta(\mathcal{M}^{\circ}(C,A,X), \mathcal{M}^{\circ}(C,B,X))$)? A positive
 answer would support $\mathcal{H}_{1}$, \C being simply good at modelling any
 partner.  It could also support  $\mathcal{H}_{3}$,  since the quality of
@@ -679,10 +699,10 @@ explained by the fact that  \A helped more \C to model him than \B did.
 
 In addition, the comparison between $\Delta_2$ and $\Delta_3$ could tell us
 whether the accuracy of mutual modelling depends more upon the modeller's effort
-$\mathcal{H}_{1}$ or the modellee's behaviour  $\mathcal{H}_{2}$.
+($\mathcal{H}_{1}$) or the modellee's behaviour ($\mathcal{H}_{2}$).
 
-Please note that we consider the quality of interactions at triad level (ABC),
-neglecting the cases where AB interact better for instance than BC, since there
+Note that we consider the quality of interactions at triad level (\A, \B, \C),
+neglecting the cases where \A and \B interact better for instance than \B and \C, since there
 was no ``private'' communication channel in the following studies. We do
 nonetheless acknowledge that this point could be debated.
 
@@ -735,7 +755,7 @@ Fig.~\ref{mm_rectangle}). A large difference would indicate that meta-cognitive
 skills (self-modelling) and partner modelling skills are rather different
 skills, while a small $\Delta_4$ could be interpreted as the indications that
 these are two specific instance of a more general cognitive process. This
-questions is however not central to this paper, and the value of $\Delta_4$ us
+questions is however not central to this paper, and the value of $\Delta_4$ is
 only available in one of the reported studies.
 
 We can also question if modelling skills depend upon what aspects are being
@@ -776,31 +796,42 @@ gestures.
 
 \section{Studies}
 
-We report five studies conducted  by different researchers in different contexts
+We report on five studies conducted  by different researchers in different contexts
 between 2000 and 2015. They do not form a consistent research strategy but
 actually the fact that some trends emerge despite their diversity constitutes
 indeed the richness of this line of work.
 
 \begin{table*}[ht!]
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \centering
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{p{2.6cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}|p{3.5cm}}
-\textit{}                     & \textbf{Study 1}                 & \textbf{Study 2}                & \textbf{Study 3}          & \textbf{Study 4}          & \textbf{Study 5}             \\ \hline
-\textbf{Task}                 & Game in virtual space            & Game in physical space          & Building an argument map  & Building a concept map    & Building a concept map       \\
-\textbf{Interactions}         & Audio                            & Written                         & Audio / Video             & Audio                     & Audio                        \\
-\textbf{Shared editor}        & 3D Space                         & 2D Map                          & Concept Map               & Concept Map               & Concept Map                  \\
-\textbf{Group Size}           & dyads                            & \textbf{triads}                 & \textbf{triads}           & dyads                     & dyads                            \\
+%\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{2.1cm}L{1.65cm}L{1.7cm}L{1.8cm}L{1.6cm}L{1.6cm}}
+\toprule
+\textit{}                     & \textbf{Study 1}                 & \textbf{Study 2}                & \textbf{Study 3}          & \textbf{Study 4}          & \textbf{Study 5}             \\ 
+\midrule
+\textbf{Task}                 & game in virtual space            & game in physical space          & building an argument map  & building a concept map    & building a concept map       \\
+\midrule
+\textbf{Interactions}         & audio                            & written                         & audio / video             & audio                     & audio                        \\
+\midrule
+\textbf{Shared editor}        & 3D space                         & 2D map                          & concept map               & concept map               & concept map                  \\
+\midrule
+\textbf{Group size}           & dyads                            & \textbf{triads}                 & \textbf{triads}           & dyads                     & dyads                            \\
+\midrule
 \textbf{Duration (mean)}      & 90min                            & 16min                           & 61min                     & 90min                     & 90min                        \\
-\textbf{Awareness tool}       & Partner's position               & Partner's current/past pos.     & -                         & Partner's concept map     & Partner's scores at pre-test \\
-\textbf{Dependent var.}       & Team/Ind. performance            & Team/Ind. performance           & Team performance          & Team/Ind. knowledge       & Team/Ind. knowledge          \\
-\textbf{Independent var.}     & Awareness tool \textit{vs} none  & Awareness tool \textit{vs} none & Audio \textit{vs} Audio+Video & Script \textit{vs} none & Awareness tool \textit{vs} none       \\
+\midrule
+\textbf{Awareness tool}       & partner's position               & partner's current/past pos.     & -                         & partner's concept map     & partner's scores at pre-test \\
+\midrule
+\textbf{Dependent variable}       & team/indiv. performance            & team/indiv. performance           & team performance          & team/indiv. knowledge       & team/indiv. knowledge          \\
+\midrule
+\textbf{Independent variable}     & awareness tool \textit{vs} none  & awareness tool \textit{vs} none & audio \textit{vs} audio+video & script \textit{vs} none & awareness tool \textit{vs} none       \\
 %\textbf{Grounding crit.}      & +0.42                            & +0.15                           & +0.22                     & +0.08                     & +0.40                        \\
 %$\mathcal{H}_1$               &                                  & supported                       & supported                 &                           &                              \\
 %$\mathcal{H}_2$               &                                  & supported&                         &                           &                              \\
 %$\mathcal{H}_3$               & supported                        & supported                       &                           & supported                 &                              \\
+\bottomrule
 \end{tabular}
-}
-\caption{Comparison of the studies}
+%}
+\caption{Overview of the studies}
 \label{synthesis_table}
 \end{table*}
 
@@ -831,17 +862,17 @@ action of their partner as well as to announce their own actions.
 \end{figure*}
 
 
-{\sc SpaceMiners} is a 3D game that involves two players collecting minerals
-located in asteroids (Fig.~\ref{study1:spaceminer}). To do so, they must launch
+{\sc SpaceMiners} is a 3D game that involves two players harvesting ore
+found on asteroids (Fig.~\ref{study1:spaceminer}). To do so, they must launch
 drones through the space after choosing their initial direction and speed. Once
-launched, the trajectory of drones is only influenced by the gravity of planets
-and by trajectory modification tools.  During the experiment, the teams were
+launched, the trajectory of drones is influenced by the gravity of planets
+and by ``trajectory modification'' tools. During the experiment, the teams were
 confronted with three increasingly complex situations. The experiment was 2
-hours long: a 30 minute tutorial and 3 levels of 30 minutes. Players uses using
+hours long: a 30 minute tutorial and 3 levels of 30 minutes. The players were using
 a regular joystick and communicated with each other through an audio channel.
 
 The independent variable was the availability of an awareness tool that shows to
-player \A  the location and gaze direction of player \B. In the awareness
+player \A  the location and gaze direction of player \B: in this ``awareness''
 condition, players could switch to the \emph{scout mode} where they could view
 what their partner was looking at. We hypothesize that this would enable
 subjects to more accurately infer their teammate's intentions. Each player sat
@@ -875,7 +906,7 @@ model \gmodel{A}{B} is compared to \B's next action) because some of the
 activities proposed by the questionnaire were not observable by the environment
 (\eg establishing a strategy). We calculated \Model{A}{B}{activity})
 as the number of common answers between questionnaires \gmodel{A}{A} and
-\gmodel{A}{B} in each game and computed the average value a across the 3 levels.
+\gmodel{A}{B} in each game and computed the average value across the 3 levels.
 
 \begin{figure}[ht!]
         \centering
@@ -903,7 +934,7 @@ constitution of two groups made up of 12 individuals ``short time in scout
 mode'' and 24 individuals ``long time in scout mode''. A two-way analysis of
 variance conducted on these contrasted groups revealed that pairs in the
 awareness condition who spent more time in the scout mode reached higher levels
-of \gModel{A}{B}($F = 8.02, p = 0.015$). Of course, a \textit{post-hoc} split
+of \gModel{A}{B}($F = 8.02, p = 0.015$). Of course, a post-hoc split
 does not support a causal direction. An alternative explanation could be that
 good modellers are more social and hence appreciate the awareness tool.
 
@@ -926,8 +957,6 @@ How to interpret a correlation of 0.38 between \gModel{A}{B} and \gModel{B}{A}?
 It is significant, which supports $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$. It is
 nonetheless far from 1 which implies we cannot discard the individual modelling
 skills. We collect more evidence along the next studies.
-
-$\mathcal{H}_{3}$
 
 %If it was null, modelling would be interpreted as an individual process that
 %varies according to personality traits or cognitive skills: some persons tend to
@@ -1021,10 +1050,10 @@ mutual modelling accuracy instead of being due to spatial reasoning skills.
 \subsubsection*{Results}
 
 \paragraph{Grounding criterion} The correlation between \gModel{A}{B} and the
-task performance (path lengths) was low: 0.15. Using a \emph{post-hoc} split on
+task performance (path lengths) was low: 0.15. Using a post-hoc split on
 \gModel{A}{B}, there is no significant difference between the performance of the
 groups with high and low \gModel{A}{B}  ($F = 1.45, p = 0.24$). Conversely, a
-\emph{post-hoc} split of the groups according to their performance did not show
+post-hoc split of the groups according to their performance did not show
 any significant differences on \gModel{A}{B} ($F = 1.16, p = 0.29$).
 
 \paragraph{Study-specific questions} There was no significant difference
@@ -1573,7 +1602,7 @@ remaining time. Providing them with ``after-task'' questionnaires implies mnemon
 and rationalization biases. The nature of mutual modelling implies methodological
 challenges that call for new  measurement methods. We have promising results for
 using eye tracking methods to address this challenge. 
-Third, our results emerge from a \emph{post-hoc} reinterpretation of studies
+Third, our results emerge from a post-hoc reinterpretation of studies
 that addressed different research questions (media richness, awareness tools,
 scripts,...). This diversity makes our results difficult to integrate, partly
 contradictory. Nonetheless, this diversity gives some generalizability: mutual
