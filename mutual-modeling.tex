@@ -19,6 +19,7 @@
 
 \usepackage{hyperref}
 \usepackage{subcaption}
+\usepackage{endnotes}
 
 \usepackage[draft, footnote, margin=false]{fixme}
 
@@ -94,7 +95,7 @@ model'' to stress the fact that this model is not necessarily detailed or
 complete, but that we acquire some representations of the persons we
 interact with. The question we address is: Does the quality of the partner
 model depend upon the modeler's ability to represent his or her partner?
-Upon the modelee's ability to make his state clear to the modeler? Or rather upon
+Upon the modelee's ability to make his state clear to the modeler? Or rather, upon
 the quality of their interactions? We address this question by comparing
 the respective accuracies of the models built by different team
 members. We report on 5 experiments on collaborative problem solving
@@ -104,7 +105,7 @@ accurate model). In 4 studies, the accuracy of the model that \A built about
 \B was correlated with the accuracy of the model that \B built about \A,  which
 seems to imply that the quality of interactions matters more than individual
 abilities when building mutual models.  However, these findings do not
-rule out the fact that individual abilities also participate in the quality of
+rule out the fact that individual abilities also contribute to the quality of
 modelling process.
 
 
@@ -130,14 +131,14 @@ related to learning: (self-) explanations in cognitive
 science~\citep{chi1989self, webb1991task}, conflict resolution in
 socio-cognitive theories~\citep{doise1975social} and mutual
 regulation~\citep{blaye1995collaborative} in a Vygostkian perspective. The
-construction of a shared understanding has been investigated for several decades
+construction of shared understanding has been investigated for several decades
 in psycholinguistics, under the  notion of
 \emph{grounding}~\citep{clark1986referring}. However, the relevance of grounding
 mechanisms for explaining learning outcomes has been questioned in the learning
 sciences. Grounding mechanisms are appropriate to explain conversational
 events, such as referential failures in short dialogue episodes, but they hardly
 predict deeper phenomena such as \emph{conceptual change} (\ie the acquisition,
-acceptation and integration of a new belief into one's mental model) over longer
+acceptance and integration of a new belief into one's mental model) over longer
 sessions~\citep{dillenbourg2006sharing}. The cumulative effect of grounding
 episodes can probably be better understood from a socio-cultural perspective:
 
@@ -146,11 +147,11 @@ Collaborative learning is associated with the increased
 cognitive-interactional effort involved in the transition from \emph{learning to
 understand each other} to \emph{learning to understand the meanings of the semiotic
 tools that constitute the mediators of interpersonal
-interaction}~\citep{baker1999role}
+interaction}~\citep[p.31]{baker1999role}
 \end{quote}
 
-Along this line, several scholars suggest that CSCL research should go deeper in
-the understanding of how partners engage into shared meaning
+\noindent Along this line, several scholars suggest that CSCL research should go deeper 
+towards understanding how partners engage in shared meaning
 making~\citep{stahl2007meaning} or \emph{intersubjective} meaning
 making~\citep{suthers2006technology}.
 
@@ -166,12 +167,18 @@ representations, due to priming mechanisms, and that this local alignment may --
 in some cases -- lead to a \emph{global alignment} of the semantic level
 (\emph{deep grounding}).  For these authors, the convergence in dialogue, and
 even the repair of some misunderstandings, is explained by this mimetic behavior
-more than by a monitoring of each other's knowledge: \emph{``...interlocutors do
+more than by a monitoring of each other's knowledge:
+
+\begin{quote}
+[\ldots] interlocutors do
 not need to monitor and develop full common ground as a regular, constant
 part of routine conversation, as it would be unnecessary and far too costly.
 Establishment of full common ground is, we argue, a specialized and
 non-automatic process that is used primarily in times of difficulty (when
-radical misalignment becomes apparent).''} (p. 179).  This view is actually not
+radical misalignment becomes apparent).~\citep[p.179]{pickering2006alignment}
+\end{quote}
+
+\noindent This view is actually not
 incompatible with Clark's \emph{grounding
 criterion}~\citep{clark1989contributing}: the degree of shared understanding
 that peers need to reach depends upon the task they perform. For instance, a
@@ -193,7 +200,7 @@ learning, then the pedagogical challenge is indeed to design tasks that require
 deep grounding. Most empirical studies on grounding and alignment are conducted
 with simple referencing tasks such as asking the way to the train station
 or helping the peer to choose a picture among many. In the studies we report here, we
-explore several richer tasks such as arguing on a sensitive issue or building a
+explore several richer tasks such as arguing about a sensitive issue or building a
 concept map.  
 
 Deep grounding or shared meaning making requires some cognitive load. For
@@ -203,7 +210,6 @@ effort}.  The cost of producing a perfect utterance may be higher than the cost
 of repairing the problems that may arise through misunderstandings, and in fact,
 subjects tend to make less efforts adapting their utterances to a specific
 partner when they know that they can later provide feedback on his/her
-
 understanding~\citep{schober1993spatial}. We introduced the notion of
 \emph{optimal collaborative effort}~\citep{dillenbourg1995evolution} to stress
 that misunderstanding should not be viewed as something to be avoided (if this
@@ -219,9 +225,9 @@ shared understanding. For instance, CSCL researchers expanded the use of
 method that frames collaborative learning activities in order to foster the
 emergence of productive interactions such as argumentation, explanation or
 conflict. Conflict-resolution scripts such as the {\sc
-ArgueGraph}~\citep{dillenbourg2008mechanics} form pair of students with
+ArgueGraph}~\citep{dillenbourg2008mechanics} form pairs of students with
 opposite opinions, which increases the difficulty of consensus building,
-requiring more justifications, more negotiation, more load. Similarly, {\sc
+requiring more justifications, more negotiation, and more load. Similarly, {\sc
 jigsaw} scripts~\citep{aronson1978jigsaw} provide peers with different but
 complementary knowledge for augmenting (reasonably) the efforts that group members
 have to engage into to reach a shared solution. 
@@ -289,7 +295,7 @@ modelling.
 
 \section{Partner Modelling}
 
-We refer to \emph{Partner modelling} as the process of inferring one's partner
+We refer to \emph{Partner modelling} as the process of inferring one's partner's
 mental states. Any claim that students carry out a detailed monitoring of their
 peers would be as incorrect as any claim that they do not maintain any
 representation at all. If mental modelling had to be permanently detailed and
@@ -397,7 +403,7 @@ misunderstanding.
 
 Mutual modelling is bi-directional. During dyadic problem solving,   partner A
 builds some model of \B and \B build some model of \A.  Moreover, these two
-processes are not independent: \A's model of what \B knows, include what \B knows
+processes are not independent: \A's model of what \B knows, includes what \B knows
 about \A.  This leads to nested levels of  modelling. If \A states ``\B thinks I
 am good in maths'', \A builds a \emph{second level} model:
 \model{A}{B}{\M{B}{A}{\text{maths-skill}}}. This leads to possibly infinite
@@ -444,7 +450,7 @@ explicit, monolithic representation of \B: it must be understood as an
 abstraction referring to complex socio-cognitive processes.  As explained in the
 previous section, the model built by \A can be fragmented, multi-dimensional, etc. This notation
 is neither presented as a computational model of mutual modelling, nor as some
-universal formalism; its usefulness is internal to this paper.  Besides, we
+universal formalism; its usefulness is internal to this paper.  Additionally, we
 refer to the \emph{degree of accuracy} of the model as \Model{A}{B}{X}. We
 discuss in the next section the methodological difficulty in measuring this
 accuracy.
@@ -531,7 +537,7 @@ present hereafter:
     \item $\mathcal{M}^{\circ}_{t0}(A,B,X)$: along the same reasoning, the initial degree
         of common grounds should be rather low (and hence the difference between
         initial and required degrees rather high) in order to make mutual
-        modelling effort more observable. Studies 1, 4 and 5 have been conducted
+        modelling effort more observable. Studies 1, 4, and 5 have been conducted
         with teams of students who did not know each other. They came
         nonetheless from the same university (and they hence had some general common
         grounds).  For studies 2 and 3, students knew each other before for
@@ -542,7 +548,7 @@ present hereafter:
     \item $cost(\alpha)$: in all studies but study 4, the cost of  grounding is
         an independent variable. Study 3 uses media richness as independent
         variable, with the hypothesis that modelling emotions is ``cheaper'' with a
-        richer medium, \ie  when peers can see each other.  Studies 1,2 and 4
+        richer medium, \ie  when peers can see each other.  Studies 1, 2, and 4
         use awareness tools which, in principle, reduce the cost of mutual modelling, but do
         not eliminate all costs: if the tool provides \A with information about
         what \B does/knows, this additional information may actually increase
@@ -610,9 +616,9 @@ activity.
 \section{Hypotheses and Questions}
 
 The experiments we report here address mutual modelling across different tasks,
-some with dyads, other with triads. They were conducted along 6 years in two
+some with dyads, others with triads. They were conducted over 6 years in two
 different institutions by different researchers. They used different
-independent, intermediate and dependent variables. Nonetheless, we were able to
+independent, intermediate, and dependent variables. Nonetheless, we were able to
 retroactively address 3 research questions across these studies. 
 
 \paragraph{The symmetry question}
@@ -828,7 +834,7 @@ richness of this line of work.
 \bottomrule
 \end{tabular}
 %}
-\caption{Overview of the studies}
+\caption{Overview of the studies and main characteristics}
 \label{synthesis_table}
 \end{table*}
 
@@ -876,7 +882,7 @@ in front of a distinct computer located in different rooms.
 \subsubsection*{Subjects}
 
 Thirty-six persons participated in this study, all native French speakers. We
-constituted 18 dyads who did not know each other beforehand. The pairs were
+formed 18 dyads who did not know each other beforehand. The pairs were
 randomly assigned to either the control condition (without the awareness tool)
 or the awareness condition (with the awareness tool).
 
@@ -948,7 +954,7 @@ communicated more.
 
 \subsubsection*{Discussion}
 
-How to interpret a correlation of 0.38 between \gModel{A}{B} and \gModel{B}{A}?
+How do we interpret a correlation of 0.38 between \gModel{A}{B} and \gModel{B}{A}?
 It is significant, which supports $\mathcal{H}_{2}$ and $\mathcal{H}_{3}$. It is
 nonetheless far from 1, which implies we cannot discard the individual modelling
 skills. We collect more evidence in the next studies.
@@ -969,7 +975,7 @@ skills. We collect more evidence in the next studies.
 \subsection{{\bf Study 2}: Effect of an awareness tool on \gModel{A}{B}  in a pervasive
 game}
 
-This study concerns a collaborative game that occurred in the physical
+This study concerns a collaborative game that occurred in physical
 space~\citep{nova2006underwhelming}. We studied whether players
 build an accurate model of the path followed by their partners, assuming that this
 path would reflect their problem solving strategy. We used an objective measure of
@@ -980,13 +986,13 @@ tools on group performance and on \gModel{A}{B}.
 \subsubsection*{Experimental setting}
 
 {\sc CatchBob} is a mobile game in which groups of 3 players have to solve a
-joint task. The game was played on our campus. Participants had to find a
+joint task. The game was played on a university campus. Participants had to find a
 virtual object (\emph{Bob}) and to ``catch'' it by forming a triangle around it.
 The players used a Tablet PC that displayed a map of the campus and an indication of
 their personal distance to Bob. Their annotations on the map were shared with
 the two other players (\A could see what \B and \C wrote). These annotations
 faded out after a few minutes to avoid covering the full display. The awareness
-tool displayed as well the location of the two other players on the map. Three
+tool also displayed the location of the two other players on the map. Three
 conditions were considered: the control condition (without tool) and two
 experimental conditions: synchronous awareness (display of the current position
 of each player) and asynchronous awareness (display of current position of each
@@ -1003,7 +1009,7 @@ during the {\sc CatchBob} game.} \label{study2:paths} \end{figure*}
 
 
 Ninety students participated in this experiment. We only selected students from
-our campus since knowledge of the campus geography had an impact both on group
+university campus since knowledge of the campus geography had an impact both on group
 performance and on mutual modelling: to represent the path of someone across
 some space is difficult without an \textit{a priori} mental map of this space.
 We formed groups of students who knew each other. We assigned 10 triads to each
@@ -1091,7 +1097,7 @@ components.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{{\bf Study 3}:  Effect of media richness on \gModel{A}{B} in argumentation}
 
-The aim of this unpublished\footnote{The data and statistical analyses of this
+The aim of this unpublished\endnote{The data and statistical analyses of this
 study are available online:
 \url{https://github.com/chili-epfl/mutual-modelling-emotions-study}.} study was
 to evaluate the effect of media richness on \Model{A}{B}{emotions}.  The
@@ -1245,7 +1251,7 @@ learning~\citep{molinari2008effects}. The script chosen is a
 {\sc jigsaw}: two students receive different but complementary subsets of the
 knowledge (texts) which have to be integrated to build a shared concept map.
 This script increases the cognitive effort to build the map, not only to
-conciliate the viewpoints of each team members but, before that, to find out
+conciliate the viewpoints of each team member but, before that, to find out
 what the other knows. 
 
 \subsubsection*{Experimental settings}
@@ -1307,7 +1313,7 @@ TeamSpeak}.
 Fifty-eight first year students from EPFL (47 men and 11 women, mean age: 20.46)
 were remunerated for participation. Dyads were randomly assigned to one of the
 two experimental conditions. Gender was balanced over the conditions.
-Participants did not know each other before the experiment. Students from Life
+Participants did not know each other before the experiment. Students from the Life
 Sciences faculty were not recruited to avoid high initial background knowledge on the
 learning domain.
 
@@ -1342,7 +1348,7 @@ counterbalanced across participants.
 \subsubsection*{Results}
 
 \paragraph{Grounding criterion} In this task, the grounding criterion was low.
-We did not however evaluate task performance (\eg the quality of the jointly
+We did not, however, evaluate task performance (\eg the quality of the jointly
 produced concept map) but learning gains. The correlation between \gModel{A}{B}
 and \A's learning gains is not significant ($\beta = 0.08, ns, N = 60$). It is
 also not significant within each condition.
@@ -1510,7 +1516,7 @@ addition, the KAT supports the processing of modelling at the first level
 ($\mathcal{H}_{1}$) and not at the second level ($\mathcal{H}_{2}$). Hence the
 fact that the KAT enhances  \gModel{A}{B}  brings additional supports to
 $\mathcal{H}_{1}$. However, the analysis of verbal interactions finds elements
-that actually supports the three hypotheses.
+that actually support the three hypotheses.
 
 %\paragraph{Rectangle question} $\Delta_4$: the correlation between \gmodel{A}{A} and \gmodel{A}{B} is
 %\fixme{???  MIRWEIS A FAIRE}.
@@ -1532,16 +1538,16 @@ syntactic alignment, as objected by \citet{pickering2006alignment}. While the
 shallow hypothesis may be relevant to simple chat situations, we investigated
 this issue in richer problem solving tasks that are more representative of the
 tasks assigned to learners in CSCL environments. In four different tasks, we
-found evidence that partner model each other since the quality of modelling
+found evidence that partners model each other since the quality of modelling
 emerged as an intermediate variable, sensitive to several independent variables
 (like the presence of awareness tools or media richness), and predictive of
 several dependent variables, such as task performance or learning gains.
-Thereby, even if we do not bring any definite conclusion to this debate, our
+Therefore, even if we do not bring any definite conclusion to this debate, our
 results support the CSCL school of thought in which shared understanding or
 intersubjective meaning making have been a foundational concept
 \citep{roschelle1995construction,schwartz1995emergence,dillenbourg2006sharing,suthers2006technology,stahl2007meaning}.
 
-Secondarily, we questioned whether the accuracy of the partner's model depends on
+Second, we questioned whether the accuracy of the partner's model depends on
 the cognitive skills of each partner or instead results from the quality of
 the interactions among them. We respectively refer to these hypothesis as
 $\mathcal{H}_1$ and $\mathcal{H}_3$. Our rationale was that a symmetry of mutual
@@ -1584,13 +1590,13 @@ for a part of the accuracy in mutual modelling.
 We acknowledge that the difference between these hypotheses is rather
 theoretical since the  process of modelling one's partner $\mathcal{H}_{1}$ and
 the process of helping one's partner to model oneself $\mathcal{H}_{2}$ are
-mediated by verbal interactions in the team. One could hardly imagine someone
-managing a very accurate modelling despite the very bad quality of interactions.
+mediated by verbal interactions in the team. It is difficult to imagine someone
+managing a very accurate modeling despite low quality interaction.
 There is a bidirectional causal link between the accuracy of mutual modelling
 and the quality of the interactions. This rather artificial distinction does
-however participate in the more fundamental discussion of the role of individual
+however contribute to the more fundamental discussion of the role of individual
 and social mechanisms in human cognition. In the field of social cognition, it
-is a commonplace to state that ``the whole is greater than the sum of the
+is commonplace to state that ``the whole is greater than the sum of the
 parts''.  This refers to the emergence of team properties than cannot be reduced
 to the set of individual contributions. Our paper illustrates this emergence by
 showing the symmetry of mutual modelling. In a nutshell, yes there is a
@@ -1599,7 +1605,7 @@ non-negligible component of mutuality in modelling one's partner.
 
 These conclusions must be presented with multiple disclaimers. First, they
 heavily rely on correlations; hence we cannot identify causal links. Second, we
-faced hard methodological issues. Providing learners with on-task questionnaires
+faced difficult methodological issues. Providing learners with on-task questionnaires
 introduces a bias: they will pay more attention to their partners in the
 remaining time. Providing them with ``after-task'' questionnaires implies
 mnemonic and rationalization biases. The nature of mutual modelling implies
@@ -1607,8 +1613,8 @@ methodological challenges that call for new measurement methods. We have
 promising results for using eye tracking methods to address this challenge.
 Third, our results emerge from a post-hoc reinterpretation of studies that
 addressed different research questions (media richness, awareness tools,
-scripts,...). This diversity makes our results difficult to integrate, partly
-and contradictory. Nonetheless, this diversity also incidentally provides some
+scripts,...). This diversity makes our results difficult to integrate as they
+appear partly contradictory. Nonetheless, this diversity also incidentally provides some
 generalizability: mutual modelling has been investigated in different contexts
 (virtual space versus real space), with different groups sizes (pairs and
 triads) and different tasks.
@@ -1641,7 +1647,7 @@ provided from a NSF Grant grant \#102511-106940.
 \bibliographystyle{spbasic}
 \bibliography{biblio}
 
-
+\theendnotes
 
 \end{document}
 
